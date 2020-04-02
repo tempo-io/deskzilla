@@ -1,0 +1,593 @@
+Deskzilla Release Notes
+http://almworks.com/deskzilla
+
+Version: 3.2.1
+Date of Release: August 18, 2016
+
+For system requirements, installation and upgrade instructions and 
+information about backing up/restoring Deskzilla configuration, 
+please see README.txt or ALM Works website.
+
+
+Change History
+==============
+
+3.2 => 3.2.1
+------------
+
+Fixes and improvements:
+
+* Fixed keywords download
+* Fixed crashes on OSX
+
+
+3.1.3 => 3.2
+------------
+
+Bundled with Java 8
+
+Support for Bugzilla 5.0
+
+Fixes and improvements:
+
+DZO-1213 Allow to choose encoding for CSV export
+JCO-1835 "Open in Browser" actions do not work
+
+
+3.1.2 => 3.1.3
+--------------
+
+Support for Bugzilla 4.4:
+
+* DZO-1189 Login fails on Bugzilla 4.4.x
+* DZO-1171 Bugzilla 4.4 compatibility: cannot post new bugs with dependent fields
+
+Fixes and improvements:
+
+* PLO-42 Reinstate spell checker in JIRA Client and Deskzilla (review current engine and choose another)
+* DZO-1178 Edited comment lost when closing window
+* DZO-1147 Allow user to "dismiss" SupportExpired notification
+* DZO-1150 Remove notification about the maintenance expiry in the next Deskzilla version
+
+
+3.1.1 => 3.1.2
+--------------
+
+* Application signed for the OS X GateKeeper
+* Support for Retina displays
+
+
+3.1 => 3.1.1
+------------
+
+Support for OS X 10.9 (Mavericks)
+
+DZO-1154 Deskzilla Lite crashing on launch with Mavericks
+DZO-1127 Implemenent synchronization workaround for Bugzilla 4.2
+DZO-1139 Deskzilla cannot submit a new bug when there is mandatory multi-select custom field
+
+
+3.0.3 => 3.1
+------------
+
+Support for Bugzilla 4.2:
+
+* DZO-1086  Server HTTP response [404 Not Found] when synchronizing with 
+            Bugzilla 4.2
+* DZO-1103  Get Changes Now does not work with Bugzilla 4.2
+* DZO-1091  Cannot download attachments
+* DZO-1097  There is now a limit on the number of bugs returned by any Bugzilla 
+            search
+* DZO-1088  Custom field value visibility can be governed by several values of 
+            another field
+* DZO-1092  Local bug IDs can be specified in the See Also field now
+* DZO-1109  TextSearch: show bug ids in tab name instead of bug urls
+* DZO-1095  Changing the requestee of a flag no longer changes the requester
+* DZO-1096  In Bugzilla 4.2, default columns has been changed --- change 
+            Deskzilla's also
+
+Bug Fixes:
+
+* DZO-1082  Hours Worked is not updated from server
+* DZO-1038  Deskzilla can create duplicate users in the local database with fake
+            e-mails that equal to lower-case real names
+* DZO-1076  Attachment with special chars in filename can't be opened
+* DZO-1077  E-mail suffix: if leading "@" is not specified, users may duplicate
+* DZO-1102  Distribution nodes may be displayed out of order
+* DZO-1107  Flag requestee cannot be uploaded: "user@domain.com does not match 
+            anything"
+* DZO-1106  Users are sometimes displayed by e-mail instead of the real name
+* DZO-1068  Hitting the minimize button in OSX doesn't minimize the application 
+            window
+* DZO-1072  Allow to localize time-tracking fields through 
+            bugzilla-terms.properties
+* DZO-1105  Workflow actions: Assigned To, Reporter and QA Contact editors show 
+            user e-mails instead of display names
+
+Improvements:
+
+* DZO-1113  Allow to open Deskzilla in full screen mode in Lion
+* DZO-856   Include TrackLink/vs2010 in the distribution
+
+
+3.0.2 => 3.0.3
+--------------
+
+Bug Fixes:
+
+* DZO-1019  Queries containing negated conditions on "Last Modified" or other
+            time-based fields produce wrong results
+* DZO-1039  Unable to connect to https://bugzilla.mozilla.org
+* DZO-1048  Deskzilla cannot download attachments with non-ASCII file names
+* DZO-1000  New Issue: initial value for Status editor may be illegal
+* DZO-1050  New Bug status editor displays inapplicable statuses
+* DZO-1052  Edit Bug status editor displays inapplicable statuses
+* DZO-1061  Cannot drag and drop bug on query by QA Contact if bug has no
+            QA Contact
+* DZO-1057  Cannot connect to Bugzilla with auto-authenication
+* DZO-1040  Duplicated flags after resolving flag conflict
+* DZO-1041  Flag edit becomes impossible after a flag is replaced with an
+            identical one
+* DZO-1049  When invoked, bug editor or flag editor may disappear until
+            application restart
+* DZO-1064  "Flags" constraint returns all bugs if it tests for only flag types
+            and all of them are inapplicable in the context
+
+Performance Improvements:
+
+* DZO-1026  Edit window takes way to long to display
+* DZO-1034  Updating many changes to the server has very poor performance
+* DZO-1033  Major performance issues when loading a search returning many
+            (~9000) results or mass editing many bugs
+* PLO-222   Reduce garbage and speed up getting current list of variants
+
+Other Improvements:
+
+* DZO-1045  Show comment number in the bug view
+* DZO-1018  Command-line option to switch user rendering to e-mails
+
+
+3.0.1 => 3.0.2
+--------------
+
+* PLO-851 Some queries cannot be opened with "Query is running..." message
+          stuck forever
+
+
+3.0 => 3.0.1
+------------
+
+* DZO-1010 Deskzilla stalls and fails when running certain
+           complex queries
+* DZO-1013 AND of two keyword queries gives empty result
+* DZO-1011 Bugs with multiple dependencies aren't shown
+           in the blocks/depends hierarchy
+* DZO-1014 Raise Deskzilla Lite limit to 2000 bugs
+
+
+3.0 Beta 3 => 3.0
+-----------------
+
+* PLO-819  Import tags from version 1.x-2.x on first run
+* DZO-1007 "java.lang.NullPointerException at z.dsi.a" error
+* DZO-1006 Exception: RasterFormatException in screenshot editor
+           when magnified area is moved
+
+
+3.0 Beta 2 => 3.0 Beta 3
+------------------------
+
+Performance:
+
+* DZO-993 Deskzilla is slow on 40k bugs
+
+Bug Fixes:
+
+* DZO-986 Duplicate bugs in DB after reloading query from server
+* DZO-988 Bugs hang in "uploading" state forever
+* PLO-846 "java.lang.IllegalArgumentException: null source" error
+* DZO-979 "Missing Bugzilla connection" error
+* DZO-992 "java.lang.NegativeArraySizeException" error
+* DZO-998 "Unexpected request result" error
+* DZO-999 "StringIndexOutOfBoundsException at z.iue.e" error
+* DZO-984 "NumberFormatException at z.bxl.c" error
+* DZO-985 "Expected single value" error
+* PLO-843 Mouse wheel doesn't work in some tables
+
+Other Improvements:
+
+* PLO-842 Invoke editors' close confirmations when app exits
+* PLO-832 A dialog for setting system properties
+* PLO-845 Display workspace directory in the About dialog
+* PLO-840 On the Mac Cmd-W should close windows
+* PLO-847 Improve feedback reporter to be less annoying
+
+
+3.0 Beta 1 => 3.0 Beta 2
+------------------------
+
+Improvements:
+
+* DZO-968 Do not show disabled Bugzilla users in the comboboxes
+* DZO-938 Restore connectivity with TrackLink
+* DZO-961 Dependencies are not extracted from certain Bugzillas
+* DZO-967 Redesign "Provide your e-mail address" page to avoid confusion
+          for LDAP users
+* PLO-828 Improve the method of starting Tag Exporter on Mac OS X
+
+Bug Fixes:
+
+* DZO-957 "Missing user name suffix" error
+* DZO-955 "Option not found" error
+* DZO-972 "Failed to load attribute" error
+* DZO-973 NPE in comment matching
+* DZO-881 Two "Hours Worked" attributes available for export
+* DZO-963 Put the focus on the comment field in "Resolve as fixed"
+* PLO-831 Multiple "current" time tracking periods are possible
+* PLO-838 Attachment tooltip hides the pop-up menu on Mac OS X
+* TLO-46  TrackLink doesn't start the application properly on Mac OS X
+* DZO-975 Turning off milestones in a Bugzilla that had them leads to problems
+
+
+2.1 => 3.0 Beta 1
+-----------------
+
+New Features and Improvements:
+
+* DZO-929 Support Bugzilla 4.0
+* PLO-399 Remember table configuration per query
+* PLO-432 Usability: There should be a way to open issue I've just posted
+* PLO-611 Per-connection offline mode (a way to pause updating a connection)
+* PLO-689 A way to synchronize just a single connection
+* PLO-567 Search for empty fields
+* PLO-709 "Text Search" constraint type for the Query Builder
+* PLO-629 Cleaner UI on Windows XP, Vista, 7
+* PLO-639 Make Open File/Folder attachment actions available on Mac and Linux
+* PLO-644 Improve "Open containing folder" to select opened item
+          in Explorer (Windows) or Finder (Mac)
+* PLO-590 Hide/Show Navigation Tree
+* PLO-324 Merge window: buttons for resolutions
+* PLO-518 Make "Tab" key move focus from large text fields
+
+Bug Fixes:
+
+* DZO-870 Dependency between Products and Custom Fields is lost
+          during full sync
+* DZO-872 Custom fields dependency extraction fails when values
+          are controlled by Status field
+* PLO-769 Query Builder doesn't restore numeric condition type
+* PLO-630 Time Tracker erases unsaved bug/issue edits
+* PLO-239 Pop-up menus with Copy, Paste, etc. in text fields (Windows, Mac)
+* PLO-620 E-mail and mailto links are not handled properly on the Mac
+* PLO-764 "Show <AppName> in Menu Bar" action disappears on the Mac
+* PLO-779 In Mac OS X application refuses to minimize and restore
+
+
+2.1 Beta 1 => 2.1
+-----------------
+
+Improvements:
+* PLO-704 Make HTTP connections use keep-alive
+* DZO-837 Optimize requests to request.cgi
+* PLO-335 Select Table Columns dialog: better keyboard support
+
+Fixed:
+* DZO-832 Flag editor glitches
+* DZO-820 Buttons in flag editor should be centered vertically
+* DZO-702 Components/products/versions with "<" or ">" in their name lead to
+          undetected dependencies between Products and other fields
+* DZO-840 Keywords column cannot be exported
+* DZO-835 Custom flag statuses make Deskzilla show error dialog
+* PLO-352 Screenshot: support word wrapping in comments
+
+
+2.0.2 => 2.1 Beta 1
+-------------------
+
+* DZO-136 Support bug flags
+Support includes displaying flags in table and in bug viewer, editing, search,
+and export of bug flags. Flags support is available for all Bugzilla servers
+starting from version 2.22.
+
+Other new features:
+* DZO-309 support of autolinkification (links for bugs, attachments etc...)
+* DZO-67  Allow to add private comment when performing a workflow action
+
+User experience improvements:
+
+* PLO-196 Enable ClearType throughout the application
+* DZO-729 On New Bug window, move Summary and Description to the top
+* DZO-50  Add attachment / screenshot in the New Bug window
+* DZO-650 Remove unused fields from New/Edit Bug
+* DZO-637 Quick as-you-type navigation in all lists (keywords and CC list in
+          New/Edit bug, Tag dialog, etc)
+* DZO-616 Display recently selected items in dialogs, e.g. in Assignee,
+          Component fields on New/Edit Bug forms
+* DZO-631 New/Edit Bug checks for invalid values for Components and other fields
+* DZO-705 Redesign CC List editor in New/Edit Bug
+* DZO-614 Wizard for creating and editing connections
+* DZO-830 Show messages and warnings related to bug in the new message panel
+* PLO-359 Support Undo/Redo in Screenshot tool
+* PLO-678 Pasting an image file onto an issue should bring up the screenshot
+          editor
+* PLO-676 Make "Create Distribution" dialog simpler
+* PLO-355 Remove "Hide empty queries: ON | OFF" from Navigation Tree
+* PLO-677 Always expand first 10 comments
+* PLO-27  Closing Icons for Tabs
+* PLO-458 Redesign the main menu
+* PLO-644 Improve "Open containing folder" to select opened item in Explorer
+* PLO-639 Make Open, Open With, Open Folder attachment actions available on Mac
+          and Linux
+* PLO-423 Upgrade to Java 6
+
+Various bugfixes, including:
+
+* DZO-762 Bug duplicates on each download details
+* DZO-23  deskzilla appears to allow the user to enter in unrecognized keywords
+* PLO-576 Highlighting of text search matches in comments is broken
+* DZO-658 Changes to See Also field are not uploaded
+* DZO-633 Allow to enter values in Resolution field only when the status is set
+          to a closed one
+* DZO-467 Options for product-dependent fields (e.g. Milestone) are not narrowed
+          to valid options on workflow action window
+* PLO-431 Time tracking window shows wrong artifact
+* PLO-50  "Open Containing Folder" doesn't work on Vista
+
+
+2.0.1 => 2.0.2
+--------------
+
+* DZO-625 Full download conflicts with any change
+* DZO-624 Order of values for Hardware, OS, Milestone and other
+          Bugzilla fields is reversed
+* DZO-584 Deskzilla complains that Reporter field cannot be uploaded
+
+
+2.0 => 2.0.1
+------------
+
+A few fixes for problems found in 2.0:
+
+* DZO-617 Custom fields are removed from the local database periodically
+          (Bugzilla 3.0)
+* DZO-619 Database thrashing on custom field visibility attribute, when
+          custom field is not available on submit
+* PLO-466 Revert to Evaluation Mode when expired license is detected
+* DZO-618 Deskzilla fails to download "All Bugs" query if Bugzilla does
+          not support search without any constraints
+* PLO-455 Local DB problem (cache is not invalidated)
+
+1.7.1 => 2.0
+------------
+
+New features:
+
+* DZO-356 Feature: Time-tracking support
+* DZO-494 Support Bugzilla 3.4
+* DZO-491 Mac OS X user interface improvements
+* DZO-519 Recognize a list of URLs in the text search field
+* DZO-367 Bug references mentioned in comments are clickable
+
+Bugzilla 3.4 Support:
+
+* DZO-507 Support "Custom Fields Whose List of Values Change Depending on the
+          Value of Another Field"
+* DZO-506 Support "Custom Fields That Only Appear When Another Field Has a
+          Particular Value"
+* DZO-509 Support See Also Field
+* DZO-508 Support New Custom Field Type: Bug ID
+
+Fixes:
+
+* DZO-489 Fixed: Removed custom field values are not deleted from Deskzilla
+* DZO-522 Fixed: Many duplicated bugs when reloading query from server
+* DZO-514 Fixed: On New Bug dialog, field values are cleared when Product is
+          changed - even if the user has already modified them
+* DZO-488 Fixed: Milestone order is not preserved
+* DZO-123 Fixed: sorting on keywords does not work correctly
+* PLO-455 Fixed: Local DB problem (cache is not invalidated)
+* DZO-577 Fixed: Blocks/depends may conflict with other fields
+* DZO-541 Fixed: Remake default queries for Light Deskzilla
+
+
+1.7 => 1.7.1
+------------
+
+The following problems were fixed:
+
+* Removing last keyword didn't work (#991, #990, #989)
+* Comments uploading in wrong order (#983, #969)
+* #970 Component-to-Product dependency is lost when Classifications are enabled
+* Cannot create new bug if default assignee contained uppercase letters (#965)
+* When milestones are turned off, submitting a bug may result in errors
+
+1.7 Beta 1 => 1.7
+-----------------
+  * Fixed a couple of bugs
+  * Added heuristic parsing of invalid CSV produced by some Bugzillas & Apache
+    on Windows
+  * Attachments of type image/x-png are now viewed in the inner viewer
+
+
+1.6.1 => 1.7 Beta 1
+-------------------
+
+  *      Support for Bugzilla 3.2, including custom workflows and custom fields
+  * #399 Edit issues with dragging and dropping them on queries
+  *  #60 Support for voting, search by votes
+  *      Faster bugs download
+  * #164 Search by "user in CC list"
+  *      Improved keywords editor and search, distribution by keywords
+  * #230 Minimize into system tray on Windows
+  *      Memory usage optimizations
+  * #316 Support for NTLM v2 authentication
+  * #329 Predefined MIME types in "Attach File" dialog
+  * #520 Issues export/import
+  * #628 When viewing attachment as text, allow to search
+  * #659 Add/remove multiple users to CC list through separate "Edit CC" dialog
+  * #850 Allow user to set status for new bug
+  * Fixed: incorrect search by date fields involving today
+  * Spell checking removed due to faulty library
+
+1.6 => 1.6.1
+------------
+
+Few minor problems have been fixed.
+
+1.6.b1 => 1.6
+-------------
+Only minor problems were found in beta.
+
+  * #852 Improve heuristics that make spell checker turned off
+  * #829 "Open selected issue in browser" keystroke not working on Mac OSX
+  * #833 Attach files keystroke
+  * #832 Attachment tooltips don't match sort order
+
+1.5.1 => 1.6.b1
+---------------
+  * #70  Feature: Screenshot capture tool
+  * #755 Quick highlighting/searching in issues table
+  * #280 Spell checking
+  * #83  Feature: Open bug for viewing in a separate window
+  * #783 Export improvements: export to PDF, export comments, export
+         attachments
+  * #740 Show selected bug(s) in a new tab
+  * #738 Create attachments with drag-and-drop
+  * #793 Periodic synchronization should load only changed issues, metadata
+         should be synchronized separately and less often
+  * #658 Exported CSV file with non-ascii characters does not display
+         correctly in MS Excel
+  * #173 Feature: pre-download attachments
+  * #821 Automatically pick up new bug id if it wasn't detected on bug submit
+         result page
+  * #100 Use default values for Priority, Severity and other fields
+  * #576 When uploading new bug or comment, make sure it is not already there
+  * #828 Fix: Quick search doesn't look into custom fields
+  * #784 Fix: Cannot change bug's status in Bugzilla 3.1.2 (changed "knobs" in
+         status form)
+
+1.5 ==> 1.5.1
+-------------
+
+  * #736 Conflicts with later-downloading fields
+
+  * #735 Allow to customize batch size when downloading bugs
+
+  * #729 User filtering/completion works incorrectly when emails 
+         have letters of different case
+
+
+1.5.b1 ==> 1.5
+--------------
+
+  * #652 When Bugzilla has "usemenuforusers" parameter turned ON, 
+         any update to a bug would result in adding the first listed 
+         user to CC list
+  * a number of fixes and minor improvements
+
+1.4 ==> 1.5.b1
+--------------
+
+  * #53  Support private comments
+  * #139 HTML parsing won't allow invalid comments
+  * #286 Support custom fields
+  * #394 A query constraint "issue belongs to collection"
+  * #443 Editable combobox enhancements (was: auto-completion)
+  * #452 Export from tabular distribution
+  * #482 Edit field through drag-and-drop reordering
+  * #533 The fact that the bug is being uploaded is not properly 
+         shown to the user
+  * #582 Ignore unparseable time zone id when parsing timestamps 
+         received from Bugzilla
+  * #598 Support reordering by custom field
+  * #602 OK button disabled even after selecting email address
+  * #613 Date/time/timestamp parser incorrectly treats China Standard 
+         Time (CST) as Central Standard Time (also CST)
+  * #616 Allow to create new collection right in the "add to 
+         collection" dialog
+  * #629 Switch from "collections" to "tags": new tagging action, 
+         viewing tags
+  * #634 Attached file name is displayed/uploaded incorrectly when 
+         it contains national letters
+  * #636 Exception: NPE at z.bge.a (after drag-and-drop)
+  * #641 Exception: AIOOBE in DefaultTableHeaderUI due to Apple's UI 
+         not clearing draggingColumn
+
+
+1.4.b1 ==> 1.4.b2 ==> 1.4
+-------------------------
+
+A number of bug fixed, including:
+  * [#593] Cannot submit a new bug if Bugzilla asks to confirm matching 
+           e-mail address
+
+
+1.3 ==> 1.4.b1
+--------------
+
+  * [#214] Improved table header shows query path
+  * [#221] Add comment actions to comment pop-up menu
+  * [#259] Support for bug security groups
+  * [#418] Auto-assign
+  * 24 more improvements and fixes
+
+
+1.3.b2 ==> 1.3
+--------------
+
+This version adds few final fixes and improvements.
+
+  * [#524] Exception: AIOOBE at z.gts.g when using quick search
+  * [#523] Bundle latest JRE 1.5
+  * [#517] Support for alternative status names
+  * [#522] Make connections hide empty queries by default
+  * [#473] Double-check migration from 1.2.1
+  * [#518] Workaround for Java bug causing incorrect time parsing of 
+           PDT, MDT, CDT and EDT times
+  * [#487] In left fields viewer, show hidden part of the value on 
+           mouse hover
+
+
+1.3.b1 ==> 1.3.b2
+-----------------
+
+This version contains fixes for a few problems found in Beta 1. This is
+an incomplete list:
+
+  * Export is broken
+  * z.ctm: Unknown attribute: [attribute status]
+  * NPE at z.qr.b
+  * Duplicate field values
+  * CCE: Cannot cast java.lang.String to ...
+
+
+1.2.x ==> 1.3.b1
+----------------
+
+This is the first beta with all improvements inherited from JIRA 
+Client project.
+
+In this release:
+
+  * Performance improvements
+  * Tabular distribution
+  * Better component for editing/selecting user
+  * Support for personal licenses
+  * Proper Mac distribution
+  * DnD bug to collection
+  * Automatically name simple queries
+  * Fixed: Cannot copy text from fields on Linux 
+  * Hierarchy view based on dependson/blocks
+  * Edit bug causes conflict after Windows timezone is changed
+  * Group user names (e-mails) by domain name
+  * Bug table columns auto-fit
+  * Cannot move bug to another project on Bugzilla 2.23+
+  * Reorder queries via drag-and-drop
+  * Filter distribution items
+  * Column titles are corrupt on MacOS
+
+
+Earlier Changes
+===============
+
+See http://almworks.com/deskzilla/history.html

@@ -1,0 +1,118 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE bugzilla SYSTEM "http://bugzilla/bz220/bugzilla.dtd">
+<bugzilla version="2.20.4" urlbase="http://bugzilla/bz220/" maintainer="admin@almworks.com" exporter="admin@almworks.com">
+
+    <bug>
+          <bug_id>1</bug_id>
+          <alias>afvafvafv</alias>
+          <creation_ts>2005-07-13 13:33</creation_ts>
+          <short_desc>Quotage: &amp;&amp;amp&amp;;&amp;amp;"&amp;amp;&amp;quot;</short_desc>
+          <delta_ts>2007-05-18 19:16:49</delta_ts>
+          <reporter_accessible>1</reporter_accessible>
+          <cclist_accessible>1</cclist_accessible>
+          <classification_id>1</classification_id>
+          <classification>Unclassified</classification>
+          <product>TestProduct</product>
+          <component>TestComponent</component>
+          <version>other</version>
+          <rep_platform>PC</rep_platform>
+          <op_sys>All</op_sys>
+          <bug_status>ASSIGNED</bug_status>
+          
+          <bug_file_loc>http://</bug_file_loc>
+          <status_whiteboard>vsavfsavfsa</status_whiteboard>
+          
+          <priority>P4</priority>
+          <bug_severity>minor</bug_severity>
+          <target_milestone>---</target_milestone>
+          
+          
+          
+          <reporter>admin1@almworks.com</reporter>
+          <assigned_to>admin2@almworks.com</assigned_to>
+          <cc>admin</cc>
+          
+          <estimated_time>0.00</estimated_time>
+          <remaining_time>0.00</remaining_time>
+          <actual_time>0.00</actual_time>
+          
+
+      
+          <group>G1</group>
+          <group>G3</group>
+
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-07-13 13:33</bug_when>
+            <thetext>description</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-07-13 13:35</bug_when>
+            <thetext>Another comment?</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-07-13 13:38</bug_when>
+            <thetext>My Comment!</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-07-13 13:49</bug_when>
+            <thetext>another comment</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-07-13 13:49</bug_when>
+            <thetext>My Comment!</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-07-13 13:52</bug_when>
+            <thetext>��� ��� ����������� ��-������!</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-07-13 14:21</bug_when>
+            <thetext>а вот еще комментарий!</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-07-13 14:53</bug_when>
+            <thetext>че-та по-русски</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-08-22 19:13</bug_when>
+            <thetext>Created an attachment (id=1)
+зфеср
+
+ =cfcfcf</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-08-26 20:19</bug_when>
+            <thetext>a                                                          b</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-08-26 21:30</bug_when>
+            <thetext>aa	bb</thetext>
+          </long_desc>
+          <long_desc>
+            <who>admin@almworks.com</who>
+            <bug_when>2005-08-27 16:37</bug_when>
+            <thetext>(From update of attachment 1)
+ssss!</thetext>
+          </long_desc>
+      
+          <attachment ispatch="1">
+            <attachid>1</attachid>
+            <date>2005-08-22 19:13</date>
+            <desc>vvv</desc>
+            <ctype>text/plain</ctype>
+              <flag name="aaaaa" status="+" setter="admin@almworks.com"/>
+          </attachment>
+    </bug>
+
+</bugzilla>

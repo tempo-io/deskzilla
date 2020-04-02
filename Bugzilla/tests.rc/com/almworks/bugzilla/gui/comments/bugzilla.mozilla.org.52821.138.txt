@@ -1,0 +1,12 @@
+> doesn't seem likely that a patch removing it completely will get checked
+
+Seems to me the Keyboard Nav owner, aaronl, would allow a patch to remove it,
+based on comment 99 and others.
+
+> With accel-shift-q, People who want it still have a shortcut
+
+Alt f x is much easier to hit, more discoverable, and backwards compatible. I
+don't see anyone WHO has a problem with this for UNIX and Windows. Can't we
+check that in and let Mac continue to rot and have dataloss, if that's the way
+they want it?
+

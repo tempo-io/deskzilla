@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Request Queue</title>
+
+
+<link rel="Top" href="http://bugs.dwscoalition.org/">
+
+
+
+
+
+      <link href="skins/standard/global.css"
+            rel="stylesheet"
+            type="text/css">
+    <!--[if lte IE 7]>
+
+      <link href="skins/standard/IE-fixes.css"
+            rel="stylesheet"
+            type="text/css">
+    <![endif]-->
+
+
+        <link href="skins/standard/global.css"
+              rel="alternate stylesheet"
+              title="Classic"
+              type="text/css">
+      <!--[if lte IE 7]>
+
+        <link href="skins/standard/IE-fixes.css"
+              rel="alternate stylesheet"
+              title="Classic"
+              type="text/css">
+      <![endif]-->
+
+
+
+            <link href="skins/contrib/Dusk/global.css"
+                  rel="stylesheet"
+                  title="Dusk"
+                  type="text/css">
+        <!--[if lte IE 7]>
+
+          <link href="skins/contrib/Dusk/IE-fixes.css"
+                rel="stylesheet"
+                title="Dusk"
+                type="text/css">
+        <![endif]-->
+
+
+      <style type="text/css">
+        table.requests th { text-align: left; }
+        table#filtering th { text-align: right; }
+
+      </style>
+
+
+        <link href="skins/custom/global.css" rel="stylesheet" type="text/css">
+    <!--[if lte IE 7]>
+
+      <link href="skins/custom/IE-fixes.css"
+            rel="stylesheet"
+            type="text/css">
+    <![endif]-->
+
+    <script src="js/yui/yahoo-dom-event.js" type="text/javascript"></script>
+    <script src="js/yui/cookie.js" type="text/javascript"></script>
+    <script src="js/global.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    <!--
+        YAHOO.namespace('bugzilla');
+        if (YAHOO.env.ua.gecko) {
+            YAHOO.util.Event._simpleRemove(window, "unload",
+                                           YAHOO.util.Event._unload);
+        }
+
+        function unhide_language_selector() {
+            YAHOO.util.Dom.removeClass(
+                'lang_links_container', 'bz_default_hidden'
+            );
+        }
+        YAHOO.util.Event.onDOMReady(unhide_language_selector);
+
+
+        var BUGZILLA = {
+            param: {
+                cookiepath: '\/'
+            },
+
+            string: {
+                attach_desc_required:
+                    'You must enter a Description for this attachment.'
+            }
+        };
+    // -->
+    </script>
+
+        <script src="js/productform.js" type="text/javascript"></script>
+
+
+
+
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico" >
+  </head>
+
+
+
+  <body onload="var f = document.request_form; selectProduct(f.product, f.component, null, null, 'Any');"
+        class="bugs-dwscoalition-org">
+
+
+
+<div id="header">
+<div id="banner">
+
+  </div>
+
+<table border="0" cellspacing="0" cellpadding="0" id="titles">
+<tr>
+    <td id="title">
+      <p>Bugzilla &ndash; Request Queue</p>
+    </td>
+
+
+</tr>
+
+</table>
+
+<table id="lang_links_container" cellpadding="0" cellspacing="0"
+       class="bz_default_hidden"><tr><td>
+</td></tr></table>
+<ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input class="txt" type="text" id="quicksearch_top" name="quicksearch">
+    <input class="btn" type="submit" value="Search"
+           id="find_top"></form></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li>
+      <span class="separator">| </span>
+        <a href="request.cgi">Requests</a></li>
+
+
+
+      <li id="new_account_container_top">
+        <span class="separator">| </span>
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+
+      </li>
+
+    <li id="mini_login_container_top">
+  <span class="separator">| </span>
+  <a id="login_link_top" href="?GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_top')">Log In</a>
+  <form action="http://bugs.dwscoalition.org/request.cgi?action=queue&amp;type=all&amp;component=&amp;group=type&amp;product=Project%20Documentation" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_top"
+        onsubmit="return check_mini_login_fields( '_top' );"
+  >
+    <input id="Bugzilla_login_top"
+           class="bz_login"
+           name="Bugzilla_login"
+           onfocus="mini_login_on_focus('_top')"
+    >
+    <input class="bz_password"
+           id="Bugzilla_password_top"
+           name="Bugzilla_password"
+           type="password"
+    >
+
+    <input class="bz_password bz_default_hidden bz_mini_login_help" type="text"
+           id="Bugzilla_password_dummy_top" value="password"
+           onfocus="mini_login_on_focus('_top')"
+    >
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_top">
+    <script type="text/javascript">
+      mini_login_constants = {
+          "login" : "login",
+          "warning" : "You must set the login and password before logging in."
+      };
+
+      if (YAHOO.env.ua.gecko || YAHOO.env.ua.ie || YAHOO.env.ua.opera) {
+          YAHOO.util.Event.onDOMReady(function() {
+              init_mini_login_form('_top');
+          });
+      }
+      else {
+          YAHOO.util.Event.on(window, 'load', function () {
+              window.setTimeout(function() {
+                  init_mini_login_form('_top');
+              }, 200);
+          });
+    }
+    </script>
+    <a href="#" onclick="return hide_mini_login_form('_top')">[x]</a>
+  </form>
+</li>
+<li id="forgot_container_top">
+  <span class="separator">| </span>
+
+  <a id="forgot_link_top" href="?GoAheadAndLogIn=1#forgot"
+     onclick="return show_forgot_form('_top')">Forgot Password</a>
+  <form action="token.cgi" method="post" id="forgot_form_top"
+        class="mini_forgot bz_default_hidden">
+    <label>Login: <input type="text" name="loginname" size="20"></label>
+    <input id="forgot_button_top" value="Reset Password"
+           type="submit">
+    <input type="hidden" name="a" value="reqpw">
+    <a href="#" onclick="return hide_forgot_form('_top')">[x]</a>
+  </form>
+
+</li>
+</ul>
+</div>
+
+<div id="bugzilla-body">
+
+<script type="text/javascript">
+  var useclassification = false; // No classification level in use
+  var first_load = true; // Is this the first time we load the page?
+  var last_sel = []; // Caches last selection
+  var cpts = new Array();
+      cpts['1'] = ['APIs (RPC, XML, Flat)', 'Communities', 'Crossposter', 'Importer', 'Inbox\/Notifications', 'Invite codes', 'Journal contents', 'Misc Backend', 'Misc UI\/Frontend', 'Registration', 'Site Administration', 'Style System', 'Tags', 'Unknown'];
+      cpts['2'] = ['General\/Unknown'];
+      cpts['3'] = ['Configuration', 'Frontend', 'Hardware', 'Site Policy'];
+      cpts['4'] = ['Doc Tools', 'English-Stripping', 'Server documentation', 'User documentation'];
+</script>
+
+
+<p>
+When you are logged in, only requests made by you or addressed to you
+are shown by default.  You can change the criteria using the form below.
+When you are logged out, all pending requests that are not restricted
+to some group are shown by default.
+</p>
+
+<form id="request_form" name="request_form" action="request.cgi" method="get">
+  <input type="hidden" name="action" value="queue">
+
+  <table id="filtering">
+    <tr>
+      <th>Requester:</th>
+      <td><input type="text" name="requester" value="" size="20"
+           title="Requester's email address"></td>
+      <th>Product:</th>
+      <td>
+        <select name="product" onchange="selectProduct(this, this.form.component, null, null, 'Any');">
+          <option value="">Any</option>
+
+              <option value="Dreamwidth Development">Dreamwidth Development
+              </option>
+              <option value="Dreamwidth Studios, LLC.">Dreamwidth Studios, LLC.
+              </option>
+              <option value="Dreamwidth.org Site Operation">Dreamwidth.org Site Operation
+              </option>
+              <option value="Project Documentation" selected>Project Documentation
+              </option>
+        </select>
+      </td>
+      <th>Flag:</th>
+
+      <td><select name="type" >
+      <option value="all" selected>all
+      </option>
+      <option value="blocking-closed-beta">blocking-closed-beta
+      </option>
+      <option value="blocking-launch">blocking-launch
+      </option>
+      <option value="blocking-open-beta">blocking-open-beta
+      </option>
+      <option value="commit">commit
+      </option>
+
+      <option value="needs-design">needs-design
+      </option>
+      <option value="needs-spec">needs-spec
+      </option>
+      <option value="needs-testing">needs-testing
+      </option>
+      <option value="review">review
+      </option>
+      <option value="signoff">signoff
+      </option>
+      <option value="Upstream">Upstream
+      </option>
+
+</select>
+      </td>
+
+
+      <!--
+      <th>Status:</th>
+      <td>
+
+      </td>
+      -->
+
+    </tr>
+    <tr>
+      <th>Requestee:</th>
+      <td><input type="text" name="requestee" value="" size="20"
+           title="Requestee's email address or &quot;-&quot; (hyphen) for requests with no requestee"></td>
+      <th>Component:</th>
+
+      <td>
+        <select name="component">
+          <option value="">Any</option>
+            <option value="APIs (RPC, XML, Flat)" >APIs (RPC, XML, Flat)</option>
+            <option value="Communities" >Communities</option>
+            <option value="Configuration" >Configuration</option>
+            <option value="Crossposter" >Crossposter</option>
+
+            <option value="Doc Tools" >Doc Tools</option>
+            <option value="English-Stripping" >English-Stripping</option>
+            <option value="Frontend" >Frontend</option>
+            <option value="General/Unknown" >General/Unknown</option>
+            <option value="Hardware" >Hardware</option>
+            <option value="Importer" >Importer</option>
+
+            <option value="Inbox/Notifications" >Inbox/Notifications</option>
+            <option value="Invite codes" >Invite codes</option>
+            <option value="Journal contents" >Journal contents</option>
+            <option value="Misc Backend" >Misc Backend</option>
+            <option value="Misc UI/Frontend" >Misc UI/Frontend</option>
+            <option value="Registration" >Registration</option>
+
+            <option value="Server documentation" >Server documentation</option>
+            <option value="Site Administration" >Site Administration</option>
+            <option value="Site Policy" >Site Policy</option>
+            <option value="Style System" >Style System</option>
+            <option value="Tags" >Tags</option>
+            <option value="Unknown" >Unknown</option>
+
+            <option value="User documentation" >User documentation</option>
+        </select>
+      </td>
+      <th>Group By:</th>
+      <td><select name="group" >
+      <option value="type"  selected>Flag
+      </option>
+      <option value="category" >Product/Component
+      </option>
+
+      <option value="requestee" >Requestee
+      </option>
+      <option value="requester" >Requester
+      </option>
+</select>
+      </td>
+      <td><input type="submit" id="filter" value="Filter"></td>
+    </tr>
+  </table>
+
+</form>
+
+
+
+<h3>Flag:
+    blocking-launch</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+        <th>Requestee</th>
+        <th>Bug</th>
+
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>Denise Paolucci [:denise] &lt;denise&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=209">209: Site tour</a></td>
+
+        <td>N/A</td>
+        <td>2009-04-21 00:36 UTC</td>
+    </tr></table>
+  <a href="buglist.cgi?bug_id=209">(view as buglist)</a><h3>Flag:
+    commit</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>Denise Paolucci [:denise] &lt;denise&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=273">273: Implement bot policy and document somewhere on site</a></td>
+        <td><a href="attachment.cgi?id=724&amp;action=edit">724: new file dw-nonfree/htdocs/site/bot.bml</a></td>
+        <td>2009-03-29 18:49 UTC</td>
+    </tr></table>
+  <a href="buglist.cgi?bug_id=273">(view as buglist)</a><h3>Flag:
+    needs-design</h3>
+
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+
+    </tr>
+    <tr>
+        <td>Denise Paolucci [:denise] &lt;denise&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=209">209: Site tour</a></td>
+        <td>N/A</td>
+        <td>2009-02-05 15:17 UTC</td>
+
+    </tr>
+    <tr>
+        <td>Denise Paolucci [:denise] &lt;denise&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1034">1034: register.bml needs complete rewrite/redesign</a></td>
+        <td>N/A</td>
+        <td>2009-07-07 18:17 UTC</td>
+
+    </tr></table>
+  <a href="buglist.cgi?bug_id=209,1034">(view as buglist)</a><h3>Flag:
+    needs-spec</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+        <th>Requestee</th>
+        <th>Bug</th>
+
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>[:foxfirefey] &lt;skittisheclipse&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=111">111: FAQ word based IDs and tags</a></td>
+
+        <td>N/A</td>
+        <td>2009-01-10 03:20 UTC</td>
+    </tr></table>
+  <a href="buglist.cgi?bug_id=111">(view as buglist)</a><h3>Flag:
+    needs-testing</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>pauamma [:pauamma] &lt;fduuvrzv&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=115">115: FAQ variables not expanded consistently in FAQ titles (questions)</a></td>
+        <td>N/A</td>
+        <td>2009-02-15 13:22 UTC</td>
+    </tr></table>
+  <a href="buglist.cgi?bug_id=115">(view as buglist)</a><h3>Flag:
+    signoff</h3>
+
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+
+    </tr>
+    <tr>
+        <td>Rachel Walmsley [:rho] &lt;rho&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1927">1927: Completely rewrite FAQ system</a></td>
+        <td><a href="attachment.cgi?id=3130&amp;action=edit">3130: New FAQ system specs</a></td>
+        <td>2010-02-13 14:45 UTC</td>
+
+    </tr></table>
+  <a href="buglist.cgi?bug_id=1927">(view as buglist)</a><h3>Flag:
+    Upstream</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+        <th>Requestee</th>
+        <th>Bug</th>
+
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>pauamma [:pauamma] &lt;fduuvrzv&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=303">303: faqcat system needs a frontend</a></td>
+
+        <td><a href="attachment.cgi?id=2734&amp;action=edit">2734: Add front end for faqcat, v2</a></td>
+        <td>2009-11-02 15:55 UTC</td>
+    </tr></table>
+  <a href="buglist.cgi?bug_id=303">(view as buglist)</a>
+</div>
+
+
+
+<div id="footer">
+  <div class="intro"></div>
+
+
+
+
+<ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input class="txt" type="text" id="quicksearch_bottom" name="quicksearch">
+    <input class="btn" type="submit" value="Search"
+           id="find_bottom"></form></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li>
+      <span class="separator">| </span>
+        <a href="request.cgi">Requests</a></li>
+
+
+
+      <li id="new_account_container_bottom">
+        <span class="separator">| </span>
+
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+      </li>
+
+    <li id="mini_login_container_bottom">
+  <span class="separator">| </span>
+  <a id="login_link_bottom" href="?GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_bottom')">Log In</a>
+  <form action="http://bugs.dwscoalition.org/request.cgi?action=queue&amp;type=all&amp;component=&amp;group=type&amp;product=Project%20Documentation" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_bottom"
+        onsubmit="return check_mini_login_fields( '_bottom' );"
+  >
+
+    <input id="Bugzilla_login_bottom"
+           class="bz_login"
+           name="Bugzilla_login"
+           onfocus="mini_login_on_focus('_bottom')"
+    >
+    <input class="bz_password"
+           id="Bugzilla_password_bottom"
+           name="Bugzilla_password"
+           type="password"
+    >
+    <input class="bz_password bz_default_hidden bz_mini_login_help" type="text"
+           id="Bugzilla_password_dummy_bottom" value="password"
+           onfocus="mini_login_on_focus('_bottom')"
+    >
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_bottom">
+    <script type="text/javascript">
+      mini_login_constants = {
+          "login" : "login",
+          "warning" : "You must set the login and password before logging in."
+      };
+
+      if (YAHOO.env.ua.gecko || YAHOO.env.ua.ie || YAHOO.env.ua.opera) {
+          YAHOO.util.Event.onDOMReady(function() {
+              init_mini_login_form('_bottom');
+          });
+      }
+      else {
+          YAHOO.util.Event.on(window, 'load', function () {
+              window.setTimeout(function() {
+                  init_mini_login_form('_bottom');
+              }, 200);
+          });
+    }
+    </script>
+    <a href="#" onclick="return hide_mini_login_form('_bottom')">[x]</a>
+  </form>
+</li>
+
+<li id="forgot_container_bottom">
+  <span class="separator">| </span>
+  <a id="forgot_link_bottom" href="?GoAheadAndLogIn=1#forgot"
+     onclick="return show_forgot_form('_bottom')">Forgot Password</a>
+  <form action="token.cgi" method="post" id="forgot_form_bottom"
+        class="mini_forgot bz_default_hidden">
+    <label>Login: <input type="text" name="loginname" size="20"></label>
+    <input id="forgot_button_bottom" value="Reset Password"
+           type="submit">
+    <input type="hidden" name="a" value="reqpw">
+    <a href="#" onclick="return hide_forgot_form('_bottom')">[x]</a>
+
+  </form>
+</li>
+</ul>
+  </li>
+
+
+
+
+
+
+
+
+</ul>
+
+  <div class="outro"></div>
+</div>
+
+</body>
+</html>

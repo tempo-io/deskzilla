@@ -1,0 +1,13 @@
+.back-pane {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.web-pane {
+    -fx-background-color: #4c6889;
+    -fx-border-color: #8994b4;
+}
+
+.web-pane WebView {
+    /*-fx-blend-mode: multiply;*/
+}

@@ -1,0 +1,774 @@
+<HTML>
+  <HEAD>
+    <TITLE>Bugzilla Query Page</TITLE>
+
+    <script language="Javascript1.1" type="text/javascript">
+      <!--
+      var cpts = new Array();
+      var vers = new Array();
+      var tms  = new Array();
+      cpts['apcc'] = new Array();
+      cpts['automated test system'] = new Array();
+      cpts['build system'] = new Array();
+      cpts['CLUtils code'] = new Array();
+      cpts['code generator'] = new Array();
+      cpts['Documentation'] = new Array();
+      cpts['documentation'] = new Array();
+      cpts['General'] = new Array();
+      cpts['JPF-JVM'] = new Array();
+      cpts['parser'] = new Array();
+      cpts['semantic analysis'] = new Array();
+      cpts['test execution system'] = new Array();
+      cpts['TestComponent1'] = new Array();
+      vers['2.0-prerelease'] = new Array();
+      vers['2.1.0 binary'] = new Array();
+      vers['2.1.0 source'] = new Array();
+      vers['2.1.1'] = new Array();
+      vers['2.2'] = new Array();
+      vers['2.3'] = new Array();
+      vers['2.4'] = new Array();
+      vers['unspecified'] = new Array();
+      vers['version 0.0'] = new Array();
+      tms['---'] = new Array();
+    tms['1.0 release'] = new Array();
+    tms['2.0 release'] = new Array();
+    cpts['build system'][cpts['build system'].length] = 'CLUtils';
+    cpts['CLUtils code'][cpts['CLUtils code'].length] = 'CLUtils';
+    cpts['Documentation'][cpts['Documentation'].length] = 'CLUtils';
+    vers['version 0.0'][vers['version 0.0'].length] = 'CLUtils';
+    tms['---'][tms['---'].length] = 'CLUtils';
+    tms['1.0 release'][tms['1.0 release'].length] = 'CLUtils';
+    cpts['apcc'][cpts['apcc'].length] = 'JPF';
+    cpts['Documentation'][cpts['Documentation'].length] = 'JPF';
+    cpts['JPF-JVM'][cpts['JPF-JVM'].length] = 'JPF';
+    vers['2.1.0 binary'][vers['2.1.0 binary'].length] = 'JPF';
+    vers['2.1.0 source'][vers['2.1.0 source'].length] = 'JPF';
+    vers['2.1.1'][vers['2.1.1'].length] = 'JPF';
+    vers['2.2'][vers['2.2'].length] = 'JPF';
+    vers['2.3'][vers['2.3'].length] = 'JPF';
+    vers['2.4'][vers['2.4'].length] = 'JPF';
+    vers['unspecified'][vers['unspecified'].length] = 'JPF';
+    tms['---'][tms['---'].length] = 'JPF';
+    cpts['automated test system'][cpts['automated test system'].length] = 'SAVANT';
+    cpts['build system'][cpts['build system'].length] = 'SAVANT';
+    cpts['code generator'][cpts['code generator'].length] = 'SAVANT';
+    cpts['documentation'][cpts['documentation'].length] = 'SAVANT';
+    cpts['parser'][cpts['parser'].length] = 'SAVANT';
+    cpts['semantic analysis'][cpts['semantic analysis'].length] = 'SAVANT';
+    vers['2.0-prerelease'][vers['2.0-prerelease'].length] = 'SAVANT';
+    tms['---'][tms['---'].length] = 'SAVANT';
+    tms['2.0 release'][tms['2.0 release'].length] = 'SAVANT';
+    cpts['TestComponent1'][cpts['TestComponent1'].length] = 'TestProduct';
+    vers['unspecified'][vers['unspecified'].length] = 'TestProduct';
+    tms['---'][tms['---'].length] = 'TestProduct';
+    cpts['build system'][cpts['build system'].length] = 'TyVis';
+    cpts['documentation'][cpts['documentation'].length] = 'TyVis';
+    cpts['General'][cpts['General'].length] = 'TyVis';
+    vers['2.0-prerelease'][vers['2.0-prerelease'].length] = 'TyVis';
+    tms['---'][tms['---'].length] = 'TyVis';
+    tms['2.0 release'][tms['2.0 release'].length] = 'TyVis';
+    cpts['documentation'][cpts['documentation'].length] = 'VESTs';
+    cpts['test execution system'][cpts['test execution system'].length] = 'VESTs';
+    vers['unspecified'][vers['unspecified'].length] = 'VESTs';
+    tms['---'][tms['---'].length] = 'VESTs';
+    cpts['build system'][cpts['build system'].length] = 'warped';
+    cpts['documentation'][cpts['documentation'].length] = 'warped';
+    cpts['General'][cpts['General'].length] = 'warped';
+    vers['2.0-prerelease'][vers['2.0-prerelease'].length] = 'warped';
+    tms['---'][tms['---'].length] = 'warped';
+    tms['2.0 release'][tms['2.0 release'].length] = 'warped';
+
+    // Only display versions/components valid for selected product(s)
+
+    function selectProduct(f) {
+        // Netscape 4.04 and 4.05 also choke with an "undefined"
+        // error.  if someone can figure out how to "define" the
+        // whatever, we'll remove this hack.  in the mean time, we'll
+        // assume that v4.00-4.03 also die, so we'll disable the neat
+        // javascript stuff for Netscape 4.05 and earlier.
+
+        var cnt = 0;
+        var i;
+        var j;
+
+        if (!f) {
+            return;
+        }
+
+        for (i=0 ; i<f.product.length ; i++) {
+            if (f.product[i].selected) {
+                cnt++;
+            }
+        }
+        var doall = (cnt == f.product.length || cnt == 0);
+
+        var csel = new Object();
+        for (i=0 ; i<f.component.length ; i++) {
+            if (f.component[i].selected) {
+                csel[f.component[i].value] = 1;
+            }
+        }
+
+        f.component.options.length = 0;
+
+        for (c in cpts) {
+            if (typeof(cpts[c]) == 'function') continue;
+            var doit = doall;
+            for (i=0 ; !doit && i<f.product.length ; i++) {
+                if (f.product[i].selected) {
+                    var p = f.product[i].value;
+                    for (j in cpts[c]) {
+                        if (typeof(cpts[c][j]) == 'function') continue;
+                        var p2 = cpts[c][j];
+                        if (p2 == p) {
+                            doit = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (doit) {
+                var l = f.component.length;
+                f.component[l] = new Option(c, c);
+                if (csel[c]) {
+                    f.component[l].selected = true;
+                }
+            }
+        }
+
+        var vsel = new Object();
+        for (i=0 ; i<f.version.length ; i++) {
+            if (f.version[i].selected) {
+                vsel[f.version[i].value] = 1;
+            }
+        }
+
+        f.version.options.length = 0;
+
+        for (v in vers) {
+            if (typeof(vers[v]) == 'function') continue;
+            doit = doall;
+            for (i=0 ; !doit && i<f.product.length ; i++) {
+                if (f.product[i].selected) {
+                    p = f.product[i].value;
+                    for (j in vers[v]) {
+                        if (typeof(vers[v][j]) == 'function') continue;
+                        p2 = vers[v][j];
+                        if (p2 == p) {
+                            doit = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (doit) {
+                l = f.version.length;
+                f.version[l] = new Option(v, v);
+                if (vsel[v]) {
+                    f.version[l].selected = true;
+                }
+            }
+        }
+
+    }
+    // -->
+    </script>
+
+
+  </HEAD>
+  <BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" onLoad="selectProduct(document.forms[0]);">
+    <TABLE BGCOLOR="#000000" WIDTH="100%" BORDER=0 CELLPADDING=0 CELLSPACING=0>
+      <TR>
+        <TD>
+          <A HREF="http://www.mozilla.org/">
+            <IMG
+              SRC="http://www.mozilla.org/images/mozilla-banner.gif" ALT=""
+              BORDER=0 WIDTH=600 HEIGHT=58>
+          </A>
+        </TD>
+      </TR>
+    </TABLE>
+    <CENTER>
+      <FONT SIZE=-1>Bugzilla version 2.14.2
+      </FONT>
+    </CENTER>
+    <TABLE BORDER=0 CELLSPACING=0 WIDTH="100%">
+      <TR>
+        <TD WIDTH=10% VALIGN=TOP ALIGN=LEFT>
+          <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
+            <TR>
+              <TD VALIGN=TOP ALIGN=LEFT NOWRAP>
+                <FONT SIZE=+1>
+                  <B>Query</B>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+        </TD>
+        <TD VALIGN=CENTER>&nbsp;</TD>
+        <TD VALIGN=CENTER ALIGN=LEFT>
+This page lets you search the database for recorded bugs.
+        </TD>
+      </TR>
+    </TABLE>
+    <P>Give me a
+      <A HREF="queryhelp.cgi">clue</A> about how to use this form.
+      <P>
+        <FORM METHOD=GET ACTION="buglist.cgi">
+
+          <table>
+            <tr>
+              <th align=left>
+                <A HREF="queryhelp.cgi#status">Status</a>:
+              </th>
+              <th align=left>
+                <A HREF="queryhelp.cgi#resolution">Resolution</a>:
+              </th>
+              <th align=left>
+                <A HREF="queryhelp.cgi#platform">Platform</a>:
+              </th>
+              <th align=left>
+                <A HREF="queryhelp.cgi#opsys">OpSys</a>:
+              </th>
+              <th align=left>
+                <A HREF="queryhelp.cgi#priority">Priority</a>:
+              </th>
+              <th align=left>
+                <A HREF="queryhelp.cgi#severity">Severity</a>:
+              </th>
+
+            </tr>
+            <tr>
+              <td align=left valign=top>
+
+                <SELECT NAME="bug_status" MULTIPLE SIZE=7>
+                  <OPTION VALUE="UNCONFIRMED">UNCONFIRMED
+                  <OPTION SELECTED VALUE="NEW">NEW
+                  <OPTION SELECTED VALUE="ASSIGNED">ASSIGNED
+                  <OPTION SELECTED VALUE="REOPENED">REOPENED
+                  <OPTION VALUE="RESOLVED">RESOLVED
+                  <OPTION VALUE="VERIFIED">VERIFIED
+                  <OPTION VALUE="CLOSED">CLOSED
+                </SELECT>
+
+              </td>
+              <td align=left valign=top>
+                <SELECT NAME="resolution" MULTIPLE SIZE=7>
+                  <OPTION VALUE="FIXED">FIXED
+                  <OPTION VALUE="INVALID">INVALID
+                  <OPTION VALUE="WONTFIX">WONTFIX
+                  <OPTION VALUE="LATER">LATER
+                  <OPTION VALUE="REMIND">REMIND
+                  <OPTION VALUE="DUPLICATE">DUPLICATE
+                  <OPTION VALUE="WORKSFORME">WORKSFORME
+                  <OPTION VALUE="MOVED">MOVED
+                  <OPTION VALUE="---">---
+                </SELECT>
+
+              </td>
+              <td align=left valign=top>
+                <SELECT NAME="rep_platform" MULTIPLE SIZE=7>
+                  <OPTION VALUE="All">All
+                  <OPTION VALUE="DEC">DEC
+                  <OPTION VALUE="HP">HP
+                  <OPTION VALUE="Macintosh">Macintosh
+                  <OPTION VALUE="PC">PC
+                  <OPTION VALUE="SGI">SGI
+                  <OPTION VALUE="Sun">Sun
+                  <OPTION VALUE="Other">Other
+                </SELECT>
+
+              </td>
+              <td align=left valign=top>
+                <SELECT NAME="op_sys" MULTIPLE SIZE=7>
+                  <OPTION VALUE="All">All
+                  <OPTION VALUE="Windows 3.1">Windows 3.1
+                  <OPTION VALUE="Windows 95">Windows 95
+                  <OPTION VALUE="Windows 98">Windows 98
+                  <OPTION VALUE="Windows ME">Windows ME
+                  <OPTION VALUE="Windows 2000">Windows 2000
+                  <OPTION VALUE="Windows NT">Windows NT
+                  <OPTION VALUE="Mac System 7">Mac System 7
+                  <OPTION VALUE="Mac System 7.5">Mac System 7.5
+                  <OPTION VALUE="Mac System 7.6.1">Mac System 7.6.1
+                  <OPTION VALUE="Mac System 8.0">Mac System 8.0
+                  <OPTION VALUE="Mac System 8.5">Mac System 8.5
+                  <OPTION VALUE="Mac System 8.6">Mac System 8.6
+                  <OPTION VALUE="Mac System 9.0">Mac System 9.0
+                  <OPTION VALUE="Linux">Linux
+                  <OPTION VALUE="BSDI">BSDI
+                  <OPTION VALUE="FreeBSD">FreeBSD
+                  <OPTION VALUE="NetBSD">NetBSD
+                  <OPTION VALUE="OpenBSD">OpenBSD
+                  <OPTION VALUE="AIX">AIX
+                  <OPTION VALUE="BeOS">BeOS
+                  <OPTION VALUE="HP-UX">HP-UX
+                  <OPTION VALUE="IRIX">IRIX
+                  <OPTION VALUE="Neutrino">Neutrino
+                  <OPTION VALUE="OpenVMS">OpenVMS
+                  <OPTION VALUE="OS/2">OS/2
+                  <OPTION VALUE="OSF/1">OSF/1
+                  <OPTION VALUE="Solaris">Solaris
+                  <OPTION VALUE="SunOS">SunOS
+                  <OPTION VALUE="other">other
+                </SELECT>
+
+              </td>
+              <td align=left valign=top>
+                <SELECT NAME="priority" MULTIPLE SIZE=7>
+                  <OPTION VALUE="P1">P1
+                  <OPTION VALUE="P2">P2
+                  <OPTION VALUE="P3">P3
+                  <OPTION VALUE="P4">P4
+                  <OPTION VALUE="P5">P5
+                </SELECT>
+
+              </td>
+              <td align=left valign=top>
+              <SELECT NAME="bug_severity" MULTIPLE SIZE=7>
+                <OPTION VALUE="blocker">blocker
+                <OPTION VALUE="critical">critical
+                <OPTION VALUE="major">major
+                <OPTION VALUE="normal">normal
+                <OPTION VALUE="minor">minor
+                <OPTION VALUE="trivial">trivial
+                <OPTION VALUE="enhancement">enhancement
+              </SELECT>
+
+            </tr>
+          </table>
+
+          <p>
+
+          <table>
+            <tr>
+              <td colspan=2>
+
+                <table border=1 cellspacing=0 cellpadding=0>
+                  <tr>
+                  <td>
+                  <table cellspacing=0 cellpadding=0>
+                    <tr>
+                      <td rowspan=2 valign=top>
+                        <a href="queryhelp.cgi#peopleinvolved">Email:</a>
+                        <input name="email1" size="30" value="">&nbsp;matching as
+                        <SELECT NAME="emailtype1">
+                          <OPTION VALUE="regexp">regexp
+                          <OPTION VALUE="notregexp">not regexp
+                          <OPTION SELECTED VALUE="substring">substring
+                          <OPTION VALUE="exact">exact
+                        </SELECT>
+                      </td>
+                      <td>
+                        <input type="checkbox" name="emailassigned_to1" value=1 checked>Assigned To
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="emailreporter1" value=1>Reporter
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align=right>(Will match any of the selected fields)</td>
+                      <td>
+                        <input type="checkbox" name="emailcc1" value=1>CC
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <input type="checkbox" name="emaillongdesc1" value=1>Added comment
+                      </td>
+                    </tr>
+                  </table>
+                </table>
+                <p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan=2>
+
+                <table border=1 cellspacing=0 cellpadding=0>
+                  <tr>
+                  <td>
+                  <table cellspacing=0 cellpadding=0>
+                    <tr>
+                      <td rowspan=2 valign=top>
+                        <a href="queryhelp.cgi#peopleinvolved">Email:</a>
+                        <input name="email2" size="30" value="">&nbsp;matching as
+                        <SELECT NAME="emailtype2">
+                          <OPTION VALUE="regexp">regexp
+                          <OPTION VALUE="notregexp">not regexp
+                          <OPTION SELECTED VALUE="substring">substring
+                          <OPTION VALUE="exact">exact
+                        </SELECT>
+                      </td>
+                      <td>
+                        <input type="checkbox" name="emailassigned_to2" value=1>Assigned To
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="emailreporter2" value=1 checked>Reporter
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align=right>(Will match any of the selected fields)</td>
+                      <td>
+                        <input type="checkbox" name="emailcc2" value=1>CC
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <input type="checkbox" name="emaillongdesc2" value=1>Added comment
+                      </td>
+                    </tr>
+                  </table>
+                </table>
+                <p>
+              </td>
+            </tr>
+            <TR>
+              <TD COLSPAN="3">
+                <SELECT NAME="bugidtype">
+                  <OPTION VALUE="include" SELECTED>Only
+                  <OPTION VALUE="exclude">Exclude
+                </SELECT>
+bugs numbered:
+                <INPUT TYPE="text" NAME="bug_id" VALUE="" SIZE=30>
+              </TD>
+            </TR>
+
+            <tr>
+              <td>
+Changed in the
+                <NOBR>last
+                  <INPUT NAME=changedin SIZE=2 VALUE=""> days.
+                </NOBR>
+              </td>
+              <td align=right>
+At
+              <NOBR>least
+                <INPUT NAME=votes SIZE=3 VALUE=""> votes.
+              </NOBR>
+            </tr>
+          </table>
+
+
+          <table>
+            <tr>
+              <td rowspan=2 align=right>Where the field(s)
+              </td>
+              <td rowspan=2>
+                <SELECT NAME="chfield" MULTIPLE SIZE=4>
+                  <OPTION VALUE="[Bug creation]">[Bug creation]
+                  <OPTION VALUE="assigned_to">assigned_to
+                  <OPTION VALUE="assignee_accessible">assignee_accessible
+                  <OPTION VALUE="bug_file_loc">bug_file_loc
+                  <OPTION VALUE="bug_severity">bug_severity
+                  <OPTION VALUE="bug_status">bug_status
+                  <OPTION VALUE="cclist_accessible">cclist_accessible
+                  <OPTION VALUE="component">component
+                  <OPTION VALUE="everconfirmed">everconfirmed
+                  <OPTION VALUE="groupset">groupset
+                  <OPTION VALUE="keywords">keywords
+                  <OPTION VALUE="op_sys">op_sys
+                  <OPTION VALUE="priority">priority
+                  <OPTION VALUE="product">product
+                  <OPTION VALUE="qa_contact">qa_contact
+                  <OPTION VALUE="qacontact_accessible">qacontact_accessible
+                  <OPTION VALUE="rep_platform">rep_platform
+                  <OPTION VALUE="reporter">reporter
+                  <OPTION VALUE="reporter_accessible">reporter_accessible
+                  <OPTION VALUE="resolution">resolution
+                  <OPTION VALUE="short_desc">short_desc
+                  <OPTION VALUE="status_whiteboard">status_whiteboard
+                  <OPTION VALUE="target_milestone">target_milestone
+                  <OPTION VALUE="version">version
+                  <OPTION VALUE="votes">votes
+                </SELECT>
+              </td>
+              <td rowspan=2>
+changed.
+              </td>
+              <td>
+                <nobr>dates
+                  <INPUT NAME=chfieldfrom SIZE=10 VALUE="">
+                </nobr>
+                <nobr>to
+                  <INPUT NAME=chfieldto SIZE=10 VALUE="Now">
+                </nobr>
+              </td>
+            </tr>
+            <tr>
+            <td>changed to value
+              <nobr>
+                <INPUT NAME=chfieldvalue SIZE=10> (optional)
+              </nobr>
+            </td>
+          </table>
+
+
+          <P>
+
+          <table>
+            <tr>
+              <TH ALIGN=LEFT VALIGN=BOTTOM>Program:</th>
+              <TH ALIGN=LEFT VALIGN=BOTTOM>Version:</th>
+              <TH ALIGN=LEFT VALIGN=BOTTOM>
+                <A HREF=describecomponents.cgi>Component:</a>
+              </th>
+
+            </tr>
+            <tr>
+
+              <td align=left valign=top>
+                <SELECT NAME="product" MULTIPLE SIZE=5 onChange="selectProduct(this.form);">
+                  <OPTION VALUE="CLUtils">CLUtils
+                  <OPTION VALUE="JPF">JPF
+                  <OPTION VALUE="SAVANT">SAVANT
+                  <OPTION VALUE="TestProduct">TestProduct
+                  <OPTION VALUE="TyVis">TyVis
+                  <OPTION VALUE="VESTs">VESTs
+                  <OPTION VALUE="warped">warped
+                </SELECT>
+              </td>
+
+              <td align=left valign=top>
+                <SELECT NAME="version" MULTIPLE SIZE=5>
+                  <OPTION VALUE="2.0-prerelease">2.0-prerelease
+                  <OPTION VALUE="2.1.0 binary">2.1.0 binary
+                  <OPTION VALUE="2.1.0 source">2.1.0 source
+                  <OPTION VALUE="2.1.1">2.1.1
+                  <OPTION VALUE="2.2">2.2
+                  <OPTION VALUE="2.3">2.3
+                  <OPTION VALUE="2.4">2.4
+                  <OPTION VALUE="unspecified">unspecified
+                  <OPTION VALUE="version 0.0">version 0.0
+                </SELECT>
+              </td>
+
+              <td align=left valign=top>
+                <SELECT NAME="component" MULTIPLE SIZE=5>
+                  <OPTION VALUE="apcc">apcc
+                  <OPTION VALUE="automated test system">automated test system
+                  <OPTION VALUE="build system">build system
+                  <OPTION VALUE="CLUtils code">CLUtils code
+                  <OPTION VALUE="code generator">code generator
+                  <OPTION VALUE="Documentation">Documentation
+                  <OPTION VALUE="documentation">documentation
+                  <OPTION VALUE="General">General
+                  <OPTION VALUE="JPF-JVM">JPF-JVM
+                  <OPTION VALUE="parser">parser
+                  <OPTION VALUE="semantic analysis">semantic analysis
+                  <OPTION VALUE="test execution system">test execution system
+                  <OPTION VALUE="TestComponent1">TestComponent1
+                </SELECT>
+              </td>
+            </tr>
+          </table>
+
+          <table border=0>
+            <tr>
+              <td align=right>Summary:</td>
+              <td>
+                <input name=short_desc size=30 value="">
+              </td>
+              <td>
+                <SELECT NAME=short_desc_type>
+                  <OPTION VALUE="substring">case-insensitive substring
+                  <OPTION VALUE="casesubstring">case-sensitive substring
+                  <OPTION VALUE="allwordssubstr" SELECTED>all words as substrings
+                  <OPTION VALUE="anywordssubstr">any words as substrings
+                  <OPTION VALUE="allwords">all words
+                  <OPTION VALUE="anywords">any words
+                  <OPTION VALUE="regexp">regular expression
+                  <OPTION VALUE="notregexp">not ( regular expression )
+                </SELECT>
+              </TD>
+            </tr>
+            <tr>
+              <td align=right>A description entry:</td>
+              <td>
+                <input name=long_desc size=30 value="">
+              </td>
+              <td>
+                <SELECT NAME=long_desc_type>
+                  <OPTION VALUE="substring">case-insensitive substring
+                  <OPTION VALUE="casesubstring">case-sensitive substring
+                  <OPTION VALUE="allwordssubstr" SELECTED>all words as substrings
+                  <OPTION VALUE="anywordssubstr">any words as substrings
+                  <OPTION VALUE="allwords">all words
+                  <OPTION VALUE="anywords">any words
+                  <OPTION VALUE="regexp">regular expression
+                  <OPTION VALUE="notregexp">not ( regular expression )
+                </SELECT>
+              </TD>
+            </tr>
+            <tr>
+              <td align=right>URL:</td>
+              <td>
+                <input name=bug_file_loc size=30 value="">
+              </td>
+              <td>
+                <SELECT NAME=bug_file_loc_type>
+                  <OPTION VALUE="substring">case-insensitive substring
+                  <OPTION VALUE="casesubstring">case-sensitive substring
+                  <OPTION VALUE="allwordssubstr" SELECTED>all words as substrings
+                  <OPTION VALUE="anywordssubstr">any words as substrings
+                  <OPTION VALUE="allwords">all words
+                  <OPTION VALUE="anywords">any words
+                  <OPTION VALUE="regexp">regular expression
+                  <OPTION VALUE="notregexp">not ( regular expression )
+                </SELECT>
+              </TD>
+            </tr>
+
+          </table>
+          <p>
+          <A NAME="chart"> </A>
+
+          <HR>
+          <TABLE>
+            <TR>
+              <TD>
+                <SELECT NAME="field0-0-0">
+                  <OPTION VALUE="noop">---
+                  <OPTION VALUE="groupset">groupset
+                  <OPTION VALUE="cclist_accessible">cclist_accessible
+                  <OPTION VALUE="everconfirmed">everconfirmed
+                  <OPTION VALUE="qacontact_accessible">qacontact_accessible
+                  <OPTION VALUE="reporter_accessible">reporter_accessible
+                  <OPTION VALUE="bug_id">Bug #
+                  <OPTION VALUE="short_desc">Summary
+                  <OPTION VALUE="product">Product
+                  <OPTION VALUE="version">Version
+                  <OPTION VALUE="rep_platform">Platform
+                  <OPTION VALUE="bug_file_loc">URL
+                  <OPTION VALUE="op_sys">OS/Version
+                  <OPTION VALUE="bug_status">Status
+                  <OPTION VALUE="status_whiteboard">Status Whiteboard
+                  <OPTION VALUE="keywords">Keywords
+                  <OPTION VALUE="resolution">Resolution
+                  <OPTION VALUE="bug_severity">Severity
+                  <OPTION VALUE="priority">Priority
+                  <OPTION VALUE="component">Component
+                  <OPTION VALUE="assigned_to">AssignedTo
+                  <OPTION VALUE="reporter">ReportedBy
+                  <OPTION VALUE="votes">Votes
+                  <OPTION VALUE="qa_contact">QAContact
+                  <OPTION VALUE="cc">CC
+                  <OPTION VALUE="dependson">BugsThisDependsOn
+                  <OPTION VALUE="blocked">OtherBugsDependingOnThis
+                  <OPTION VALUE="attachments.description">Attachment description
+                  <OPTION VALUE="attachments.thedata">Attachment data
+                  <OPTION VALUE="attachments.mimetype">Attachment mime type
+                  <OPTION VALUE="attachments.ispatch">Attachment is patch
+                  <OPTION VALUE="target_milestone">Target Milestone
+                  <OPTION VALUE="delta_ts">Last changed date
+                  <OPTION VALUE="(to_days(now()) - to_days(bugs.delta_ts))">Days since bug changed
+                  <OPTION VALUE="longdesc">Comment
+                </SELECT>
+                <SELECT NAME="type0-0-0">
+                  <OPTION VALUE="noop">---
+                  <OPTION VALUE="equals">equal to
+                  <OPTION VALUE="notequals">not equal to
+                  <OPTION VALUE="casesubstring">contains (case-sensitive) substring
+                  <OPTION VALUE="substring">contains (case-insensitive) substring
+                  <OPTION VALUE="notsubstring">does not contain (case-insensitive) substring
+                  <OPTION VALUE="allwordssubstr">all words as (case-insensitive) substrings
+                  <OPTION VALUE="anywordssubstr">any words as (case-insensitive) substrings
+                  <OPTION VALUE="regexp">contains regexp
+                  <OPTION VALUE="notregexp">does not contain regexp
+                  <OPTION VALUE="lessthan">less than
+                  <OPTION VALUE="greaterthan">greater than
+                  <OPTION VALUE="anywords">any words
+                  <OPTION VALUE="allwords">all words
+                  <OPTION VALUE="nowords">none of the words
+                  <OPTION VALUE="changedbefore">changed before
+                  <OPTION VALUE="changedafter">changed after
+                  <OPTION VALUE="changedto">changed to
+                  <OPTION VALUE="changedby">changed by
+                </SELECT>
+                <INPUT NAME="value0-0-0" VALUE="">
+              </TD>
+              <TD>
+                <INPUT TYPE="submit" VALUE="Or" NAME="cmd-add0-0-1" ONCLICK="document.forms[0].action='query.cgi#chart' ; document.forms[0].method='POST' ; return 1;">
+              </TD>
+            </TR>
+            <TR>
+              <TD>
+                <INPUT TYPE="submit" VALUE="And" NAME="cmd-add0-1-0" ONCLICK="document.forms[0].action='query.cgi#chart' ; document.forms[0].method='POST' ; return 1;">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <INPUT TYPE="submit" VALUE="Add another boolean chart" NAME="cmd-add1-0-0" ONCLICK="document.forms[0].action='query.cgi#chart' ; document.forms[0].method='POST' ; return 1;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <NOBR>
+                  <A HREF="queryhelp.cgi#advancedquerying">What is this stuff?</A>
+                </NOBR>
+
+              </TD>
+            </TR>
+          </TABLE>
+          <HR>
+          <INPUT TYPE="hidden" NAME="cmdtype" VALUE="doit">
+          <NOBR>
+            <B>Sort By:</B>
+            <SELECT NAME="order">
+              <OPTION VALUE="Bug Number">Bug Number
+              <OPTION SELECTED VALUE="'Importance'">'Importance'
+              <OPTION VALUE="Assignee">Assignee
+            </SELECT>
+          </NOBR>
+          <INPUT TYPE="submit" VALUE="Submit query">
+          <INPUT TYPE="reset" VALUE="Reset back to the default query">
+
+        </FORM>
+        <TABLE BORDER="0">
+          <TR>
+            <TD BGCOLOR="#000000" VALIGN="TOP">
+              <TABLE BORDER="0" CELLPADDING="10" CELLSPACING="0" WIDTH="100%"
+                BGCOLOR="lightyellow">
+                <TR>
+                <TD>
+This is
+                <B>Bugzilla</B>: the Mozilla bug system.  For more
+information about what Bugzilla is and what it can do, see
+                <A HREF="http://www.mozilla.org/">mozilla.org</A>'s
+                <A HREF="http://www.mozilla.org/bugs/">
+                  <B>bug pages</B>
+                </A>.
+                <BR>
+                <FORM METHOD=GET ACTION="show_bug.cgi">
+                  <TABLE width="100%">
+                  <TR>
+                    <TD>
+Actions:
+                    </TD>
+                    <TD VALIGN="middle" NOWRAP>
+                      <a href='enter_bug.cgi'>New</a> |
+                      <a href='query.cgi'>Query</a> |
+                      <INPUT TYPE=SUBMIT VALUE="Find"> bug #
+                      <INPUT NAME=id SIZE=6> |
+                      <a href='reports.cgi'>Reports</a>
+                    </TD>
+                    <TD>&nbsp;</TD>
+                    <TD valign=middle align=right>
+                      <a href="createaccount.cgi">
+                        <NOBR>New account</NOBR>
+                      </a>
+ |
+                      <NOBR>
+                        <a href=query.cgi?GoAheadAndLogIn=1>Log in</a>
+                      </NOBR>
+                    </TD>
+                  </TR>
+                </FORM>
+              </TABLE>
+            </TD>
+          </TR>
+        </TABLE>
+      </TD>
+    </TR>
+  </TABLE>

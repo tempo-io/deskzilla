@@ -1,0 +1,8 @@
+Martin, removing the shortcut *is* an option.
+
+Jeremy M. Dolan seemed to have phrased it just right in Comment #138:
+
+> Alt f x is much easier to hit, more discoverable, and backwards compatible.
+> I don't see anyone WHO has a problem with this for UNIX and Windows.
+> Can't we check that in and let Mac continue to rot and have dataloss,
+> if that's the way they want it?

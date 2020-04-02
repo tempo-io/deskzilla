@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Request Queue</title>
+
+
+<link rel="Top" href="http://bugzilla/bz340/">
+
+
+
+
+
+
+
+
+
+
+    <link rel="Saved&nbsp;Searches" title="My Bugs"
+          href="buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailassigned_to1=1&amp;emailreporter1=1&amp;emailtype1=exact&amp;email1=setter&amp;field0-0-0=bug_status&amp;type0-0-0=notequals&amp;value0-0-0=UNCONFIRMED&amp;field0-0-1=reporter&amp;type0-0-1=equals&amp;value0-0-1=setter">
+
+
+
+   <link rel="Administration" title="Parameters"
+                  href="editparams.cgi"><link rel="Administration" title="Users"
+                  href="editusers.cgi"><link rel="Administration" title="Products" href="editproducts.cgi"><link rel="Administration" title="Flag Types"
+                  href="editflagtypes.cgi"><link rel="Administration" title="Groups"
+                  href="editgroups.cgi"><link rel="Administration" title="Keywords"
+                  href="editkeywords.cgi"><link rel="Administration" title="Whining"
+                  href="editwhines.cgi"><link rel="Administration" title="Sanity Check"
+                  href="sanitycheck.cgi">
+
+
+
+
+
+      <link href="skins/standard/global.css"
+            rel="stylesheet"
+            type="text/css">
+    <!--[if lte IE 7]>
+
+      <link href="skins/standard/IE-fixes.css"
+            rel="stylesheet"
+            type="text/css">
+    <![endif]-->
+
+
+        <link href="skins/standard/global.css"
+              rel="alternate stylesheet"
+              title="Classic"
+              type="text/css">
+      <!--[if lte IE 7]>
+
+        <link href="skins/standard/IE-fixes.css"
+              rel="alternate stylesheet"
+              title="Classic"
+              type="text/css">
+      <![endif]-->
+
+
+
+            <link href="skins/contrib/Dusk/global.css"
+                  rel="stylesheet"
+                  title="Dusk"
+                  type="text/css">
+        <!--[if lte IE 7]>
+
+          <link href="skins/contrib/Dusk/IE-fixes.css"
+                rel="stylesheet"
+                title="Dusk"
+                type="text/css">
+        <![endif]-->
+
+
+      <style type="text/css">
+        table.requests th { text-align: left; }
+        table#filtering th { text-align: right; }
+
+      </style>
+
+
+        <link href="skins/custom/global.css" rel="stylesheet" type="text/css">
+    <!--[if lte IE 7]>
+
+      <link href="skins/custom/IE-fixes.css"
+            rel="stylesheet"
+            type="text/css">
+    <![endif]-->
+
+    <script src="js/yui/yahoo-dom-event.js" type="text/javascript"></script>
+    <script src="js/global.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    <!--
+        YAHOO.namespace('bugzilla');
+        if (YAHOO.env.ua.gecko) {
+            YAHOO.util.Event._simpleRemove(window, "unload",
+                                           YAHOO.util.Event._unload);
+        }
+
+        var BUGZILLA = {
+            param: {
+                cookiepath: '\/bz340\/'
+            }
+        };
+  var useclassification = false; // No classification level in use
+  var first_load = true; // Is this the first time we load the page?
+  var last_sel = []; // Caches last selection
+  var cpts = new Array();
+    cpts['1'] = ['M1' ];
+    cpts['2'] = ['FF', 'GG', 'HH', 'PD - Component A', 'PD - Component B' ];
+    cpts['3'] = ['One Component' ];
+    cpts['4'] = ['TestComponent', 'TP - Component X', 'TP - Component Y' ];
+    // -->
+    </script>
+
+        <script src="js/productform.js" type="text/javascript"></script>
+
+
+
+
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico" >
+  </head>
+
+
+
+  <body onload="var f = document.request_form; selectProduct(f.product, f.component, null, null, 'Any');"
+        class="bugzilla-bz340">
+
+
+<div id="header">
+<div id="banner">
+  </div>
+
+<table border="0" cellspacing="0" cellpadding="0" id="titles">
+<tr>
+    <td id="title">
+      <p>Bugzilla &ndash; Request Queue</p>
+    </td>
+
+
+</tr>
+</table>
+<ul class="links">
+  <li><a href="../../../../../../src/com/almworks/bugzilla/integration/oper">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input class="txt" type="text" id="quicksearch_top" name="quicksearch">
+    <input class="btn" type="submit" value="Find" id="find_top"></form></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li>
+      <span class="separator">| </span>
+        <a href="request.cgi?requester=setter&amp;requestee=setter&amp;do_union=1&amp;group=type&amp;action=queue">My Requests</a></li>
+
+    <li><span class="separator">| </span><a href="votes.cgi?action=show_user">My&nbsp;Votes</a></li>
+
+    <li><span class="separator">| </span><a href="userprefs.cgi">Preferences</a></li>
+
+      <li><span class="separator">| </span><a href="admin.cgi">Administration</a></li>
+
+
+    <li>
+      <span class="separator">| </span>
+        <a href="index.cgi?logout=1">Log&nbsp;out</a>
+        setter</li>
+
+</ul>
+
+</div>
+
+<div id="bugzilla-body">
+
+<p>
+When you are logged in, only requests made by you or addressed to you
+are shown by default.  You can change the criteria using the form below.
+When you are logged out, all pending requests that are not restricted
+to some group are shown by default.
+</p>
+
+<form id="request_form" name="request_form" action="request.cgi" method="get">
+  <input type="hidden" name="action" value="queue">
+
+  <table id="filtering">
+    <tr>
+
+      <th>Requester:</th>
+      <td><input type="text" name="requester" value="" size="20"
+           title="Requester's email address"></td>
+      <th>Product:</th>
+      <td>
+        <select name="product" onchange="selectProduct(this, this.form.component, null, null, 'Any');">
+          <option value="">Any</option>
+            <option value="ManyBoogz">ManyBoogz</option>
+
+            <option value="Pro Duct">Pro Duct</option>
+            <option value="Product With Space Char">Product With Space Char</option>
+            <option value="TestProduct">TestProduct</option>
+        </select>
+      </td>
+      <th>Flag:</th>
+      <td><select name="type" >
+
+      <option value="all" selected>all
+      </option>
+      <option value="A">A
+      </option>
+      <option value="f1e">f1e
+      </option>
+      <option value="I">I
+      </option>
+      <option value="M">M
+      </option>
+      <option value="MI">MI
+      </option>
+
+      <option value="MR">MR
+      </option>
+      <option value="MRI">MRI
+      </option>
+      <option value="MRS">MRS
+      </option>
+      <option value="MRSI">MRSI
+      </option>
+      <option value="New_FLag">New_FLag
+      </option>
+      <option value="R">R
+      </option>
+
+      <option value="RI">RI
+      </option>
+      <option value="RS">RS
+      </option>
+      <option value="RSI">RSI
+      </option>
+</select>
+      </td>
+
+
+      <!--
+      <th>Status:</th>
+      <td>
+
+      </td>
+      -->
+
+    </tr>
+
+    <tr>
+      <th>Requestee:</th>
+      <td><input type="text" name="requestee" value="" size="20"
+           title="Requestee's email address or &quot;-&quot; (hyphen) for requests with no requestee"></td>
+      <th>Component:</th>
+      <td>
+        <select name="component">
+          <option value="">Any</option>
+
+            <option value="FF" >FF</option>
+            <option value="GG" >GG</option>
+            <option value="HH" >HH</option>
+            <option value="M1" >M1</option>
+            <option value="One Component" >One Component</option>
+            <option value="PD - Component A" >PD - Component A</option>
+
+            <option value="PD - Component B" >PD - Component B</option>
+            <option value="TP - Component X" >TP - Component X</option>
+            <option value="TP - Component Y" >TP - Component Y</option>
+            <option value="TestComponent" >TestComponent</option>
+        </select>
+      </td>
+      <th>Group By:</th>
+
+      <td><select name="group" >
+      <option value="type"  selected>Flag
+      </option>
+      <option value="category" >Product/Component
+      </option>
+      <option value="requestee" >Requestee
+      </option>
+      <option value="requester" >Requester
+      </option>
+</select>
+      </td>
+
+      <td><input type="submit" id="filter" value="Filter"></td>
+    </tr>
+  </table>
+
+</form>
+
+
+
+<h3>Flag:
+    f1e</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+
+        <th>Requester</th>
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td>Pavel Zvyagin &lt;pzvyagin&#64;almworks.com&gt;</td>
+        <td><a href="show_bug.cgi?id=1">1: A bug to test time tracking things</a></td>
+        <td>N/A</td>
+
+        <td>2010-01-31 15:12 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td>Crash Test Dummy &lt;dummy&#64;user.com&gt;</td>
+
+        <td><a href="show_bug.cgi?id=4">4: Test bug444</a></td>
+        <td>N/A</td>
+        <td>2010-02-01 19:14 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=5">5: summarya</a></td>
+        <td>N/A</td>
+        <td>2010-02-04 19:34 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td>NewUser &lt;NewUser&gt;</td>
+        <td><a href="show_bug.cgi?id=1063">1063: Summary</a></td>
+        <td>N/A</td>
+        <td>2010-02-16 11:34 MSK</td>
+    </tr>
+    <tr>
+
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td>John Abraham Doe &lt;johndoe&gt;</td>
+        <td><a href="show_bug.cgi?id=6">6: Test Bug 2</a></td>
+        <td>N/A</td>
+        <td>2010-02-18 19:27 MSK</td>
+
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td>Requestee A (pwd 123) &lt;A&gt;</td>
+        <td><a href="show_bug.cgi?id=1">1: A bug to test time tracking things</a></td>
+        <td>N/A</td>
+
+        <td>2010-02-24 17:35 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td>NewUser &lt;NewUser&gt;</td>
+        <td><a href="show_bug.cgi?id=4">4: Test bug444</a></td>
+
+        <td>N/A</td>
+        <td>2010-02-25 15:54 MSK</td>
+    </tr>
+        </table><h3>Flag:
+    MR</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1109">1109: MR</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:40 MSK</td>
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1113">1113: MR</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:48 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1114">1114: MR</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:48 MSK</td>
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1114">1114: MR</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:48 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1119">1119: 3</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:57 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1124">1124: 8</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:03 MSK</td>
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1123">1123: 7</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:09 MSK</td>
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1124">1124: 8</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:09 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1">1: A bug to test time tracking things</a></td>
+        <td>N/A</td>
+        <td>2010-02-24 15:39 MSK</td>
+    </tr>
+        </table><h3>Flag:
+    MRI</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+
+    <tr>
+        <th>Requester</th>
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1119">1119: 3</a></td>
+        <td>N/A</td>
+
+        <td>2010-02-15 13:57 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1124">1124: 8</a></td>
+
+        <td>N/A</td>
+        <td>2010-02-15 14:03 MSK</td>
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1123">1123: 7</a></td>
+
+        <td>N/A</td>
+        <td>2010-02-15 14:09 MSK</td>
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1124">1124: 8</a></td>
+
+        <td>N/A</td>
+        <td>2010-02-15 14:09 MSK</td>
+    </tr>
+        </table><h3>Flag:
+    MRS</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1119">1119: 3</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:57 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1124">1124: 8</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:03 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td>Requestee A (pwd 123) &lt;A&gt;</td>
+        <td><a href="show_bug.cgi?id=1126">1126: 10</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:04 MSK</td>
+    </tr>
+    <tr>
+
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td>Requestee A (pwd 123) &lt;A&gt;</td>
+        <td><a href="show_bug.cgi?id=1127">1127: 11</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:04 MSK</td>
+
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1123">1123: 7</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:09 MSK</td>
+
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1124">1124: 8</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:09 MSK</td>
+
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td>Requestee B (pwd 123) &lt;B&gt;</td>
+        <td><a href="show_bug.cgi?id=1127">1127: 11</a></td>
+        <td>N/A</td>
+
+        <td>2010-02-15 14:13 MSK</td>
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td>Requestee A (pwd 123) &lt;A&gt;</td>
+        <td><a href="show_bug.cgi?id=1128">1128: 12</a></td>
+
+        <td>N/A</td>
+        <td>2010-02-15 14:13 MSK</td>
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1126">1126: 10</a></td>
+
+        <td>N/A</td>
+        <td>2010-02-18 20:56 MSK</td>
+    </tr>
+        </table><h3>Flag:
+    MRSI</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1119">1119: 3</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:57 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1124">1124: 8</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:03 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td>Requestee A (pwd 123) &lt;A&gt;</td>
+        <td><a href="show_bug.cgi?id=1126">1126: 10</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:04 MSK</td>
+    </tr>
+    <tr>
+
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td>Requestee A (pwd 123) &lt;A&gt;</td>
+        <td><a href="show_bug.cgi?id=1127">1127: 11</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:04 MSK</td>
+
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1123">1123: 7</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:09 MSK</td>
+
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1124">1124: 8</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:09 MSK</td>
+
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1126">1126: 10</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 14:10 MSK</td>
+
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td>Requestee B (pwd 123) &lt;B&gt;</td>
+        <td><a href="show_bug.cgi?id=1127">1127: 11</a></td>
+        <td>N/A</td>
+
+        <td>2010-02-15 14:13 MSK</td>
+    </tr>
+    <tr>
+        <td>setter &lt;setter&gt;</td>
+        <td>Requestee A (pwd 123) &lt;A&gt;</td>
+        <td><a href="show_bug.cgi?id=1128">1128: 12</a></td>
+
+        <td>N/A</td>
+        <td>2010-02-15 14:13 MSK</td>
+    </tr>
+        </table><h3>Flag:
+    R</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1099">1099: R</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:26 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1119">1119: 3</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:57 MSK</td>
+    </tr>
+        </table><h3>Flag:
+    RI</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+
+    <tr>
+        <th>Requester</th>
+        <th>Requestee</th>
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td></td>
+        <td><a href="show_bug.cgi?id=1119">1119: 3</a></td>
+        <td>N/A</td>
+
+        <td>2010-02-15 13:57 MSK</td>
+    </tr>
+        </table><h3>Flag:
+    RS</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+        <th>Requestee</th>
+
+        <th>Bug</th>
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td></td>
+        <td><a href="show_bug.cgi?id=1102">1102: RS</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:28 MSK</td>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+
+        <td>Requestee A (pwd 123) &lt;A&gt;</td>
+        <td><a href="show_bug.cgi?id=1103">1103: RS</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:34 MSK</td>
+    </tr>
+    <tr>
+
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td>Requestee A (pwd 123) &lt;A&gt;</td>
+        <td><a href="show_bug.cgi?id=1119">1119: 3</a></td>
+        <td>N/A</td>
+        <td>2010-02-15 13:57 MSK</td>
+
+    </tr>
+        </table><h3>Flag:
+    RSI</h3>
+  <table class="requests" cellspacing="0" cellpadding="4" border="1">
+    <tr>
+        <th>Requester</th>
+        <th>Requestee</th>
+        <th>Bug</th>
+
+        <th>Attachment</th>
+        <th>Created</th>
+    </tr>
+    <tr>
+        <td>Bugzilla Administrator &lt;admin&#64;almworks.com&gt;</td>
+        <td>Pavel Zvyagin &lt;pzvyagin&#64;almworks.com&gt;</td>
+
+        <td><a href="show_bug.cgi?id=1119">1119: 3</a></td>
+        <td>N/A</td>
+        <td>2010-02-25 17:20 MSK</td>
+    </tr>
+  </table>
+</div>
+
+
+
+<div id="footer">
+  <div class="intro"></div>
+
+
+
+
+<ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="../../../../../../src/com/almworks/bugzilla/integration/oper">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input class="txt" type="text" id="quicksearch_bottom" name="quicksearch">
+    <input class="btn" type="submit" value="Find" id="find_bottom"></form></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li>
+      <span class="separator">| </span>
+        <a href="request.cgi?requester=setter&amp;requestee=setter&amp;do_union=1&amp;group=type&amp;action=queue">My Requests</a></li>
+
+    <li><span class="separator">| </span><a href="votes.cgi?action=show_user">My&nbsp;Votes</a></li>
+
+    <li><span class="separator">| </span><a href="userprefs.cgi">Preferences</a></li>
+      <li><span class="separator">| </span><a href="admin.cgi">Administration</a></li>
+
+
+    <li>
+      <span class="separator">| </span>
+        <a href="index.cgi?logout=1">Log&nbsp;out</a>
+
+        setter</li>
+</ul>
+  </li>
+
+
+
+    <li id="links-saved">
+      <ul class="links">
+          <li><a href="buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailassigned_to1=1&amp;emailreporter1=1&amp;emailtype1=exact&amp;email1=setter&amp;field0-0-0=bug_status&amp;type0-0-0=notequals&amp;value0-0-0=UNCONFIRMED&amp;field0-0-1=reporter&amp;type0-0-1=equals&amp;value0-0-1=setter">My Bugs</a></li>
+
+      </ul>
+
+    </li>
+
+
+<li id="links-special">
+    <script type="text/javascript">
+      <!--
+      function update_text() {
+        // 'lob' means list_of_bugs.
+        var lob_action = document.getElementById('lob_action');
+        var action = lob_action.options[lob_action.selectedIndex].value;
+        var text = document.getElementById('lob_direction');
+        var new_query_text = document.getElementById('lob_new_query_text');
+
+        if (action == "add") {
+          text.innerHTML = "to";
+          new_query_text.style.display = 'inline';
+        }
+        else {
+          text.innerHTML = "from";
+          new_query_text.style.display = 'none';
+        }
+      }
+
+      function manage_old_lists() {
+        var old_lists = document.getElementById('lob_oldqueryname');
+        // If there is no saved searches available, returns.
+        if (!old_lists) return;
+
+        var new_query = document.getElementById('lob_newqueryname').value;
+
+        if (new_query != "") {
+          old_lists.disabled = true;
+        }
+        else {
+          old_lists.disabled = false;
+        }
+      }
+      //-->
+    </script>
+
+
+    <div class="label"></div>
+    <ul class="links"><li class="form">
+      <form id="list_of_bugs" action="buglist.cgi" method="get">
+        <input type="hidden" name="cmdtype" value="doit">
+
+        <input type="hidden" name="remtype" value="asnamed">
+        <input type="hidden" name="list_of_bugs" value="1">
+        <select id="lob_action" name="action" onchange="update_text();">
+          <option value="add">Add</option>
+        </select>
+
+          <a href="docs/html/query.html#individual-buglists">the named tag</a>
+
+        <span id="lob_new_query_text">
+
+          <input class="txt" type="text" id="lob_newqueryname"
+                 size="20" maxlength="64" name="newqueryname"
+                 onkeyup="manage_old_lists();">
+        </span>
+        <span id="lob_direction">to</span>
+        bugs
+        <input type="text" name="bug_ids" size="12" maxlength="80">
+        <input type="submit" value="Commit" id="commit_list_of_bugs">
+      </form>
+    </li></ul>
+  </li>
+
+
+</ul>
+
+  <div class="outro"></div>
+</div>
+
+</body>
+</html>

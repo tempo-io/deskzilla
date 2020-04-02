@@ -1,0 +1,122 @@
+<!DOCTYPE ui [
+<!ELEMENT viewer (id,presentation,componentFactory,purpose)>
+<!ELEMENT sameNames (#PCDATA)>
+<!ELEMENT actionBinding (componentName, key, browseWeb)>
+<!ELEMENT modelBinding (componentName, key)>
+<!ELEMENT browseWeb (#PCDATA)>
+<!ELEMENT presentation (Name)>
+<!ELEMENT sizePolicy (srinkable)>
+<!ELEMENT prototype (property)>
+<!ELEMENT property (key,value)>
+<!ELEMENT srinkable (#PCDATA)>
+<!ELEMENT componentFactory (className,instanceFieldName)>
+<!ELEMENT mainColumns (column)+>
+<!ELEMENT column (key,sizePolicy?)>
+<!ELEMENT ui (viewers,mainProperty,mainColumns,prototype)>
+<!ELEMENT viewers (viewer)+>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT key (#PCDATA)>
+<!ELEMENT componentName (#PCDATA)>
+<!ELEMENT className (#PCDATA)>
+<!ELEMENT instanceFieldName (#PCDATA)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT mainProperty (#PCDATA)>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT purpose (#PCDATA)>
+]>
+<ui>
+  <viewers>
+    <viewer>
+      <id>Brief</id>
+      <presentation>
+        <Name>Brief View</Name>
+      </presentation>
+      <componentFactory>
+        <className>com.almworks.bugzilla.gui.BriefView</className>
+        <instanceFieldName>myWholePanel</instanceFieldName>
+      </componentFactory>
+      <purpose>view</purpose>
+      <purpose>edit</purpose>
+    </viewer>
+    <viewer>
+      <id>weblike</id>
+      <presentation>
+        <Name>Web View</Name>
+      </presentation>
+      <componentFactory>
+        <className>com.almworks.bugzilla.gui.WebLikeView</className>
+        <instanceFieldName>myWholePanel</instanceFieldName>
+      </componentFactory>
+      <purpose>view</purpose>
+      <purpose>edit</purpose>
+    </viewer>
+    <viewer>
+      <id>newWebLike</id>
+      <presentation>
+        <Name>New Bug (Web-like)</Name>
+      </presentation>
+      <componentFactory>
+        <className>com.almworks.bugzilla.gui.WebLikeCreate</className>
+        <instanceFieldName>myWholePanel</instanceFieldName>
+      </componentFactory>
+      <purpose>create</purpose>
+    </viewer>
+    <viewer>
+      <id>newBrief</id>
+      <presentation>
+        <Name>New Bug (Brief)</Name>
+      </presentation>
+      <componentFactory>
+        <className>com.almworks.bugzilla.gui.BriefCreate</className>
+        <instanceFieldName>myWholePanel</instanceFieldName>
+      </componentFactory>
+      <purpose>create</purpose>
+    </viewer>
+  </viewers>
+  <mainProperty>id</mainProperty>
+  <mainColumns>
+    <column>
+      <key>id</key>
+    </column>
+    <column>
+      <key>summary</key>
+    </column>
+    <column>
+      <key>status</key>
+    </column>
+    <column>
+      <key>priority</key>
+      <sizePolicy>
+        <srinkable/>
+      </sizePolicy>
+    </column>
+    <column>
+      <key>target_milestone</key>
+      <sizePolicy>
+        <srinkable/>
+      </sizePolicy>
+    </column>
+  </mainColumns>
+  <prototype>
+    <property>
+      <key>summary</key>
+      <value>123456789.123456789.123456789.1234567890</value>
+    </property>
+    <property>
+      <key>id</key>
+      <value>1234567</value>
+    </property>
+    <property>
+      <key>status</key>
+      <value>-=CLOSED=-</value>
+    </property>
+    <property>
+      <key>priority</key>
+      <value>ZZZ Priority</value>
+    </property>
+    <property>
+      <key>target_milestone</key>
+      <value>ZZZ Target Milestone</value>
+    </property>
+  </prototype>
+</ui>

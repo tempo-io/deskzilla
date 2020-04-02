@@ -1,0 +1,30 @@
+Created an attachment (id=129832)
+extension to #86671 with pref
+
+To summarize it, this bug is WONTFIX but with the existing patches you can easily "fix" it yourself.
+Personally I like my Ctrl+Q and don't want to have even more keys to hit.
+#147 is not a bad idea but could require more work. Currently Window-Close and Tab-Close are seperate things.
+If for some reason Quit confirmation should make it into Mozilla, those who hate it for whatever reason will only see it once and can then disable it, like it's done with form submit data and now also for Multiple Tabs.
+
+---------8<--- If you know how to patch or don't care, skip this --->8---------
+
+As long as you have access to your chrome, let me repeat #84
+For Windows users, chrome is in C:/Program Files/mozilla.org/Mozilla/chrome
+If you'd want to apply my patch, you don't need to compile Mozilla at all!
+Use your favourite archiver (WinRAR isn't bad, use google!) and unjar/unzip toolkit.jar and en-US.jar, preserving directory structure.
+Now go to toolkit/content/global and edit globalOverlay.js with your favourite text editor. Follow the instructions in the patch attachment: lines with + in front need to be added (without the "+"), lines without anything are already in the file, you can use them for orientation.
+The other file that needs to be edited is
+en-US/locale/en-US/global/appstrings.properties
+Finally, repack the files (Filetype: ZIP, Compression: Store) and rename to
+en-US.jar or toolkit.jar. Make sure that, if you open them, you don't see en-US or toolkit as first folder inside the archive, but locale (en-US.jar) or content (toolkit.jar)
+I can provide my altered .jar files for Mozilla/5.0 (Windows; U; Windows NT
+5.1; en-US; rv:1.5a) Gecko/20030718
+---------8<--------------------------------------------------------->8---------
+
+
+The current patch "conflicts" slightly with the multi-tab window-close confirmation 1.5 is using. I don't mind the behaviour, change it if you do. If you have the tab confirmation enabled and do Ctrl+Q with mutliple open windows, you will first receive the tab confirmation. If you confirm it, the Quit confirmation will pop up.
+Now, if you cancel the Quit confirmation, nothing will be closed, not even the window where you confirmed the close.
+This patch uses the pref general.application.warnOnQuit to store information about a disabled Quit warning.
+This patch adds the locale strings application.quitWarningTitle,
+application.quitWarning, application.quitButton and
+application.quitWarningPromptMe to global/appstrings.properties

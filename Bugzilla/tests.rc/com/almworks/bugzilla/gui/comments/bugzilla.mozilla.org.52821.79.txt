@@ -1,0 +1,18 @@
+A simple way to disable the shortcut (option 4), would be to change
+
+<!ENTITY quitApplicationCmd.key		"Q">
+to
+<!ENTITY quitApplicationCmd.key		"">
+
+in
+
+/xpfe/communicator/resources/locale/en-US/unix|win|os2/platformCommunicatorOverlay.dtd
+
+(or
+\chrome\en-win|unix.jar\locale\en-US\communicator-platform\platformCommunicatorOverlay.dtd
+in the compiled version)
+
+for every locale apart from mac, where this command seems to be the norm. At
+least as a stopgap solution?
+
+(Not that important, but it's inconvenient editing the jar file every time)

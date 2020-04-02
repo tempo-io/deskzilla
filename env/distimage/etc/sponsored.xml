@@ -1,0 +1,127 @@
+<urls>
+  <sign>ajMsfwp3UsHT+SozzE6BecgHQF80NBxvmdFe4WgHXCl25nmvUJrsCAaEfg/1lNzqFfAobLP3q3XGlhMxznlzqfItynb3TSgF3nNklUqKztopvifmsels0bd9VwL/ZRy6qABrRH9VvMjpYhG6IR74jJEX59ZiHyTvejyoLVXhG0agB8Fr0NgTQzimFxGAUGvufih6WCjj/niPfaiYYqFPoQG85kb8SoSSwHWGv03TfN96kP9O1/AGwrHhWA6DDXmv06Tm85u2e1pdJRgFtnFeEnSepRm7wJvt049Y54TeAzFU4DqjFbNQxB1c7srbbLlr5ZtNvWmg7n0T8hmA/H5Eyg==</sign>
+  <server url="https://bugs.eclipse.org/bugs" description="eclipse BUGS" type="bugzilla" />
+  <server url="https://bugs.freedesktop.org/" description="FreeDesktop Bugzilla" type="bugzilla" />
+  <server url="http://bugs.gentoo.org/" description="Gentoo Bugzilla" type="bugzilla" />
+  <server url="http://bugs.kde.org/" description="KDE Bug Tracking System" type="bugzilla" />
+  <server url="http://bugs.xfree86.org/" description="XFree86 Bugzilla" type="bugzilla" />
+  <server url="http://bugzilla.abisource.com/" description="AbiWord Bugzilla" type="bugzilla" />
+  <server url="http://bugzilla.gnome.org/" description="GNOME Bugzilla" type="bugzilla" />
+  <server url="http://bugzilla.kernel.org/" description="Kernel Bug Tracker" type="bugzilla" />
+  <server url="https://bugzilla.mozilla.org/" description="Bugzilla@Mozilla" type="bugzilla" />
+  <server url="https://bugzilla.redhat.com/" description="Red Hat Bugzilla" type="bugzilla" />
+  <server url="https://bugzilla.redhat.com/bugzilla" description="Red Hat Bugzilla" type="bugzilla" />
+  <server url="http://gcc.gnu.org/bugzilla" description="GCC Bugzilla" type="bugzilla" />
+  <server url="http://issues.apache.org/bugzilla" description="ASF Bugzilla" type="bugzilla" />
+  <server url="http://issues.apache.org/SpamAssassin" description="SA Bugzilla" type="bugzilla" />
+  <server url="http://www.w3.org/bugs/public" description="W3C Bug/Issue Tracking System" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-3.2-branch/" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-3.4-branch/" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-3.6-branch/" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-4.0-branch/" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-4.2-branch/" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-4.4-branch/" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-5.0-branch/" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-tip/" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-tip-pg/" type="bugzilla" />
+  <server url="https://landfill.bugzilla.org/bugzilla-tip-sqlite/" type="bugzilla" />
+  <server url="https://issues.apache.org/jira" description="Apache" type="jira" />
+  <server url="https://hibernate.onjira.com" description="Hibernate" type="jira" />
+  <server url="http://bugzilla.achievo.org/" type="bugzilla" />
+  <server url="https://www.mozdev.org/bugs" type="bugzilla" />
+  <server url="https://bugzilla.osafoundation.org" type="bugzilla" />
+  <server url="http://bugs.xaraya.com" type="bugzilla" />
+  <server url="http://bugs.winehq.org/" type="bugzilla" />
+  <server url="http://www.reactos.org/bugzilla/" type="bugzilla" />
+  <server url="https://bugzilla.mozilla-russia.org/" type="bugzilla" />
+  <server url="http://bugzilla.almworks.com" type="bugzilla" />
+  <server url="https://bugs.eclipse.org/bugs" type="bugzilla" />
+  <server url="http://bugs.gentoo.org" type="bugzilla" />
+  <server url="https://bugs.gentoo.org" type="bugzilla" />
+  <server url="http://bugzilla.mozilla.org" type="bugzilla" />
+  <server url="http://bugzilla.gnome.org" type="bugzilla" />
+  <server url="https://bugzilla.gnome.org" type="bugzilla" />
+  <server url="http://cool.ars-grin.gov/bugz" type="bugzilla" />
+  <server url="http://bugzilla.icculus.org" type="bugzilla" />
+  <server url="http://bugs.kde.org" type="bugzilla" />
+  <server url="https://bugs.kde.org" type="bugzilla" />
+  <server url="http://bugs.dwscoalition.org" type="bugzilla" />
+  <server url="http://bugs.linuxbase.org" type="bugzilla" />
+  <server url="http://bugzilla.wikimedia.org" type="bugzilla" />
+  <server url="https://bugzilla.mozilla.org" type="bugzilla" />
+  <server url="http://bugzilla.mplayerhq.hu" type="bugzilla" />
+  <server url="http://bugzilla.robotyka.ia.pw.edu.pl" type="bugzilla" />
+  <server url="http://tools.oasis-open.org/issues" type="jira" />
+  <server url="http://defect.opensolaris.org/bz" type="bugzilla" />
+  <server url="http://bugzilla.qooxdoo.org" type="bugzilla" />
+  <server url="http://www.reactos.org/bugzilla" type="bugzilla" />
+  <server url="https://bugzilla.samba.org" type="bugzilla" />
+  <server url="http://oss.sgi.com/bugzilla" type="bugzilla" />
+  <server url="http://bugzilla.songbirdnest.com" type="bugzilla" />
+  <server url="http://locke.dcnicn.com/bugzilla/iso10303" type="bugzilla" />
+  <server url="http://bugs.winehq.org" type="bugzilla" />
+  <server url="http://bugzilla.zimbra.com" type="bugzilla" />
+  <server url="http://jira.codehaus.org" description="Codehaus" type="jira" />
+  <server url="https://jira.codehaus.org" type="jira" />
+  <server url="https://wso2.org/jira" type="jira" />
+  <server url="http://issues.appfuse.org" type="jira" />
+  <server url="https://bugs.benetech.org" type="jira" />
+  <server url="http://issues.civicrm.org/jira" type="jira" />
+  <server url="http://issues.compass-project.org/" type="jira" />
+  <server url="https://jira.atlassian.com" type="jira" />
+  <server url="https://jira.dgfoundation.org" type="jira" />
+  <server url="http://tracker.firebirdsql.org" type="jira" />
+  <server url="http://jira.freeswitch.org" type="jira" />
+  <server url="http://track.sipfoundry.org" type="jira" />
+  <server url="http://jira.globus.org" type="jira" />
+  <server url="http://www.mimosa.iom.int/jira" type="jira" />
+  <server url="http://host156.lan.imolinfo.it/jira" type="jira" />
+  <server url="http://www.mirthcorp.com/community/issues/" type="jira" />
+  <server url="http://tracker.moodle.org" type="jira" />
+  <server url="http://www.mulesoft.org/jira" type="jira" />
+  <server url="http://forge.octo.com/jira" type="jira" />
+  <server url="https://forge.octo.com/jira" type="jira" />
+  <server url="http://jira.opensymphony.com" type="jira" />
+  <server url="http://jira.prx.org" type="jira" />
+  <server url="https://jira.sakaiproject.org" type="jira" />
+  <server url="https://jira.secondlife.com" type="jira" />
+  <server url="https://issues.sonatype.org" type="jira" />
+  <server url="http://jira.public.thoughtworks.org" type="jira" />
+  <server url="http://jira.xwiki.org" type="jira" />
+  <server url="http://framework.zend.com/issues" type="jira" />
+  <server url="https://issues.dlang.org/" type="bugzilla" />
+  <server url="https://jira.almworks.com" type="jira" />
+  <server url="https://jira.exoplatform.org" type="jira" />
+  <server url="http://opencast.jira.com" type="jira" />
+  <server url="https://opencast.jira.com" type="jira" />
+  <server url="http://pmo.applab.org" type="jira" />
+  <server url="http://newartisans.com/bugzilla" type="bugzilla" />
+  <server url="https://newartisans.com/bugzilla" type="bugzilla" />
+  <server url="http://bugs.meego.com" type="bugzilla" />
+  <server url="https://bugs.webkit.org" type="bugzilla" />
+  <server url="http://dev.tdar.org/jira" type="jira" />
+  <server url="http://bugzilla.opennms.org" type="bugzilla" />
+  <server url="http://llvm.org/bugs" type="bugzilla" />
+  <server url="https://issues.jboss.org" type="jira" />
+  <server url="https://tickets.openmrs.org" type="jira" />
+  <server url="http://community.orangeleap.com/jira" type="jira" />
+  <server url="http://projets-ent.fr.logica.com/jira" type="jira" />
+  <server url="http://bugs.webwork.maa.org" type="bugzilla" />
+  <server url="https://bugzilla.xfce.org/" type="bugzilla" />
+  <server url="http://jira.boxee.tv" type="jira" />
+  <server url="https://jira.springsource.org" description="Spring Framework" type="jira" />
+  <server url="https://www.nsnam.org/bugzilla" type="bugzilla" />
+  <server url="https://frontlinesms.jira.com" type="jira" />
+  <server url="https://issues.voltdb.com" type="jira" />
+  <server url="http://wikistep.org/bugzilla/" type="bugzilla" />
+  <server url="https://www.pdes-ch.com/bugzilla" type="bugzilla" />
+  <server url="https://2600hz.atlassian.net" type="jira" />
+  <server url="https://www.iteraplan.de/issues" type="jira" />
+  <server url="http://bugs.ledger-cli.org/" type="bugzilla" />
+  <server url="http://scm.meruvian.org" type="jira" />
+  <server url="http://pm.joomlart.com" type="jira" />
+  <server url="https://meruvian.atlassian.net" type="jira" />
+  <server url="https://bugs.freebsd.org/bugzilla" type="bugzilla" />
+  <server url="https://coq.inria.fr/bugs" type="bugzilla" />
+  <server url="https://bz.apache.org/bugzilla/" type="bugzilla" />
+</urls>

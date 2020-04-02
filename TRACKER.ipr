@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactManager">
+    <artifact name="Screenshot:jar">
+      <output-path>$PROJECT_DIR$/../..</output-path>
+      <root id="root">
+        <element id="archive" name="Screenshot.jar">
+          <element id="directory" name="META-INF">
+            <element id="file-copy" path="$PROJECT_DIR$/Screenshot/META-INF/MANIFEST.MF" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+  </component>
+  <component name="CodeStyleProjectProfileManger">
+    <option name="PROJECT_PROFILE" />
+    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
+  </component>
+  <component name="CodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS">
+      <value>
+        <option name="USE_SAME_INDENTS" value="true" />
+        <option name="JAVA_INDENT_OPTIONS">
+          <value>
+            <option name="INDENT_SIZE" value="2" />
+            <option name="CONTINUATION_INDENT_SIZE" value="2" />
+            <option name="TAB_SIZE" value="8" />
+            <option name="USE_TAB_CHARACTER" value="false" />
+            <option name="SMART_TABS" value="false" />
+            <option name="LABEL_INDENT_SIZE" value="-2" />
+            <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+            <option name="USE_RELATIVE_INDENTS" value="false" />
+          </value>
+        </option>
+        <option name="OTHER_INDENT_OPTIONS">
+          <value>
+            <option name="INDENT_SIZE" value="2" />
+            <option name="CONTINUATION_INDENT_SIZE" value="2" />
+            <option name="TAB_SIZE" value="8" />
+            <option name="USE_TAB_CHARACTER" value="false" />
+            <option name="SMART_TABS" value="false" />
+            <option name="LABEL_INDENT_SIZE" value="-2" />
+            <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+            <option name="USE_RELATIVE_INDENTS" value="false" />
+          </value>
+        </option>
+        <option name="FIELD_NAME_PREFIX" value="my" />
+        <option name="STATIC_FIELD_NAME_PREFIX" value="our" />
+        <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="3" />
+        <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND">
+          <value>
+            <package name="java.awt" withSubpackages="false" static="false" />
+            <package name="org.jetbrains.annotations" withSubpackages="false" static="false" />
+            <package name="javax.swing" withSubpackages="false" static="false" />
+          </value>
+        </option>
+        <option name="JD_KEEP_EMPTY_PARAMETER" value="false" />
+        <option name="JD_KEEP_EMPTY_EXCEPTION" value="false" />
+        <option name="JD_KEEP_EMPTY_RETURN" value="false" />
+        <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="body,div,p,form,h1,h2,h3,br" />
+        <option name="HTML_ELEMENTS_TO_REMOVE_NEW_LINE_BEFORE" value="" />
+        <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="" />
+        <option name="KEEP_LINE_BREAKS" value="false" />
+        <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
+        <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+        <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
+        <option name="BLANK_LINES_AROUND_CLASS" value="2" />
+        <option name="BRACE_STYLE" value="5" />
+        <option name="CLASS_BRACE_STYLE" value="5" />
+        <option name="METHOD_BRACE_STYLE" value="5" />
+        <option name="INDENT_CASE_FROM_SWITCH" value="false" />
+        <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+        <option name="ALIGN_MULTILINE_FOR" value="false" />
+        <option name="SPACE_BEFORE_ARRAY_INITIALIZER_LBRACE" value="true" />
+        <option name="CALL_PARAMETERS_WRAP" value="1" />
+        <option name="METHOD_PARAMETERS_WRAP" value="1" />
+        <option name="EXTENDS_LIST_WRAP" value="1" />
+        <option name="THROWS_LIST_WRAP" value="1" />
+        <option name="EXTENDS_KEYWORD_WRAP" value="1" />
+        <option name="THROWS_KEYWORD_WRAP" value="1" />
+        <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
+        <option name="BINARY_OPERATION_WRAP" value="1" />
+        <option name="TERNARY_OPERATION_WRAP" value="1" />
+        <option name="FOR_STATEMENT_WRAP" value="1" />
+        <option name="ARRAY_INITIALIZER_WRAP" value="1" />
+        <option name="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value="true" />
+        <option name="ASSIGNMENT_WRAP" value="1" />
+        <option name="FIELD_ANNOTATION_WRAP" value="0" />
+        <ADDITIONAL_INDENT_OPTIONS fileType="groovy">
+          <option name="INDENT_SIZE" value="2" />
+          <option name="CONTINUATION_INDENT_SIZE" value="8" />
+          <option name="TAB_SIZE" value="4" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="0" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+          <option name="USE_RELATIVE_INDENTS" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="gsp">
+          <option name="INDENT_SIZE" value="2" />
+          <option name="CONTINUATION_INDENT_SIZE" value="8" />
+          <option name="TAB_SIZE" value="4" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="0" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+          <option name="USE_RELATIVE_INDENTS" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="java">
+          <option name="INDENT_SIZE" value="2" />
+          <option name="CONTINUATION_INDENT_SIZE" value="2" />
+          <option name="TAB_SIZE" value="8" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="-2" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+          <option name="USE_RELATIVE_INDENTS" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="js">
+          <option name="INDENT_SIZE" value="4" />
+          <option name="CONTINUATION_INDENT_SIZE" value="8" />
+          <option name="TAB_SIZE" value="4" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="0" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+          <option name="USE_RELATIVE_INDENTS" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="jsp">
+          <option name="INDENT_SIZE" value="4" />
+          <option name="CONTINUATION_INDENT_SIZE" value="8" />
+          <option name="TAB_SIZE" value="4" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="0" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+          <option name="USE_RELATIVE_INDENTS" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="php">
+          <option name="INDENT_SIZE" value="4" />
+          <option name="CONTINUATION_INDENT_SIZE" value="8" />
+          <option name="TAB_SIZE" value="4" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="0" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+          <option name="USE_RELATIVE_INDENTS" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="sql">
+          <option name="INDENT_SIZE" value="2" />
+          <option name="CONTINUATION_INDENT_SIZE" value="8" />
+          <option name="TAB_SIZE" value="4" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="0" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+          <option name="USE_RELATIVE_INDENTS" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="xml">
+          <option name="INDENT_SIZE" value="4" />
+          <option name="CONTINUATION_INDENT_SIZE" value="8" />
+          <option name="TAB_SIZE" value="4" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="0" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+          <option name="USE_RELATIVE_INDENTS" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="yml">
+          <option name="INDENT_SIZE" value="2" />
+          <option name="CONTINUATION_INDENT_SIZE" value="8" />
+          <option name="TAB_SIZE" value="4" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="0" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+          <option name="USE_RELATIVE_INDENTS" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
+      </value>
+    </option>
+    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+  </component>
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/JiraProvider" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/b2dev" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <resourceExtensions>
+      <entry name=".+\.(properties|xml|html|dtd|tld)" />
+      <entry name=".+\.(gif|png|jpeg|jpg)" />
+    </resourceExtensions>
+    <wildcardResourcePatterns>
+      <entry name="?*.properties" />
+      <entry name="?*.xml" />
+      <entry name="?*.gif" />
+      <entry name="?*.png" />
+      <entry name="?*.jpeg" />
+      <entry name="?*.jpg" />
+      <entry name="?*.html" />
+      <entry name="?*.dtd" />
+      <entry name="?*.tld" />
+    </wildcardResourcePatterns>
+  </component>
+  <component name="CopyrightManager" default="" />
+  <component name="CppTools.Loader" reportImplicitCastToBool="false" reportNameReferencedOnce="false" version="3" compilerSelect="AUTO" />
+  <component name="DependenciesAnalyzeManager">
+    <option name="myForwardDirection" value="false" />
+  </component>
+  <component name="DependencyValidationManager">
+    <scope name="All sources" pattern="src:*..*" />
+    <scope name="junit.TestCase" pattern="lib:junit.framework.TestCase" />
+    <scope name="API" pattern="src:com.almworks..api..*" />
+    <scope name="Launcher" pattern="src:com.almworks.platform.Launcher" />
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="EclipseCompilerSettings">
+    <option name="GENERATE_NO_WARNINGS" value="true" />
+    <option name="DEPRECATION" value="false" />
+  </component>
+  <component name="EclipseEmbeddedCompilerSettings">
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="true" />
+    <option name="DEPRECATION" value="false" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+    <option name="MAXIMUM_HEAP_SIZE" value="128" />
+  </component>
+  <component name="Encoding">
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="PRINT_LINE_NUMBERS" value="false" />
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Temp" />
+  </component>
+  <component name="IdProvider" IDEtalkID="A04FDEFE3AD7597E1F71C030D4C6CE05" />
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
+  <component name="IssueNavigationConfiguration">
+    <option name="links">
+      <list>
+        <IssueNavigationLink>
+          <option name="issueRegexp" value="[A-Z]+\-\d+" />
+          <option name="linkRegexp" value="http://localhost:8080/browse/$0" />
+        </IssueNavigationLink>
+      </list>
+    </option>
+  </component>
+  <component name="JavacSettings">
+    <option name="GENERATE_NO_WARNINGS" value="true" />
+    <option name="MAXIMUM_HEAP_SIZE" value="200" />
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OTHER_OPTIONS" value="" />
+  </component>
+  <component name="LogConsolePreferences">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="PEExternalization">
+    <option name="IGNORE_METHOD_NAMES" value="" />
+    <option name="IGNORE_METHOD_NAMES_ENABLED" value="false" />
+    <option name="IGNORE_CLASS_CONSTRUCTORS">
+      <value>
+        <option class="Exception" includeInheritors="true" />
+      </value>
+    </option>
+    <option name="IGNORE_CLASS_CONSTRUCTOR_NAMES_ENABLED" value="true" />
+    <option name="IGNORE_CLASS_METHODS_ENABLED" value="true" />
+    <option name="IGNORE_STRINGS_CONTAINS_ONLY_ENABLED" value="true" />
+    <option name="IGNORE_STRINGS_CONTAINS_ONLY_WHITESPACES" value="true" />
+    <option name="IGNORE_STRINGS_CONTAINS_ONLY_PUNCTUATIONS" value="true" />
+    <option name="IGNORE_STRINGS_CONTAINS_ONLY_SPECIFIED_ENABLED" value="true" />
+    <option name="IGNORE_STRINGS_CONTAINS_ONLY_SPECIFIED" value="" />
+    <option name="IGNORE_CLASS_METHODS">
+      <value>
+        <option class="Exception" includeInheritors="false" />
+        <option class="java.util.ResourceBundle" includeInheritors="true" />
+      </value>
+    </option>
+    <option name="IGNORE_CONSTANTS_DECLARATIONS" value="true" />
+  </component>
+  <component name="Palette2">
+    <group name="Swing">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+      </item>
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+        <initial-values>
+          <property name="text" value="Button" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="RadioButton" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="CheckBox" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="Label" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+      </item>
+    </group>
+    <group name="ALMWorks">
+      <item class="com.almworks.util.components.Link" icon="/com/intellij/uiDesigner/icons/label.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="1" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.AList" icon="/com/intellij/uiDesigner/icons/list.png" removable="true" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="com.almworks.util.components.ATable" icon="/com/intellij/uiDesigner/icons/table.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.ASortedTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.ALabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.ATextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="true" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.almworks.util.components.AScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.AActionButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.URLLink" icon="/com/intellij/uiDesigner/icons/label.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="1" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.FieldWithMoreButton" icon="/com/intellij/uiDesigner/icons/textField.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.AComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="true" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.FileSelectionField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.CompactSubsetEditor" icon="/com/intellij/uiDesigner/icons/panel.png" removable="true" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.FilteringComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="true" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.AToolbarButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="true" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.sfs.StringFilterSetEditor" icon="/com/intellij/uiDesigner/icons/panel.png" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.ADateField" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="true" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="com.almworks.util.components.DesignPlaceHolder" icon="/com/intellij/uiDesigner/icons/panel.png" removable="true" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+    </group>
+  </component>
+  <component name="ProjectCodeStyleConfiguration">
+    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+    <code_scheme name="Project" version="173">
+      <option name="USE_SAME_INDENTS" value="true" />
+      <option name="IGNORE_SAME_INDENTS_FOR_LANGUAGES" value="true" />
+      <option name="OTHER_INDENT_OPTIONS">
+        <value>
+          <option name="INDENT_SIZE" value="2" />
+          <option name="CONTINUATION_INDENT_SIZE" value="2" />
+          <option name="TAB_SIZE" value="8" />
+          <option name="LABEL_INDENT_SIZE" value="-2" />
+        </value>
+      </option>
+      <option name="BRACE_STYLE" value="5" />
+      <option name="CLASS_BRACE_STYLE" value="5" />
+      <option name="METHOD_BRACE_STYLE" value="5" />
+      <HTMLCodeStyleSettings>
+        <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="body,div,p,form,h1,h2,h3,br" />
+        <option name="HTML_ELEMENTS_TO_REMOVE_NEW_LINE_BEFORE" value="" />
+        <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="" />
+      </HTMLCodeStyleSettings>
+      <JavaCodeStyleSettings>
+        <option name="FIELD_NAME_PREFIX" value="my" />
+        <option name="STATIC_FIELD_NAME_PREFIX" value="our" />
+        <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="3" />
+        <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND">
+          <value>
+            <package name="java.awt" withSubpackages="false" static="false" />
+            <package name="org.jetbrains.annotations" withSubpackages="false" static="false" />
+            <package name="javax.swing" withSubpackages="false" static="false" />
+          </value>
+        </option>
+        <option name="JD_KEEP_EMPTY_PARAMETER" value="false" />
+        <option name="JD_KEEP_EMPTY_EXCEPTION" value="false" />
+        <option name="JD_KEEP_EMPTY_RETURN" value="false" />
+      </JavaCodeStyleSettings>
+      <MarkdownNavigatorCodeStyleSettings>
+        <option name="RIGHT_MARGIN" value="72" />
+      </MarkdownNavigatorCodeStyleSettings>
+      <XML>
+        <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+      </XML>
+      <ADDITIONAL_INDENT_OPTIONS fileType="gsp">
+        <option name="INDENT_SIZE" value="2" />
+      </ADDITIONAL_INDENT_OPTIONS>
+      <ADDITIONAL_INDENT_OPTIONS fileType="sql">
+        <option name="INDENT_SIZE" value="2" />
+      </ADDITIONAL_INDENT_OPTIONS>
+      <ADDITIONAL_INDENT_OPTIONS fileType="yml">
+        <option name="INDENT_SIZE" value="2" />
+      </ADDITIONAL_INDENT_OPTIONS>
+      <codeStyleSettings language="Groovy">
+        <option name="KEEP_LINE_BREAKS" value="false" />
+        <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
+        <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+        <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
+        <option name="BLANK_LINES_AROUND_CLASS" value="2" />
+        <option name="BRACE_STYLE" value="5" />
+        <option name="CLASS_BRACE_STYLE" value="5" />
+        <option name="METHOD_BRACE_STYLE" value="5" />
+        <option name="INDENT_CASE_FROM_SWITCH" value="false" />
+        <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+        <option name="ALIGN_MULTILINE_FOR" value="false" />
+        <option name="CALL_PARAMETERS_WRAP" value="1" />
+        <option name="METHOD_PARAMETERS_WRAP" value="1" />
+        <option name="EXTENDS_LIST_WRAP" value="1" />
+        <option name="THROWS_LIST_WRAP" value="1" />
+        <option name="EXTENDS_KEYWORD_WRAP" value="1" />
+        <option name="THROWS_KEYWORD_WRAP" value="1" />
+        <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
+        <option name="BINARY_OPERATION_WRAP" value="1" />
+        <option name="TERNARY_OPERATION_WRAP" value="1" />
+        <option name="FOR_STATEMENT_WRAP" value="1" />
+        <option name="ASSIGNMENT_WRAP" value="1" />
+        <option name="FIELD_ANNOTATION_WRAP" value="0" />
+        <indentOptions>
+          <option name="INDENT_SIZE" value="2" />
+          <option name="CONTINUATION_INDENT_SIZE" value="2" />
+          <option name="TAB_SIZE" value="8" />
+          <option name="LABEL_INDENT_SIZE" value="-2" />
+        </indentOptions>
+      </codeStyleSettings>
+      <codeStyleSettings language="JAVA">
+        <option name="KEEP_LINE_BREAKS" value="false" />
+        <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
+        <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+        <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
+        <option name="BLANK_LINES_AROUND_CLASS" value="2" />
+        <option name="BRACE_STYLE" value="5" />
+        <option name="CLASS_BRACE_STYLE" value="5" />
+        <option name="METHOD_BRACE_STYLE" value="5" />
+        <option name="INDENT_CASE_FROM_SWITCH" value="false" />
+        <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+        <option name="ALIGN_MULTILINE_FOR" value="false" />
+        <option name="SPACE_BEFORE_ARRAY_INITIALIZER_LBRACE" value="true" />
+        <option name="CALL_PARAMETERS_WRAP" value="1" />
+        <option name="METHOD_PARAMETERS_WRAP" value="1" />
+        <option name="EXTENDS_LIST_WRAP" value="1" />
+        <option name="THROWS_LIST_WRAP" value="1" />
+        <option name="EXTENDS_KEYWORD_WRAP" value="1" />
+        <option name="THROWS_KEYWORD_WRAP" value="1" />
+        <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
+        <option name="BINARY_OPERATION_WRAP" value="1" />
+        <option name="TERNARY_OPERATION_WRAP" value="1" />
+        <option name="FOR_STATEMENT_WRAP" value="1" />
+        <option name="ARRAY_INITIALIZER_WRAP" value="1" />
+        <option name="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value="true" />
+        <option name="ASSIGNMENT_WRAP" value="1" />
+        <option name="FIELD_ANNOTATION_WRAP" value="0" />
+        <indentOptions>
+          <option name="INDENT_SIZE" value="2" />
+          <option name="CONTINUATION_INDENT_SIZE" value="2" />
+          <option name="TAB_SIZE" value="8" />
+          <option name="LABEL_INDENT_SIZE" value="-2" />
+        </indentOptions>
+      </codeStyleSettings>
+      <codeStyleSettings language="XML">
+        <indentOptions>
+          <option name="INDENT_SIZE" value="2" />
+          <option name="CONTINUATION_INDENT_SIZE" value="2" />
+          <option name="TAB_SIZE" value="8" />
+          <option name="LABEL_INDENT_SIZE" value="-2" />
+        </indentOptions>
+      </codeStyleSettings>
+    </code_scheme>
+  </component>
+  <component name="ProjectCodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS">
+      <value>
+        <option name="USE_SAME_INDENTS" value="true" />
+        <option name="IGNORE_SAME_INDENTS_FOR_LANGUAGES" value="true" />
+        <option name="JAVA_INDENT_OPTIONS">
+          <value>
+            <option name="INDENT_SIZE" value="2" />
+            <option name="CONTINUATION_INDENT_SIZE" value="2" />
+            <option name="TAB_SIZE" value="8" />
+            <option name="USE_TAB_CHARACTER" value="false" />
+            <option name="SMART_TABS" value="false" />
+            <option name="LABEL_INDENT_SIZE" value="-2" />
+            <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+            <option name="USE_RELATIVE_INDENTS" value="false" />
+          </value>
+        </option>
+        <option name="OTHER_INDENT_OPTIONS">
+          <value>
+            <option name="INDENT_SIZE" value="2" />
+            <option name="CONTINUATION_INDENT_SIZE" value="2" />
+            <option name="TAB_SIZE" value="8" />
+            <option name="USE_TAB_CHARACTER" value="false" />
+            <option name="SMART_TABS" value="false" />
+            <option name="LABEL_INDENT_SIZE" value="-2" />
+            <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+            <option name="USE_RELATIVE_INDENTS" value="false" />
+          </value>
+        </option>
+        <option name="FIELD_NAME_PREFIX" value="my" />
+        <option name="STATIC_FIELD_NAME_PREFIX" value="our" />
+        <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="3" />
+        <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND">
+          <value>
+            <package name="java.awt" withSubpackages="false" static="false" />
+            <package name="org.jetbrains.annotations" withSubpackages="false" static="false" />
+            <package name="javax.swing" withSubpackages="false" static="false" />
+          </value>
+        </option>
+        <option name="JD_KEEP_EMPTY_PARAMETER" value="false" />
+        <option name="JD_KEEP_EMPTY_EXCEPTION" value="false" />
+        <option name="JD_KEEP_EMPTY_RETURN" value="false" />
+        <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="body,div,p,form,h1,h2,h3,br" />
+        <option name="HTML_ELEMENTS_TO_REMOVE_NEW_LINE_BEFORE" value="" />
+        <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="" />
+        <option name="KEEP_LINE_BREAKS" value="false" />
+        <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
+        <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+        <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
+        <option name="BLANK_LINES_AROUND_CLASS" value="2" />
+        <option name="BRACE_STYLE" value="5" />
+        <option name="CLASS_BRACE_STYLE" value="5" />
+        <option name="METHOD_BRACE_STYLE" value="5" />
+        <option name="INDENT_CASE_FROM_SWITCH" value="false" />
+        <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+        <option name="ALIGN_MULTILINE_FOR" value="false" />
+        <option name="SPACE_BEFORE_ARRAY_INITIALIZER_LBRACE" value="true" />
+        <option name="CALL_PARAMETERS_WRAP" value="1" />
+        <option name="METHOD_PARAMETERS_WRAP" value="1" />
+        <option name="EXTENDS_LIST_WRAP" value="1" />
+        <option name="THROWS_LIST_WRAP" value="1" />
+        <option name="EXTENDS_KEYWORD_WRAP" value="1" />
+        <option name="THROWS_KEYWORD_WRAP" value="1" />
+        <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
+        <option name="BINARY_OPERATION_WRAP" value="1" />
+        <option name="TERNARY_OPERATION_WRAP" value="1" />
+        <option name="FOR_STATEMENT_WRAP" value="1" />
+        <option name="ARRAY_INITIALIZER_WRAP" value="1" />
+        <option name="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value="true" />
+        <option name="ASSIGNMENT_WRAP" value="1" />
+        <option name="FIELD_ANNOTATION_WRAP" value="0" />
+        <MarkdownNavigatorCodeStyleSettings>
+          <option name="RIGHT_MARGIN" value="72" />
+        </MarkdownNavigatorCodeStyleSettings>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
+        <ADDITIONAL_INDENT_OPTIONS fileType="gsp">
+          <option name="INDENT_SIZE" value="2" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="sql">
+          <option name="INDENT_SIZE" value="2" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <ADDITIONAL_INDENT_OPTIONS fileType="yml">
+          <option name="INDENT_SIZE" value="2" />
+        </ADDITIONAL_INDENT_OPTIONS>
+        <codeStyleSettings language="Groovy">
+          <option name="KEEP_LINE_BREAKS" value="false" />
+          <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
+          <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+          <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
+          <option name="BLANK_LINES_AROUND_CLASS" value="2" />
+          <option name="BRACE_STYLE" value="5" />
+          <option name="CLASS_BRACE_STYLE" value="5" />
+          <option name="METHOD_BRACE_STYLE" value="5" />
+          <option name="INDENT_CASE_FROM_SWITCH" value="false" />
+          <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+          <option name="ALIGN_MULTILINE_FOR" value="false" />
+          <option name="CALL_PARAMETERS_WRAP" value="1" />
+          <option name="METHOD_PARAMETERS_WRAP" value="1" />
+          <option name="EXTENDS_LIST_WRAP" value="1" />
+          <option name="THROWS_LIST_WRAP" value="1" />
+          <option name="EXTENDS_KEYWORD_WRAP" value="1" />
+          <option name="THROWS_KEYWORD_WRAP" value="1" />
+          <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
+          <option name="BINARY_OPERATION_WRAP" value="1" />
+          <option name="TERNARY_OPERATION_WRAP" value="1" />
+          <option name="FOR_STATEMENT_WRAP" value="1" />
+          <option name="ASSIGNMENT_WRAP" value="1" />
+          <option name="FIELD_ANNOTATION_WRAP" value="0" />
+          <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+          <indentOptions>
+            <option name="INDENT_SIZE" value="2" />
+            <option name="CONTINUATION_INDENT_SIZE" value="2" />
+            <option name="TAB_SIZE" value="8" />
+            <option name="LABEL_INDENT_SIZE" value="-2" />
+          </indentOptions>
+        </codeStyleSettings>
+        <codeStyleSettings language="JAVA">
+          <option name="KEEP_LINE_BREAKS" value="false" />
+          <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
+          <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+          <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
+          <option name="BLANK_LINES_AROUND_CLASS" value="2" />
+          <option name="BRACE_STYLE" value="5" />
+          <option name="CLASS_BRACE_STYLE" value="5" />
+          <option name="METHOD_BRACE_STYLE" value="5" />
+          <option name="INDENT_CASE_FROM_SWITCH" value="false" />
+          <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+          <option name="ALIGN_MULTILINE_FOR" value="false" />
+          <option name="SPACE_BEFORE_ARRAY_INITIALIZER_LBRACE" value="true" />
+          <option name="CALL_PARAMETERS_WRAP" value="1" />
+          <option name="METHOD_PARAMETERS_WRAP" value="1" />
+          <option name="EXTENDS_LIST_WRAP" value="1" />
+          <option name="THROWS_LIST_WRAP" value="1" />
+          <option name="EXTENDS_KEYWORD_WRAP" value="1" />
+          <option name="THROWS_KEYWORD_WRAP" value="1" />
+          <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
+          <option name="BINARY_OPERATION_WRAP" value="1" />
+          <option name="TERNARY_OPERATION_WRAP" value="1" />
+          <option name="FOR_STATEMENT_WRAP" value="1" />
+          <option name="ARRAY_INITIALIZER_WRAP" value="1" />
+          <option name="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value="true" />
+          <option name="ASSIGNMENT_WRAP" value="1" />
+          <option name="FIELD_ANNOTATION_WRAP" value="0" />
+          <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+          <indentOptions>
+            <option name="INDENT_SIZE" value="2" />
+            <option name="CONTINUATION_INDENT_SIZE" value="2" />
+            <option name="TAB_SIZE" value="8" />
+            <option name="LABEL_INDENT_SIZE" value="-2" />
+          </indentOptions>
+        </codeStyleSettings>
+        <codeStyleSettings language="XML">
+          <indentOptions>
+            <option name="INDENT_SIZE" value="2" />
+            <option name="CONTINUATION_INDENT_SIZE" value="2" />
+            <option name="TAB_SIZE" value="8" />
+            <option name="LABEL_INDENT_SIZE" value="-2" />
+          </indentOptions>
+        </codeStyleSettings>
+      </value>
+    </option>
+    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+  </component>
+  <component name="ProjectDetails">
+    <option name="projectName" value="TRACKER" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AppInit/AppInit.iml" filepath="$PROJECT_DIR$/AppInit/AppInit.iml" group="REUSABLE" />
+      <module fileurl="file://$PROJECT_DIR$/Application/Application.iml" filepath="$PROJECT_DIR$/Application/Application.iml" group="PLATFORM" />
+      <module fileurl="file://$PROJECT_DIR$/Bugzilla/Bugzilla.iml" filepath="$PROJECT_DIR$/Bugzilla/Bugzilla.iml" group="DESKZILLA" />
+      <module fileurl="file://$PROJECT_DIR$/BuildTools/BuildTools.iml" filepath="$PROJECT_DIR$/BuildTools/BuildTools.iml" group="TOOLS" />
+      <module fileurl="file://$PROJECT_DIR$/CommonUtils/CommonUtils.iml" filepath="$PROJECT_DIR$/CommonUtils/CommonUtils.iml" group="REUSABLE" />
+      <module fileurl="file://$PROJECT_DIR$/ConnectorSupport/ConnectorSupport.iml" filepath="$PROJECT_DIR$/ConnectorSupport/ConnectorSupport.iml" group="REUSABLE" />
+      <module fileurl="file://$PROJECT_DIR$/CoreComponents/CoreComponents.iml" filepath="$PROJECT_DIR$/CoreComponents/CoreComponents.iml" group="PLATFORM" />
+      <module fileurl="file://$PROJECT_DIR$/Database/Database.iml" filepath="$PROJECT_DIR$/Database/Database.iml" group="PLATFORM" />
+      <module fileurl="file://$PROJECT_DIR$/Engine/Engine.iml" filepath="$PROJECT_DIR$/Engine/Engine.iml" group="PLATFORM" />
+      <module fileurl="file://$PROJECT_DIR$/ExternalApi/ExternalApi.iml" filepath="$PROJECT_DIR$/ExternalApi/ExternalApi.iml" group="API" />
+      <module fileurl="file://$PROJECT_DIR$/ExternalApiService/ExternalApiService.iml" filepath="$PROJECT_DIR$/ExternalApiService/ExternalApiService.iml" group="API" />
+      <module fileurl="file://$PROJECT_DIR$/FXUtils/FXUtils.iml" filepath="$PROJECT_DIR$/FXUtils/FXUtils.iml" group="REUSABLE" />
+      <module fileurl="file://$PROJECT_DIR$/Idea.Deskzilla/Idea.Deskzilla.iml" filepath="$PROJECT_DIR$/Idea.Deskzilla/Idea.Deskzilla.iml" group="_SPECIAL" />
+      <module fileurl="file://$PROJECT_DIR$/ItemStorage/ItemStorage.iml" filepath="$PROJECT_DIR$/ItemStorage/ItemStorage.iml" group="_REFACTORING" />
+      <module fileurl="file://$PROJECT_DIR$/ItemSync/ItemSync.iml" filepath="$PROJECT_DIR$/ItemSync/ItemSync.iml" group="_REFACTORING" />
+      <module fileurl="file://$PROJECT_DIR$/Launcher/Launcher.iml" filepath="$PROJECT_DIR$/Launcher/Launcher.iml" group="PLATFORM" />
+      <module fileurl="file://$PROJECT_DIR$/Launcher.Deskzilla/Launcher.Deskzilla.iml" filepath="$PROJECT_DIR$/Launcher.Deskzilla/Launcher.Deskzilla.iml" group="DESKZILLA" />
+      <module fileurl="file://$PROJECT_DIR$/Resources.Common/Resources.Common.iml" filepath="$PROJECT_DIR$/Resources.Common/Resources.Common.iml" group="PLATFORM" />
+      <module fileurl="file://$PROJECT_DIR$/Resources.Deskzilla/Resources.Deskzilla.iml" filepath="$PROJECT_DIR$/Resources.Deskzilla/Resources.Deskzilla.iml" group="DESKZILLA" />
+      <module fileurl="file://$PROJECT_DIR$/Screenshot/Screenshot.iml" filepath="$PROJECT_DIR$/Screenshot/Screenshot.iml" group="PLATFORM" />
+      <module fileurl="file://$PROJECT_DIR$/Services/Services.iml" filepath="$PROJECT_DIR$/Services/Services.iml" group="REUSABLE" />
+      <module fileurl="file://$PROJECT_DIR$/SpellCheck/SpellCheck.iml" filepath="$PROJECT_DIR$/SpellCheck/SpellCheck.iml" group="REUSABLE" />
+      <module fileurl="file://$PROJECT_DIR$/TRACKER.iml" filepath="$PROJECT_DIR$/TRACKER.iml" group="_REFACTORING" />
+      <module fileurl="file://$PROJECT_DIR$/TagExporter/TagExporter.iml" filepath="$PROJECT_DIR$/TagExporter/TagExporter.iml" group="TOOLS" />
+      <module fileurl="file://$PROJECT_DIR$/twocents/TwoCents.iml" filepath="$PROJECT_DIR$/twocents/TwoCents.iml" group="REUSABLE" />
+      <module fileurl="file://$PROJECT_DIR$/Utils/Utils.iml" filepath="$PROJECT_DIR$/Utils/Utils.iml" group="REUSABLE" />
+      <module fileurl="file://$PROJECT_DIR$/widgets/widgets.iml" filepath="$PROJECT_DIR$/widgets/widgets.iml" group="REUSABLE" />
+    </modules>
+  </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8_192" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build.idea" />
+  </component>
+  <component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="All Tests" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.almworks" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-Xmx256m" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Profile " />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Database Tests" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="true" merge="false" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.almworks.items.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ItemStorage" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.almworks.items" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-Dis.debugging=true -ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="65468" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Profile ">
+        <option name="myExternalizedOptions" value="&#13;&#10;additional-options2=onexit\=snapshot&#13;&#10;" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Deskzilla.Mac" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.almworks.launcher.Launcher" />
+      <option name="VM_PARAMETERS" value="-ea -Ddeskzilla.debug=true -Di.a=true -Xmx256m -Dalmworks.home=$PROJECT_DIR$/env/debug -Ddebug.components=com/almworks/rc/DebugComponents-Bugzilla.xml" />
+      <option name="PROGRAM_PARAMETERS" value="$TEST_AREA$/DZ-B-3-0" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lib/sqlite4java" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Idea.Deskzilla" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Deskzilla.Profile" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma" />
+      <option name="MAIN_CLASS_NAME" value="com.almworks.launcher.Launcher" />
+      <option name="VM_PARAMETERS" value="-Xmx256m -agentlib:yjpagent -Di.a=true -Ddeskzilla.debug=true -Ddeskzilla.home=. -Ddebug.components=com/almworks/rc/DebugComponents-Bugzilla.xml" />
+      <option name="PROGRAM_PARAMETERS" value="C:\.ALMWorks\Workspaces\deskzilla.profile" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/env/debug" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Idea.Deskzilla" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="4457" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Profile " />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Deskzilla.Unix" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.almworks.launcher.Launcher" />
+      <option name="VM_PARAMETERS" value="-ea -Ddeskzilla.debug=true -Di.a=true -Xmx256m -Dalmworks.home=. -Ddebug.components=com/almworks/rc/DebugComponents-Bugzilla.xml" />
+      <option name="PROGRAM_PARAMETERS" value="$TEST_AREA$/DZ-B-3-0" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/env/debug" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8_25" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Idea.Deskzilla" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="41040" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Profile " />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="JIRA Client" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="true" merge="true" sample_coverage="true" runner="emma">
+        <pattern>
+          <option name="PATTERN" value="com.almworks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.almworks.launcher.Launcher" />
+      <option name="VM_PARAMETERS" value="-ea -Xmx256m -Di.a=true -Djiraclient.debug=true -Djira.dump=all -Djiraclient.home=. -Ddebug.components=com/almworks/rc/DebugComponents-Jira.xml -Ddebug.context=true -Ddebug.allows.kleval=true -Dis.debugging=true " />
+      <option name="PROGRAM_PARAMETERS" value="c:\Temp\jira.test2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/env/debug" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Idea.JiraClient" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1666" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JProfiler">
+        <option name="WINDOW" value="false" />
+        <option name="JVMPI" value="false" />
+        <option name="INTERPRETED" value="false" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Profile ">
+        <option name="myExternalizedOptions" value="&#13;&#10;additional-options2=onexit\=snapshot&#13;&#10;" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="JProfiler" />
+      <ConfigurationWrapper RunnerId="Profile " />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="JIRA Client.Profile" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="true" sample_coverage="true" runner="emma">
+        <pattern>
+          <option name="PATTERN" value="com.almworks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.almworks.launcher.Launcher" />
+      <option name="VM_PARAMETERS" value="-Xmx256m -Di.a=true -Djiraclient.debug=true -Djiraclient.home=. -Ddebug.components=com/almworks/rc/DebugComponents-Jira.xml -Ddebug.allows.kleval=true " />
+      <option name="PROGRAM_PARAMETERS" value="c:\Temp\jira.test2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/env/debug" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Idea.JiraClient" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52339" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Profile ">
+        <option name="myExternalizedOptions" value="&#13;&#10;additional-options=&#13;&#10;snapshots-dir=&#13;&#10;" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Profile " />
+      <method />
+    </configuration>
+    <configuration default="false" name="JIRA Client.SwingExplorer" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="true" sample_coverage="true" runner="emma">
+        <pattern>
+          <option name="PATTERN" value="com.almworks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.swingexplorer.Launcher" />
+      <option name="VM_PARAMETERS" value="-ea -Xmx256m -Di.a=true -Djiraclient.debug=true -Djira.dump=all -Djiraclient.home=. -Ddebug.components=com/almworks/rc/DebugComponents-Jira.xml -Ddebug.context=true -Ddebug.allows.kleval=true -javaagent:../../lib/swingexp/swag.jar -Xbootclasspath/a:../../lib/swingexp/swag.jar " />
+      <option name="PROGRAM_PARAMETERS" value="com.almworks.launcher.Launcher c:\Temp\jira.test2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/env/debug" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Idea.JiraClient" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56270" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Profile ">
+        <option name="myExternalizedOptions" value="&#13;&#10;additional-options=&#13;&#10;snapshots-dir=&#13;&#10;" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+  </component>
+  <component name="ResourceManagerContainer">
+    <option name="myResourceBundles">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="http://svn/tracker2/branches" />
+                  <option value="http://svn/tracker2/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="http://svn/tracker2/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="myVersion" value="124" />
+  </component>
+  <component name="TL_CHECKIN_HANDLER">
+    <option name="myFiltering" value="false" />
+  </component>
+  <component name="TL_PLUGIN">
+    <option name="myModel">
+      <IssueLinkModel>
+        <option name="deskzillaWorkspace" value="C:\Work\ALMWorks\Workspaces\ALMWorks" />
+        <option name="integrateWith" value="1" />
+        <option name="myCurrentTypeList">
+          <list>
+            <CodeLinkType>
+              <option name="patternString" value="#(\d+)\b" />
+              <option name="replacePattern" value="http://bugzilla.almworks.com/show_bug.cgi?id=$1" />
+            </CodeLinkType>
+          </list>
+        </option>
+        <option name="myDeskzillaWorkspace" value="C:\Work\ALMWorks\Workspaces\ALMWorks" />
+        <option name="myIntegrateWith" value="1" />
+      </IssueLinkModel>
+    </option>
+    <option name="myCheckinOptions">
+      <CheckinOptions />
+    </option>
+  </component>
+  <component name="TeamCityRootDirectoryHolder">
+    <option name="myRelativeRootDirectory" />
+  </component>
+  <component name="TrackLink.DashboardWindow">
+    <option name="myModelBeanOrderedList">
+      <list>
+        <option value="favorites" />
+      </list>
+    </option>
+    <option name="myModelBean">
+      <map>
+        <entry key="favorites" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="TrackLinkPlugin">
+    <linkType pattern="\b(\p{Upper}{2,}\-\d+)\b" url="http://localhost:8080/browse/$1" />
+    <checkinOptions allowMultiline="false" replaceUserComment="true" includeSummary="false" maximumColumns="80" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+  </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="com.intellij.jsf.UserDefinedFacesConfigs">
+    <option name="USER_DEFINED_CONFIGS">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+  </component>
+  <component name="com.siyeh.metrics.MetricsReloaded">
+    <option name="selectedProfile" value="Default" />
+    <option name="autoscroll" value="false" />
+  </component>
+  <component name="libraryTable">
+    <library name="ant">
+      <CLASSES>
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-antlr.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-apache-bcel.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-apache-bsf.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-apache-log4j.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-apache-oro.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-apache-regexp.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-apache-resolver.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-commons-logging.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-commons-net.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-icontract.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-jai.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-javamail.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-jdepend.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-jmf.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-jsch.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-junit.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-launcher.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-netrexx.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-nodeps.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-starteam.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-stylebook.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-swing.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-trax.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-vaj.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-weblogic.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-xalan1.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant-xslp.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/xercesImpl.jar!/" />
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/xml-apis.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="file://C:/java/apache-ant-1.6.5/docs/manual/api" />
+        <root url="file:///java/apache-ant-1.6.5/docs/manual/api" />
+      </JAVADOC>
+      <SOURCES />
+    </library>
+    <library name="apache-soap">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/jira/soap.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jira/activation.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jira/mail.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://C:/java/soap-2_3_1/src" />
+        <root url="file:///java/soap-2_3_1/src" />
+        <root url="jar://$PROJECT_DIR$/lib/javamail-1.4.2-src.zip!/mail/src/main/java" />
+      </SOURCES>
+    </library>
+    <library name="commons-codec">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/commons-codec.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://C:/java/commons-codec/src/java" />
+        <root url="file:///java/commons-codec/src/java" />
+      </SOURCES>
+    </library>
+    <library name="commons-httpclient">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/commons-httpclient.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/../../PATCHED/commons-httpclient-3.0/src/java" />
+      </SOURCES>
+    </library>
+    <library name="commons-logging">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/commons-logging.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://C:/java/commons-logging/src" />
+        <root url="file:///java/commons-logging/src" />
+      </SOURCES>
+    </library>
+    <library name="IdeaGUIDesignerRuntime">
+      <CLASSES>
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/forms_rt.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="IdeaRuntime">
+      <CLASSES>
+        <root url="jar://$APPLICATION_HOME_DIR$/lib/idea_rt.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="integers">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/integers.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/integers-src.zip!/" />
+      </SOURCES>
+    </library>
+    <library name="itext">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/iText-2.0.7.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="JavaMail">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/mail.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="javolution">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/javolution.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://C:/java/javolution-4.0/src.1.5" />
+        <root url="file:///java/javolution-4.0/src.1.5" />
+      </SOURCES>
+    </library>
+    <library name="jazzy">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/jazzy.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/../../PATCHED/jazzy/src" />
+      </SOURCES>
+    </library>
+    <library name="JDOM">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/pjdom.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="file://C:/java/jdom/build/apidocs" />
+        <root url="file:///java/jdom/build/apidocs" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="file://C:/java/jdom/src/java" />
+        <root url="file:///java/jdom/src/java" />
+        <root url="file://$PROJECT_DIR$/../pjdom/src/java" />
+      </SOURCES>
+    </library>
+    <library name="jetbrains-annotations">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/annotations.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="jgoodies-forms">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/forms-1.0.7.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://C:/java/forms-1.0.7/src/core" />
+        <root url="file://C:/java/forms-1.0.7/src/extras" />
+        <root url="file:///java/forms-1.0.7/src/extras" />
+        <root url="file:///java/forms-1.0.7/src/core" />
+        <root url="file://C:/Dev/jgoodies/forms-1.0.7/src/core" />
+      </SOURCES>
+    </library>
+    <library name="jna">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/jna.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://C:/Dev/jna/src" />
+      </SOURCES>
+    </library>
+    <library name="json-simple">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/json_simple-1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/json-simple-src.zip!/" />
+      </SOURCES>
+    </library>
+    <library name="junit">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/junit.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="mysql-connector">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/mysql-connector.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://C:/java/mysql-connector" />
+        <root url="file:///java/mysql-connector" />
+      </SOURCES>
+    </library>
+    <library name="nekohtml">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/nekohtml.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/../../PATCHED/nekohtml-0.9.5/src/html" />
+        <root url="file://$USER_HOME$/sereda/ALMWorks/PATCHED/nekohtml-0.9.5/src/html" />
+      </SOURCES>
+    </library>
+    <library name="Piccolo">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/piccolo.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/piccolox.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="picocontainer">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/picocontainer.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="file://C:/java/picocontainer-1.1/docs/apidocs" />
+        <root url="file:///java/picocontainer-1.1/docs/apidocs" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="file://C:/java/picocontainer-1.1/src/java" />
+        <root url="file:///java/picocontainer-1.1/src/java" />
+      </SOURCES>
+    </library>
+    <library name="sqlite4java">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/sqlite4java/sqlite4java.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/sqlite4java/sqlite4java-src.zip!/" />
+      </SOURCES>
+    </library>
+    <library name="suggester">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/suggester-basic/suggester-1.1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/suggester-basic/src.zip!/src" />
+      </SOURCES>
+    </library>
+    <library name="SwingExplorer">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/swingexp/swag.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/swingexp/swexpl_u.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="trove-2.1.0">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/trove-2.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="winlaf">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/winlaf.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://T:/java/winlaf/code/src" />
+        <root url="file://C:/java/winlaf/code/src" />
+        <root url="file:///java/winlaf/code/src" />
+      </SOURCES>
+    </library>
+    <library name="xerces">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/xml-apis.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/xercesImpl.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="file://C:/java/xerces/docs/javadocs/api" />
+        <root url="file:///java/xerces/docs/javadocs/api" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/../../PATCHED/xerces-2_8_1/src" />
+        <root url="file://$PROJECT_DIR$/../../PATCHED/xerces-2_8_1/build/src" />
+        <root url="file://$USER_HOME$/sereda/ALMWorks/PATCHED/xerces-2_8_1/src" />
+        <root url="file://$USER_HOME$/sereda/ALMWorks/PATCHED/xerces-2_8_1/build/src" />
+      </SOURCES>
+    </library>
+    <library name="xmlrpc">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/xmlrpc.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="file://C:/java/xmlrpc-2.0/docs/apidocs" />
+        <root url="file:///java/xmlrpc-2.0/docs/apidocs" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://C:/java/xmlrpc-2.0.1/xmlrpc-2.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="xpp">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/pullparser.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://C:/java/PullParser2.1.10/src/java/impl/format" />
+        <root url="file://C:/java/PullParser2.1.10/src/java/impl/node" />
+        <root url="file://C:/java/PullParser2.1.10/src/java/impl/tag" />
+        <root url="file://C:/java/PullParser2.1.10/src/java/impl/pullparser" />
+        <root url="file://C:/java/PullParser2.1.10/src/java/intf" />
+        <root url="file://C:/java/PullParser2.1.10/src/java/impl/small" />
+        <root url="file://C:/java/PullParser2.1.10/src/java/impl/factory" />
+        <root url="file:///java/PullParser2.1.10/src/java/impl/format" />
+        <root url="file:///java/PullParser2.1.10/src/java/impl/node" />
+        <root url="file:///java/PullParser2.1.10/src/java/impl/tag" />
+        <root url="file:///java/PullParser2.1.10/src/java/impl/pullparser" />
+        <root url="file:///java/PullParser2.1.10/src/java/intf" />
+        <root url="file:///java/PullParser2.1.10/src/java/impl/small" />
+        <root url="file:///java/PullParser2.1.10/src/java/impl/factory" />
+      </SOURCES>
+    </library>
+  </component>
+  <component name="uidesigner-configuration">
+    <option name="DEFAULT_LAYOUT_MANAGER" value="FormLayout" />
+  </component>
+</project>

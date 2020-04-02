@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: this interface is experimental and under development.
+   - We may and probably will make breaking changes to it in the future. -->
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:bz="http://www.bugzilla.org/rdf#">
+
+<bz:installation rdf:about="http://bugzilla/bz340/">
+  <bz:install_version>3.4.1</bz:install_version>
+  <bz:maintainer>null&#64;almworks.com</bz:maintainer>
+
+  <bz:status>
+    <Seq>
+        <li>UNCONFIRMED</li>
+        <li>NEW</li>
+        <li>ASSIGNED</li>
+        <li>REOPENED</li>
+        <li>RESOLVED</li>
+        <li>VERIFIED</li>
+        <li>CLOSED</li>
+    </Seq>
+  </bz:status>
+
+  <bz:status_open>
+    <Seq>
+        <li>UNCONFIRMED</li>
+        <li>NEW</li>
+        <li>ASSIGNED</li>
+        <li>REOPENED</li>
+    </Seq>
+  </bz:status_open>
+
+  <bz:status_closed>
+    <Seq>
+        <li>RESOLVED</li>
+        <li>VERIFIED</li>
+        <li>CLOSED</li>
+    </Seq>
+  </bz:status_closed>
+
+  <bz:resolution>
+    <Seq>
+        <li></li>
+        <li>FIXED</li>
+        <li>INVALID</li>
+        <li>WONTFIX</li>
+        <li>DUPLICATE</li>
+        <li>WORKSFORME</li>
+        <li>MOVED</li>
+    </Seq>
+  </bz:resolution>
+
+  <bz:keyword>
+    <Seq>
+    </Seq>
+  </bz:keyword>
+
+  <bz:platform>
+    <Seq>
+        <li>All</li>
+        <li>PC</li>
+        <li>Macintosh</li>
+        <li>Other</li>
+    </Seq>
+  </bz:platform>
+
+  <bz:op_sys>
+    <Seq>
+        <li>All</li>
+        <li>Windows</li>
+        <li>Mac OS</li>
+        <li>Linux</li>
+        <li>Other</li>
+    </Seq>
+  </bz:op_sys>
+
+  <bz:priority>
+    <Seq>
+        <li>P1</li>
+        <li>P2</li>
+        <li>P3</li>
+        <li>P4</li>
+        <li>P5</li>
+    </Seq>
+  </bz:priority>
+
+  <bz:severity>
+    <Seq>
+        <li>blocker</li>
+        <li>critical</li>
+        <li>major</li>
+        <li>normal</li>
+        <li>minor</li>
+        <li>trivial</li>
+        <li>enhancement</li>
+    </Seq>
+  </bz:severity>
+
+  <bz:cf_depstatus>
+    <Seq>
+        <li>---</li>
+        <li>Always!</li>
+        <li>Assigned - 1</li>
+        <li>Assigned - 2</li>
+        <li>New - 1</li>
+        <li>New - 2</li>
+        <li>New -3</li>
+        <li>Resolved - 1</li>
+        <li>Unconfirmed - 1</li>
+        <li>Unconfirmed - 2</li>
+    </Seq>
+  </bz:cf_depstatus>
+
+  <bz:cf_multiselect>
+    <Seq>
+        <li>Development</li>
+        <li>QA</li>
+        <li>Production</li>
+        <li>Management</li>
+    </Seq>
+  </bz:cf_multiselect>
+
+  <bz:cf_dropdown>
+    <Seq>
+        <li>---</li>
+        <li>Aha!</li>
+        <li>Hehe</li>
+        <li>Huh?</li>
+        <li>Uh-huh</li>
+    </Seq>
+  </bz:cf_dropdown>
+
+  <bz:cf_devsub>
+    <Seq>
+        <li>Sub3</li>
+        <li>Sub1</li>
+        <li>Sub2</li>
+    </Seq>
+  </bz:cf_devsub>
+
+  <bz:cf_subsub>
+    <Seq>
+        <li>---</li>
+        <li>Sub 3.2</li>
+        <li>Sub 3.3</li>
+        <li>Sub 3.1</li>
+    </Seq>
+  </bz:cf_subsub>
+
+
+  <bz:products>
+    <Seq>
+        <li>
+          <bz:product rdf:about="http://bugzilla/bz340/product.cgi?name=Pro%20Duct">
+            <bz:name>Pro Duct</bz:name>
+
+            <bz:components>
+              <Seq>
+                  <li resource="http://bugzilla/bz340/component.cgi?name=FF&amp;product=Pro%20Duct"/>
+              </Seq>
+            </bz:components>
+
+            <bz:versions>
+              <Seq>
+                  <li resource="http://bugzilla/bz340/version.cgi?name=unspecified"/>
+              </Seq>
+            </bz:versions>
+
+              <bz:target_milestones>
+                <Seq>
+                    <li resource="http://bugzilla/bz340/milestone.cgi?name=BBB"/>
+                    <li resource="http://bugzilla/bz340/milestone.cgi?name=---"/>
+                    <li resource="http://bugzilla/bz340/milestone.cgi?name=DDD"/>
+                    <li resource="http://bugzilla/bz340/milestone.cgi?name=CCC"/>
+                </Seq>
+              </bz:target_milestones>
+
+          </bz:product>
+        </li>
+        <li>
+          <bz:product rdf:about="http://bugzilla/bz340/product.cgi?name=TestProduct">
+            <bz:name>TestProduct</bz:name>
+
+            <bz:components>
+              <Seq>
+                  <li resource="http://bugzilla/bz340/component.cgi?name=TestComponent&amp;product=TestProduct"/>
+              </Seq>
+            </bz:components>
+
+            <bz:versions>
+              <Seq>
+                  <li resource="http://bugzilla/bz340/version.cgi?name=unspecified"/>
+                  <li resource="http://bugzilla/bz340/version.cgi?name=v1"/>
+              </Seq>
+            </bz:versions>
+
+              <bz:target_milestones>
+                <Seq>
+                    <li resource="http://bugzilla/bz340/milestone.cgi?name=---"/>
+                    <li resource="http://bugzilla/bz340/milestone.cgi?name=BBB"/>
+                    <li resource="http://bugzilla/bz340/milestone.cgi?name=AAA"/>
+                    <li resource="http://bugzilla/bz340/milestone.cgi?name=CCC"/>
+                </Seq>
+              </bz:target_milestones>
+
+          </bz:product>
+        </li>
+    </Seq>
+  </bz:products>
+
+  <bz:components>
+    <Seq>
+          <li>
+            <bz:component rdf:about="http://bugzilla/bz340/component.cgi?name=FF&amp;product=Pro%20Duct">
+              <bz:name>FF</bz:name>
+              <bz:flag_types>
+                <Seq>
+                </Seq>
+              </bz:flag_types>
+            </bz:component>
+          </li>
+          <li>
+            <bz:component rdf:about="http://bugzilla/bz340/component.cgi?name=TestComponent&amp;product=TestProduct">
+              <bz:name>TestComponent</bz:name>
+              <bz:flag_types>
+                <Seq>
+                </Seq>
+              </bz:flag_types>
+            </bz:component>
+          </li>
+    </Seq>
+  </bz:components>
+
+  <bz:versions>
+    <Seq>
+          <li>
+            <bz:version rdf:about="http://bugzilla/bz340/version.cgi?name=unspecified">
+              <bz:name>unspecified</bz:name>
+            </bz:version>
+          </li>
+          <li>
+            <bz:version rdf:about="http://bugzilla/bz340/version.cgi?name=unspecified">
+              <bz:name>unspecified</bz:name>
+            </bz:version>
+          </li>
+          <li>
+            <bz:version rdf:about="http://bugzilla/bz340/version.cgi?name=v1">
+              <bz:name>v1</bz:name>
+            </bz:version>
+          </li>
+    </Seq>
+  </bz:versions>
+
+    <bz:target_milestones>
+      <Seq>
+            <li>
+              <bz:target_milestone rdf:about="http://bugzilla/bz340/milestone.cgi?name=BBB">
+                <bz:name>BBB</bz:name>
+              </bz:target_milestone>
+            </li>
+            <li>
+              <bz:target_milestone rdf:about="http://bugzilla/bz340/milestone.cgi?name=---">
+                <bz:name>---</bz:name>
+              </bz:target_milestone>
+            </li>
+            <li>
+              <bz:target_milestone rdf:about="http://bugzilla/bz340/milestone.cgi?name=DDD">
+                <bz:name>DDD</bz:name>
+              </bz:target_milestone>
+            </li>
+            <li>
+              <bz:target_milestone rdf:about="http://bugzilla/bz340/milestone.cgi?name=CCC">
+                <bz:name>CCC</bz:name>
+              </bz:target_milestone>
+            </li>
+            <li>
+              <bz:target_milestone rdf:about="http://bugzilla/bz340/milestone.cgi?name=---">
+                <bz:name>---</bz:name>
+              </bz:target_milestone>
+            </li>
+            <li>
+              <bz:target_milestone rdf:about="http://bugzilla/bz340/milestone.cgi?name=BBB">
+                <bz:name>BBB</bz:name>
+              </bz:target_milestone>
+            </li>
+            <li>
+              <bz:target_milestone rdf:about="http://bugzilla/bz340/milestone.cgi?name=AAA">
+                <bz:name>AAA</bz:name>
+              </bz:target_milestone>
+            </li>
+            <li>
+              <bz:target_milestone rdf:about="http://bugzilla/bz340/milestone.cgi?name=CCC">
+                <bz:name>CCC</bz:name>
+              </bz:target_milestone>
+            </li>
+      </Seq>
+    </bz:target_milestones>
+
+  <bz:flag_types>
+    <Seq>
+    </Seq>
+  </bz:flag_types>
+
+  <bz:fields>
+    <Seq>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cf_relates">
+            <bz:name>cf_relates</bz:name>
+            <bz:description>Bug ID -- Relatest To</bz:description>
+              <bz:type>6</bz:type>
+              <bz:type_desc>Bug ID</bz:type_desc>
+              <bz:enter_bug>1</bz:enter_bug>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cf_reproduction">
+            <bz:name>cf_reproduction</bz:name>
+            <bz:description>Large Text -- Reproduction Sequence</bz:description>
+              <bz:type>4</bz:type>
+              <bz:type_desc>Large Text Box</bz:type_desc>
+              <bz:enter_bug>1</bz:enter_bug>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cf_depstatus">
+            <bz:name>cf_depstatus</bz:name>
+            <bz:description>Status Dep -- Class</bz:description>
+              <bz:type>2</bz:type>
+              <bz:type_desc>Drop Down</bz:type_desc>
+              <bz:enter_bug>1</bz:enter_bug>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cf_whatever">
+            <bz:name>cf_whatever</bz:name>
+            <bz:description>Free Text -- Whatever</bz:description>
+              <bz:type>1</bz:type>
+              <bz:type_desc>Free Text</bz:type_desc>
+              <bz:enter_bug>1</bz:enter_bug>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cf_multiselect">
+            <bz:name>cf_multiselect</bz:name>
+            <bz:description>MultiSelect -- Affected Depts</bz:description>
+              <bz:type>3</bz:type>
+              <bz:type_desc>Multiple-Selection Box</bz:type_desc>
+              <bz:enter_bug>0</bz:enter_bug>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cf_dropdown">
+            <bz:name>cf_dropdown</bz:name>
+            <bz:description>DropDown -- Whoohooo</bz:description>
+              <bz:type>2</bz:type>
+              <bz:type_desc>Drop Down</bz:type_desc>
+              <bz:enter_bug>0</bz:enter_bug>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cf_datetime">
+            <bz:name>cf_datetime</bz:name>
+            <bz:description>Estimated start time</bz:description>
+              <bz:type>5</bz:type>
+              <bz:type_desc>Date/Time</bz:type_desc>
+              <bz:enter_bug>0</bz:enter_bug>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cf_devsub">
+            <bz:name>cf_devsub</bz:name>
+            <bz:description>Development Subdivisions</bz:description>
+              <bz:type>3</bz:type>
+              <bz:type_desc>Multiple-Selection Box</bz:type_desc>
+              <bz:enter_bug>1</bz:enter_bug>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cf_subsub">
+            <bz:name>cf_subsub</bz:name>
+            <bz:description>Sub3 Subdivisions</bz:description>
+              <bz:type>2</bz:type>
+              <bz:type_desc>Drop Down</bz:type_desc>
+              <bz:enter_bug>0</bz:enter_bug>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=bug_id">
+            <bz:name>bug_id</bz:name>
+            <bz:description>Bug ID</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=short_desc">
+            <bz:name>short_desc</bz:name>
+            <bz:description>Summary</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=classification">
+            <bz:name>classification</bz:name>
+            <bz:description>Classification</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=product">
+            <bz:name>product</bz:name>
+            <bz:description>Product</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=version">
+            <bz:name>version</bz:name>
+            <bz:description>Version</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=rep_platform">
+            <bz:name>rep_platform</bz:name>
+            <bz:description>Hardware</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=bug_file_loc">
+            <bz:name>bug_file_loc</bz:name>
+            <bz:description>URL</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=op_sys">
+            <bz:name>op_sys</bz:name>
+            <bz:description>OS</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=bug_status">
+            <bz:name>bug_status</bz:name>
+            <bz:description>Status</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=status_whiteboard">
+            <bz:name>status_whiteboard</bz:name>
+            <bz:description>Whiteboard</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=keywords">
+            <bz:name>keywords</bz:name>
+            <bz:description>Keywords</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=resolution">
+            <bz:name>resolution</bz:name>
+            <bz:description>Resolution</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=bug_severity">
+            <bz:name>bug_severity</bz:name>
+            <bz:description>Severity</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=priority">
+            <bz:name>priority</bz:name>
+            <bz:description>Priority</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=component">
+            <bz:name>component</bz:name>
+            <bz:description>Component</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=assigned_to">
+            <bz:name>assigned_to</bz:name>
+            <bz:description>Assignee</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=reporter">
+            <bz:name>reporter</bz:name>
+            <bz:description>Reporter</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=votes">
+            <bz:name>votes</bz:name>
+            <bz:description>Votes</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=qa_contact">
+            <bz:name>qa_contact</bz:name>
+            <bz:description>QA Contact</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cc">
+            <bz:name>cc</bz:name>
+            <bz:description>CC</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=dependson">
+            <bz:name>dependson</bz:name>
+            <bz:description>Depends on</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=blocked">
+            <bz:name>blocked</bz:name>
+            <bz:description>Blocks</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=attachments.description">
+            <bz:name>attachments.description</bz:name>
+            <bz:description>Attachment description</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=attachments.filename">
+            <bz:name>attachments.filename</bz:name>
+            <bz:description>Attachment filename</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=attachments.mimetype">
+            <bz:name>attachments.mimetype</bz:name>
+            <bz:description>Attachment mime type</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=attachments.ispatch">
+            <bz:name>attachments.ispatch</bz:name>
+            <bz:description>Attachment is patch</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=attachments.isobsolete">
+            <bz:name>attachments.isobsolete</bz:name>
+            <bz:description>Attachment is obsolete</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=attachments.isprivate">
+            <bz:name>attachments.isprivate</bz:name>
+            <bz:description>Attachment is private</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=attachments.submitter">
+            <bz:name>attachments.submitter</bz:name>
+            <bz:description>Attachment creator</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=target_milestone">
+            <bz:name>target_milestone</bz:name>
+            <bz:description>Target Milestone</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=creation_ts">
+            <bz:name>creation_ts</bz:name>
+            <bz:description>Creation date</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=delta_ts">
+            <bz:name>delta_ts</bz:name>
+            <bz:description>Changed</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=longdesc">
+            <bz:name>longdesc</bz:name>
+            <bz:description>Comment</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=longdescs.isprivate">
+            <bz:name>longdescs.isprivate</bz:name>
+            <bz:description>Comment is private</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=alias">
+            <bz:name>alias</bz:name>
+            <bz:description>Alias</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=everconfirmed">
+            <bz:name>everconfirmed</bz:name>
+            <bz:description>Ever confirmed</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=reporter_accessible">
+            <bz:name>reporter_accessible</bz:name>
+            <bz:description>Reporter accessible</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=cclist_accessible">
+            <bz:name>cclist_accessible</bz:name>
+            <bz:description>CC list accessible</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=bug_group">
+            <bz:name>bug_group</bz:name>
+            <bz:description>Group</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=estimated_time">
+            <bz:name>estimated_time</bz:name>
+            <bz:description>Orig. Est.</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=remaining_time">
+            <bz:name>remaining_time</bz:name>
+            <bz:description>Hours Left</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=deadline">
+            <bz:name>deadline</bz:name>
+            <bz:description>Deadline</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=commenter">
+            <bz:name>commenter</bz:name>
+            <bz:description>Commenter</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=flagtypes.name">
+            <bz:name>flagtypes.name</bz:name>
+            <bz:description>Flag</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=requestees.login_name">
+            <bz:name>requestees.login_name</bz:name>
+            <bz:description>Flag Requestee</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=setters.login_name">
+            <bz:name>setters.login_name</bz:name>
+            <bz:description>Flag Setter</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=work_time">
+            <bz:name>work_time</bz:name>
+            <bz:description>Hours Worked</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=percentage_complete">
+            <bz:name>percentage_complete</bz:name>
+            <bz:description>%Complete</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=content">
+            <bz:name>content</bz:name>
+            <bz:description>Content</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=attach_data.thedata">
+            <bz:name>attach_data.thedata</bz:name>
+            <bz:description>Attachment data</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=attachments.isurl">
+            <bz:name>attachments.isurl</bz:name>
+            <bz:description>Attachment is a URL</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=owner_idle_time">
+            <bz:name>owner_idle_time</bz:name>
+            <bz:description>Time Since Assignee Touched</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=see_also">
+            <bz:name>see_also</bz:name>
+            <bz:description>See Also</bz:description>
+          </bz:field>
+        </li>
+        <li>
+          <bz:field rdf:about="http://bugzilla/bz340/field.cgi?name=days_elapsed">
+            <bz:name>days_elapsed</bz:name>
+            <bz:description>Days since bug changed</bz:description>
+          </bz:field>
+        </li>
+    </Seq>
+  </bz:fields>
+</bz:installation>
+
+</RDF>

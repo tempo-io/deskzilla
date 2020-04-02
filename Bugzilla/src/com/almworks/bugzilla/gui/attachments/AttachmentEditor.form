@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.almworks.bugzilla.gui.attachments.AttachmentEditor">
+  <grid id="c7416" binding="myFormPanel" layout-manager="FormLayout">
+    <rowspec value="center:d:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:d:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:d:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:d:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:d:noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="left:3dlu:noGrow"/>
+    <colspec value="fill:d:grow"/>
+    <rowgroup>
+      <member index="1"/>
+      <member index="3"/>
+      <member index="5"/>
+      <member index="7"/>
+    </rowgroup>
+    <constraints>
+      <xy x="172" y="142" width="464" height="287"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="2ebe6" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <name value="for:file"/>
+          <text value=":file"/>
+        </properties>
+      </component>
+      <component id="c3927" class="com.almworks.util.components.FieldWithMoreButton" binding="myFilename">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <actionName value="Select File..."/>
+          <enabled value="true"/>
+          <fieldClassName value="javax.swing.JTextField"/>
+          <name value=""/>
+          <opaque value="true"/>
+        </properties>
+      </component>
+      <component id="af003" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <labelFor value="354f8"/>
+          <name value="for:size"/>
+          <text value=":size"/>
+        </properties>
+      </component>
+      <component id="354f8" class="javax.swing.JTextField" binding="mySize">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <columns value="9"/>
+          <editable value="false"/>
+          <name value="size"/>
+        </properties>
+      </component>
+      <component id="f6b2b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms top="2" left="0" bottom="0" right="0"/>
+        </constraints>
+        <properties>
+          <labelFor value="f0515"/>
+          <name value="for:description"/>
+          <text value=":description"/>
+          <verticalAlignment value="1"/>
+        </properties>
+      </component>
+      <component id="5ceed" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <inheritsPopupMenu value="true"/>
+          <labelFor value="7353d"/>
+          <name value="for:mime"/>
+          <text value=":mime"/>
+        </properties>
+      </component>
+      <component id="7353d" class="com.almworks.util.components.AComboBox" binding="myMimeType">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <name value=":mime"/>
+        </properties>
+      </component>
+      <grid id="975f2" layout-manager="BorderLayout" hgap="5" vgap="0">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="1456" class="javax.swing.JLabel" binding="myErrorLabel">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <text value="error"/>
+            </properties>
+          </component>
+          <component id="32ac0" class="javax.swing.JButton" binding="myPreviewButton">
+            <constraints border-constraint="East"/>
+            <properties>
+              <label value=":preview"/>
+              <text value=":preview"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="f0515" class="javax.swing.JTextField" binding="myDescription">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <margin top="1" left="1" bottom="1" right="1"/>
+          <name value="description"/>
+          <selectionEnd value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.almworks.bugzilla.gui.BugzillaCreateView">
+  <grid id="62576" binding="myWholePanel" layout-manager="GridLayoutManager" row-count="4" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="44" y="42" width="551" height="463"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <hspacer id="3d49">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="100" height="-1"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <grid id="9a958" layout-manager="BorderLayout" hgap="0" vgap="5">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="294eb" layout-manager="FormLayout">
+            <rowspec value="fill:17px:noGrow"/>
+            <rowspec value="top:3dlu:noGrow"/>
+            <rowspec value="center:max(d;20px):grow"/>
+            <colspec value="fill:d:grow"/>
+            <constraints border-constraint="North"/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="b3349" class="javax.swing.JLabel" binding="myCCLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <name value="cc"/>
+                  <text value="&amp;CC:"/>
+                </properties>
+              </component>
+              <component id="9356c" class="com.almworks.util.components.PlaceHolder" binding="myCCPlace">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-vert="false"/>
+                </constraints>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+          <grid id="3e9df" binding="myGroupsPanel" layout-manager="FormLayout">
+            <rowspec value="center:d:grow"/>
+            <colspec value="fill:d:grow"/>
+            <constraints border-constraint="Center"/>
+            <properties>
+              <opaque value="false"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </grid>
+      <grid id="5f67a" binding="myFieldsPanel" layout-manager="FormLayout">
+        <rowspec value="center:d:noGrow"/>
+        <rowspec value="top:4dlu:noGrow"/>
+        <rowspec value="center:max(d;4px):noGrow"/>
+        <rowspec value="top:4dlu:noGrow"/>
+        <rowspec value="center:d:noGrow"/>
+        <rowspec value="top:4dlu:noGrow"/>
+        <rowspec value="center:d:noGrow"/>
+        <rowspec value="top:4dlu:noGrow"/>
+        <rowspec value="center:d:noGrow"/>
+        <rowspec value="top:4dlu:noGrow"/>
+        <rowspec value="center:d:noGrow"/>
+        <rowspec value="top:4dlu:noGrow"/>
+        <rowspec value="center:d:noGrow"/>
+        <colspec value="fill:max(d;4px):noGrow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:d:grow"/>
+        <colspec value="left:20dlu:noGrow"/>
+        <colspec value="fill:max(d;4px):noGrow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:d:grow"/>
+        <rowgroup>
+          <member index="1"/>
+          <member index="3"/>
+          <member index="5"/>
+          <member index="7"/>
+          <member index="9"/>
+          <member index="11"/>
+          <member index="13"/>
+        </rowgroup>
+        <colgroup>
+          <member index="3"/>
+          <member index="7"/>
+        </colgroup>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="fc9a" class="com.almworks.util.components.AComboBox" binding="myProduct">
+            <constraints>
+              <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <name value="product"/>
+            </properties>
+          </component>
+          <component id="c2a0e" class="com.almworks.util.components.AComboBox" binding="myComponent">
+            <constraints>
+              <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <name value="component"/>
+            </properties>
+          </component>
+          <component id="102eb" class="javax.swing.JLabel" binding="myProductLabel">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="product"/>
+              <text value="&amp;Product:"/>
+            </properties>
+          </component>
+          <component id="5a713" class="javax.swing.JLabel" binding="myComponentLabel">
+            <constraints>
+              <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="component"/>
+              <text value="Compo&amp;nent:"/>
+            </properties>
+          </component>
+          <component id="e3a0b" class="javax.swing.JTextField">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="0"/>
+              <editable value="false"/>
+              <name value="reporter"/>
+            </properties>
+          </component>
+          <component id="6c779" class="com.almworks.util.components.AComboBox" binding="myVersion">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <name value="version"/>
+            </properties>
+          </component>
+          <component id="54a60" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="reporter"/>
+              <text value="Reporter:"/>
+            </properties>
+          </component>
+          <component id="9262" class="javax.swing.JLabel" binding="myVersionLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="version"/>
+              <text value="&amp;Version:"/>
+            </properties>
+          </component>
+          <component id="c0c74" class="com.almworks.util.components.AComboBox" binding="myOS">
+            <constraints>
+              <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <name value="operating_system"/>
+            </properties>
+          </component>
+          <component id="62ea2" class="com.almworks.util.components.AComboBox" binding="mySeverity">
+            <constraints>
+              <grid row="8" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <name value="severity"/>
+            </properties>
+          </component>
+          <component id="da208" class="com.almworks.util.components.AComboBox" binding="myPlatform">
+            <constraints>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <name value="platform"/>
+            </properties>
+          </component>
+          <component id="a5293" class="javax.swing.JLabel" binding="myPlatformLabel">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="platform"/>
+              <text value="Plat&amp;form:"/>
+            </properties>
+          </component>
+          <component id="d5e53" class="javax.swing.JLabel" binding="myOSLabel">
+            <constraints>
+              <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="operatingSystem"/>
+              <text value="&amp;OS:"/>
+            </properties>
+          </component>
+          <component id="8cf18" class="javax.swing.JLabel" binding="mySeverityLabel">
+            <constraints>
+              <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="severity"/>
+              <text value="S&amp;everity:"/>
+            </properties>
+          </component>
+          <component id="809df" class="javax.swing.JLabel" binding="myAssignedToLabel">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="assignedTo"/>
+              <text value="Assigned &amp;To:"/>
+            </properties>
+          </component>
+          <component id="b5063" class="javax.swing.JLabel" binding="myPriorityLabel">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="priority"/>
+              <text value="Pr&amp;iority:"/>
+            </properties>
+          </component>
+          <component id="e6777" class="com.almworks.util.components.AComboBox" binding="myPriority">
+            <constraints>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <name value="priority"/>
+            </properties>
+          </component>
+          <component id="94d69" class="com.almworks.util.components.completion.CompletingComboBox" binding="myAssignTo">
+            <constraints>
+              <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <name value="assigned_to"/>
+            </properties>
+          </component>
+          <component id="b1ec5" class="javax.swing.JTextField" binding="myDepends">
+            <constraints>
+              <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <editable value="true"/>
+              <name value="blocked_by"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="3c267" class="javax.swing.JLabel" binding="myBlocksLabel">
+            <constraints>
+              <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="blocks"/>
+              <text value="&amp;Blocks:"/>
+            </properties>
+          </component>
+          <component id="9fc2b" class="javax.swing.JTextField" binding="myBlocks">
+            <constraints>
+              <grid row="12" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <editable value="true"/>
+              <name value="blocks"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="e1ebb" class="javax.swing.JLabel" binding="myDependsOnLabel">
+            <constraints>
+              <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="10"/>
+              <name value="dependsOn"/>
+              <text value="Depends On:"/>
+            </properties>
+          </component>
+          <component id="5baca" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <labelFor value="58404"/>
+              <name value="status"/>
+              <text value="Status:"/>
+            </properties>
+          </component>
+          <component id="58404" class="com.almworks.util.components.AComboBox" binding="myStatus">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <columns value="5"/>
+              <name value="status"/>
+            </properties>
+          </component>
+          <component id="947e2" class="javax.swing.JLabel" binding="myKeywordsLabel">
+            <constraints>
+              <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="keywords"/>
+              <text value="&amp;Keywords:"/>
+            </properties>
+          </component>
+          <component id="33ca9" class="com.almworks.util.components.FieldWithMoreButton" binding="myKeywords">
+            <constraints>
+              <grid row="10" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <name value="keywords"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <hspacer id="86e7b">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="100" height="-1"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <grid id="97ef4" binding="myHeader" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="ac8b2" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="7a0d" class="javax.swing.JTextField" binding="mySummary">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <name value="summary"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <component id="380a4" class="javax.swing.JLabel" binding="mySummaryLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <name value="summary"/>
+              <text value="&amp;Summary:"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <vspacer id="10622">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <grid id="698f8" binding="myFooter" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="80a87" class="javax.swing.JTextField" binding="myURLField">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <editable value="true"/>
+              <name value="url"/>
+            </properties>
+          </component>
+          <component id="27d05" class="com.almworks.util.components.Link" binding="myURLLink">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="4"/>
+              <text value="URL:"/>
+            </properties>
+          </component>
+          <component id="5b2e8" class="javax.swing.JCheckBox" binding="myDescriptionPrivate">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Description is private"/>
+              <visible value="true"/>
+            </properties>
+          </component>
+          <scrollpane id="dc21a" binding="myDescriptionScrollPane" custom-create="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="320" height="160"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalScrollBarPolicy value="31"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="bc77e" class="javax.swing.JTextPane" binding="myDescription">
+                <constraints/>
+                <properties>
+                  <name value="description"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <component id="73b9a" class="javax.swing.JLabel" binding="myDescriptionLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <name value="description"/>
+              <text value="&amp;Description:"/>
+            </properties>
+          </component>
+          <component id="92b5e" class="javax.swing.JLabel" binding="myAttachmentsLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Attachments:"/>
+            </properties>
+          </component>
+          <scrollpane id="e5e60" class="com.almworks.util.components.ASortedTable" binding="myAttachmentsTable">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="1" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </scrollpane>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

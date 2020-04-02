@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<bugzilla version="2.18rc3"
+  urlbase="http://bugzilla/"
+  maintainer="admin@almworks.com"
+  >
+
+  <bug error="NotPermitted">
+    <bug_id>100</bug_id>
+  </bug>
+  <bug error="NotFound">
+    <bug_id>1024</bug_id>
+  </bug>
+
+</bugzilla>

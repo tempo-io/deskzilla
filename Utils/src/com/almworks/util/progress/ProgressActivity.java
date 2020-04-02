@@ -1,0 +1,60 @@
+package com.almworks.util.progress;
+
+import org.almworks.util.Util;
+import org.jetbrains.annotations.*;
+
+public class ProgressActivity {
+  @Nullable
+  private final Object myActivity;
+
+  // reference to linked list of activities of delegate progresses
+  @Nullable
+  private final ProgressActivity mySubactivitiesHead;
+
+  // next activity in delegate activities list of parent activity
+  @Nullable
+  private ProgressActivity myNext;
+
+
+  ProgressActivity(@Nullable Object activity, @Nullable ProgressActivity subactivitiesHead) {
+    myActivity = activity;
+    mySubactivitiesHead = subactivitiesHead;
+  }
+
+  void setNext(@NotNull ProgressActivity next) {
+    assert myNext == null;
+    myNext = next;
+  }
+
+  @Nullable
+  public Object getActivity() {
+    return myActivity;
+  }
+
+  @Nullable
+  public ProgressActivity getSubactivitiesHead() {
+    return mySubactivitiesHead;
+  }
+
+  @Nullable
+  public ProgressActivity getNext() {
+    return myNext;
+  }
+
+  public String toString() {
+    return ProgressActivityFormat.DEFAULT.format(this);
+  }
+
+  public <T> T getActivity(Class<T> activityClass) {
+    if (myActivity != null) {
+      if (activityClass.isInstance(myActivity))
+        return Util.cast(activityClass, myActivity);
+    }
+    for (ProgressActivity pa = mySubactivitiesHead; pa != null; pa = pa.getNext()) {
+      T value = pa.getActivity(activityClass);
+      if (value != null)
+        return value;
+    }
+    return null;
+  }
+}

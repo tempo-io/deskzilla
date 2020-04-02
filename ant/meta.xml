@@ -1,0 +1,463 @@
+<project>
+  <module name="Application">
+    <depends module="CoreComponents"/>
+    <depends module="Utils"/>
+    <depends module="CommonUtils"/>
+    <depends module="twocents"/>
+    <depends module="Engine"/>
+    <depends module="Launcher"/>
+    <depends module="Services"/>
+    <depends module="Screenshot"/>
+    <depends module="ItemStorage"/>
+    <depends module="ItemSync"/>
+    <depends module="AppInit"/>
+    <uselib lib="picocontainer"/>
+    <uselib lib="ideaforms"/>
+    <uselib lib="jgoodies_forms"/>
+    <uselib lib="itext"/>
+    <uselib lib="jna"/>
+    <uselib lib="integers"/>
+    <uselib lib="gnu.trove"/>
+  </module>
+
+  <module name="Bugzilla">
+    <depends module="Application"/>
+    <depends module="CoreComponents"/>
+    <depends module="Utils"/>
+    <depends module="CommonUtils"/>
+    <depends module="twocents"/>
+    <depends module="Engine"/>
+    <depends module="Launcher"/>
+    <depends module="Services"/>
+    <depends module="ConnectorSupport"/>
+    <depends module="Screenshot"/>
+    <depends module="widgets"/>
+    <depends module="ItemSync"/>
+    <depends module="ItemStorage"/>
+    <uselib lib="picocontainer"/>
+    <uselib lib="nekohtml"/>
+    <uselib lib="commons-httpclient"/>
+    <uselib lib="commons-logging"/>
+    <uselib lib="commons-codec"/>
+    <uselib lib="xerces"/>
+    <uselib lib="jdom"/>
+    <uselib lib="ideaforms"/>
+    <uselib lib="jce"/>
+    <uselib lib="jgoodies_forms"/>
+    <uselib lib="integers"/>
+    <uselib lib="gnu.trove"/>
+  </module>
+
+  <module name="Database">
+    <depends module="Utils"/>
+    <depends module="CommonUtils"/>
+    <depends module="twocents"/>
+    <depends module="CoreComponents"/>
+    <depends module="Launcher"/>
+    <depends module="Services"/>
+    <uselib lib="picocontainer"/>
+    <uselib lib="jdom"/>
+    <uselib lib="ideaforms"/>
+    <uselib lib="javolution"/>
+    <uselib lib="gnu.trove"/>
+  </module>
+
+  <module name="Engine">
+    <depends module="Utils"/>
+    <depends module="CommonUtils"/>
+    <depends module="twocents"/>
+    <depends module="CoreComponents"/>
+    <depends module="Launcher"/>
+    <depends module="Services"/>
+    <depends module="ConnectorSupport"/>
+    <depends module="ItemStorage"/>
+    <depends module="ItemSync"/>
+    <uselib lib="jdom"/>
+    <uselib lib="picocontainer"/>
+    <uselib lib="ideaforms"/>
+    <uselib lib="javolution"/>
+    <uselib lib="jgoodies_forms"/>
+    <uselib lib="commons-httpclient"/>
+    <uselib lib="commons-logging"/>
+    <uselib lib="commons-codec"/>
+    <uselib lib="integers"/>
+    <uselib lib="gnu.trove"/>
+  </module>
+
+  <module name="Services">
+    <depends module="Utils"/>
+    <depends module="CommonUtils"/>
+    <depends module="twocents"/>
+    <uselib lib="ideaforms"/>
+    <uselib lib="picocontainer"/>
+    <uselib lib="commons-httpclient"/>
+    <uselib lib="commons-logging"/>
+    <uselib lib="commons-codec"/>
+    <uselib lib="jgoodies_forms"/>
+  </module>
+
+  <module name="twocents"/>
+
+  <module name="Screenshot" >
+    <depends module="CoreComponents"/>
+    <depends module="Utils"/>
+    <depends module="CommonUtils"/>
+    <depends module="Services"/>
+    <depends module="twocents"/>
+  </module>
+
+  <module name="CommonUtils">
+    <depends module="twocents"/>
+    <uselib lib="jdom"/>
+    <uselib lib="integers"/>
+    <uselib lib="gnu.trove"/>
+  </module>
+
+  <module name="Utils">
+    <depends module="twocents"/>
+    <depends module="AppInit"/>
+    <depends module="CommonUtils"/>
+    <uselib lib="jdom"/>
+    <uselib lib="ideaforms"/>
+    <uselib lib="jgoodies_forms"/>
+    <uselib lib="ideart"/>
+    <uselib lib="commons-codec"/>
+    <uselib lib="jce"/>
+    <uselib lib="commons-logging"/>
+    <uselib lib="winlaf"/>
+    <uselib lib="commons-httpclient"/>
+    <uselib lib="javolution"/>
+    <uselib lib="integers"/>
+    <uselib lib="suggester"/>
+    <uselib lib="gnu.trove"/>
+  </module>
+
+  <module name="FXUtils">
+    <depends module="CommonUtils"/>
+    <depends module="Utils"/>
+    <depends module="twocents"/>
+    <uselib lib="javafx"/>
+  </module>
+
+  <module name="CoreComponents">
+    <depends module="Utils"/>
+    <depends module="CommonUtils"/>
+    <depends module="twocents"/>
+    <depends module="Launcher"/>
+    <depends module="Services"/>
+    <depends module="AppInit"/>
+    <depends module="SpellCheck"/>
+    <depends module="FXUtils"/>
+    <uselib lib="picocontainer"/>
+    <uselib lib="jdom"/>
+    <uselib lib="commons-codec"/>
+    <uselib lib="jce"/>
+    <uselib lib="ideaforms"/>
+    <uselib lib="commons-httpclient"/>
+    <uselib lib="commons-logging"/>
+    <uselib lib="xmlrpc"/>
+    <uselib lib="jgoodies_forms"/>
+    <uselib lib="jazzy"/>
+    <uselib lib="sqlite4java"/>
+    <uselib lib="jna"/>
+    <uselib lib="javamail"/>
+    <uselib lib="suggester"/>
+    <uselib lib="javafx"/>
+  </module>
+
+  <module name="BuildTools">
+    <depends module="Utils"/>
+  </module>
+
+  <module name="TagExporter">
+    <depends module="CoreComponents"/>
+    <depends module="Database"/>
+    <depends module="Engine"/>
+    <depends module="CommonUtils"/>
+    <depends module="Utils"/>
+    <depends module="Launcher"/>
+    <depends module="twocents"/>
+    <uselib lib="jgoodies_forms"/>
+    <uselib lib="jdom"/>
+    <uselib lib="picocontainer"/>
+  </module>
+
+  <module name="Launcher">
+    <depends module="AppInit"/>
+  </module>
+  <module name="Launcher.Deskzilla"/>
+
+  <module name="ConnectorSupport">
+    <depends module="Services"/>
+    <depends module="CommonUtils"/>
+    <depends module="Utils"/>
+    <depends module="twocents"/>
+    <uselib lib="jdom"/>
+    <uselib lib="commons-httpclient"/>
+    <uselib lib="commons-logging"/>
+    <uselib lib="commons-codec"/>
+    <uselib lib="xerces"/>
+    <uselib lib="nekohtml"/>
+  </module>
+
+  <module name="ExternalApi">
+    <depends module="twocents"/>
+    <uselib lib="xmlrpc"/>
+    <uselib lib="commons-codec"/>
+  </module>
+
+  <module name="ExternalApiService">
+    <depends module="ExternalApi"/>
+    <depends module="CommonUtils"/>
+    <depends module="Utils"/>
+    <depends module="twocents"/>
+    <depends module="Engine"/>
+    <depends module="Services"/>
+    <depends module="CoreComponents"/>
+    <depends module="Application"/>
+    <depends module="Launcher"/>
+    <depends module="ItemStorage"/>
+    <depends module="ItemSync"/>
+    <uselib lib="xmlrpc"/>
+    <uselib lib="commons-codec"/>
+    <uselib lib="picocontainer"/>
+    <uselib lib="ideaforms"/>
+    <uselib lib="integers"/>
+  </module>
+
+  <module name="Resources.Common"/>
+
+  <module name="Resources.Deskzilla"/>
+
+  <module name="AppInit"/>
+
+  <module name="widgets">
+      <depends module="CommonUtils"/>
+      <depends module="Utils"/>
+      <depends module="twocents"/>
+  </module>
+
+  <module name="ItemStorage">
+    <depends module="Utils"/>
+    <depends module="CommonUtils"/>
+    <depends module="twocents"/>
+    <depends module="CoreComponents"/>
+    <depends module="Services"/>
+    <uselib lib="integers"/>
+    <uselib lib="sqlite4java"/>
+    <uselib lib="picocontainer"/>
+    <uselib lib="gnu.trove"/>
+  </module>
+
+  <module name="ItemSync">
+    <depends module="Utils"/>
+    <depends module="CommonUtils"/>
+    <depends module="ItemStorage"/>
+    <depends module="twocents"/>
+    <uselib lib="integers"/>
+    <uselib lib="gnu.trove"/>
+  </module>
+
+  <module name="SpellCheck">
+    <depends module="twocents"/>
+    <depends module="CommonUtils"/>
+    <depends module="Utils"/>
+    <uselib lib="suggester"/>
+  </module>
+
+  <lib name="gnu.trove">
+    <jar jar="trove-2.1.0.jar"/>
+  </lib>
+
+  <lib name="integers">
+    <jar jar="integers.jar"/>
+  </lib>
+
+  <lib name="nekohtml">
+    <jar jar="nekohtml.jar"/>
+  </lib>
+
+  <lib name="ideaforms">
+    <jar jar="forms_rt.jar"/>
+  </lib>
+
+  <lib name="jgoodies_forms">
+    <jar jar="forms-1.0.7.jar"/>
+  </lib>
+
+  <lib name="jdom">
+    <jar jar="pjdom.jar"/>
+  </lib>
+
+  <lib name="itext">
+    <jar jar="iText-2.0.7.jar"/>
+  </lib>
+
+  <lib name="piccolo">
+    <jar jar="piccolo.jar"/>
+    <jar jar="piccolox.jar"/>
+    <!--    <redist/>-->
+  </lib>
+
+  <lib name="junit">
+    <jar jar="junit.jar"/>
+  </lib>
+
+  <lib name="xerces">
+    <jar jar="xercesImpl.jar"/>
+    <jar jar="xml-apis.jar"/>
+  </lib>
+
+  <lib name="commons-httpclient">
+    <jar jar="commons-httpclient.jar"/>
+  </lib>
+
+  <lib name="commons-logging">
+    <jar jar="commons-logging.jar"/>
+  </lib>
+
+  <lib name="commons-codec">
+    <jar jar="commons-codec.jar"/>
+  </lib>
+
+  <lib name="jazzy">
+    <jar jar="jazzy.jar"/>
+  </lib>
+
+  <lib name="picocontainer">
+    <jar jar="picocontainer.jar"/>
+  </lib>
+
+  <lib name="javolution">
+    <jar jar="javolution.jar"/>
+  </lib>
+
+  <lib name="mysql-connector">
+    <jar jar="mysql-connector.jar"/>
+  </lib>
+
+  <lib name="winlaf">
+    <jar jar="winlaf.jar"/>
+  </lib>
+
+  <lib name="xmlrpc">
+    <jar jar="xmlrpc.jar"/>
+  </lib>
+
+  <lib name="json-simple">
+    <jar jar="json_simple-1.1.jar"/>
+  </lib>
+
+  <lib name="jna">
+    <jar jar="jna.jar"/>
+  </lib>
+
+  <lib name="apache-soap">
+    <jar jar="jira/soap.jar"/>
+    <jar jar="jira/mail.jar"/>
+    <jar jar="jira/activation.jar"/>
+  </lib>
+
+  <lib name="ideart">
+    <extjar jar="${IdeaPath}/lib/idea_rt.jar"/>
+  </lib>
+
+  <lib name="jce">
+    <extjar jar="${jdk}/jre/lib/jce.jar"/>
+    <extjar jar="${jdk}/jre/lib/jsse.jar"/>
+  </lib>
+
+  <lib name="javafx">
+    <extjar jar="${jdk}/jre/lib/ext/jfxrt.jar"/>
+  </lib>
+
+  <lib name="xpp">
+    <jar jar="pullparser.jar"/>
+  </lib>
+
+  <lib name="sqlite4java">
+    <jar jar="sqlite4java/sqlite4java.jar"/>
+    <native file="sqlite4java/sqlite4java-win32-x86.dll"/>
+    <native file="sqlite4java/sqlite4java-win32-x64.dll"/>
+    <native file="sqlite4java/libsqlite4java-osx.dylib"/>
+    <native file="sqlite4java/libsqlite4java-linux-i386.so"/>
+    <native file="sqlite4java/libsqlite4java-linux-amd64.so"/>
+  </lib>
+
+  <lib name="javamail">
+    <jar jar="mail.jar"/>
+  </lib>
+
+  <lib name="suggester">
+    <jar jar="suggester-basic/suggester-1.1.2.jar"/>
+  </lib>
+
+  <product id="deskzilla">
+    <distjar jar="almworks-tracker-api.jar">
+      <place dir="lib/"/>
+      <include module="ExternalApi"/>
+      <manifest/>
+    </distjar>
+
+    <distjar jar="deskzilla.jar">
+      <place dir=""/>
+      <include module="Launcher"/>
+      <include module="AppInit"/>
+      <include module="Launcher.Deskzilla"/>
+      <manifest>
+        <attribute name="Main-Class" value="com.almworks.launcher.Launcher"/>
+      </manifest>
+    </distjar>
+
+    <distjar jar="base.jar">
+      <place dir="components/"/>
+      <include module="Application"/>
+      <include module="Engine"/>
+      <include module="Utils"/>
+      <include module="CommonUtils"/>
+      <include module="CoreComponents"/>
+      <include module="Services"/>
+      <include module="ConnectorSupport"/>
+      <include module="ExternalApiService"/>
+      <include module="Resources.Common"/>
+      <include module="Resources.Deskzilla"/>
+      <include module="Screenshot"/>
+      <include module="widgets"/>
+      <include module="ItemStorage"/>
+      <include module="ItemSync"/>
+      <include module="SpellCheck"/>
+      <include module="FXUtils"/>
+    </distjar>
+
+    <distjar jar="bugzilla.jar">
+      <place dir="components/"/>
+      <include module="Bugzilla"/>
+    </distjar>
+
+    <distjar jar="twocents.jar">
+      <place dir="lib/"/>
+      <include module="twocents"/>
+    </distjar>
+
+    <distlib lib="xmlrpc"/>
+    <distlib lib="winlaf"/>
+    <distlib lib="picocontainer"/>
+    <distlib lib="javolution"/>
+    <distlib lib="commons-codec"/>
+    <distlib lib="commons-logging"/>
+    <distlib lib="commons-httpclient"/>
+    <distlib lib="xerces"/>
+    <distlib lib="jdom"/>
+    <distlib lib="ideaforms"/>
+    <distlib lib="jgoodies_forms"/>
+    <distlib lib="nekohtml"/>
+    <distlib lib="jazzy"/>
+    <distlib lib="itext"/>
+    <distlib lib="jna"/>
+    <distlib lib="sqlite4java"/>
+    <distlib lib="integers"/>
+    <distlib lib="javamail"/>
+    <distlib lib="suggester"/>
+    <distlib lib="gnu.trove"/>
+  </product>
+</project>
