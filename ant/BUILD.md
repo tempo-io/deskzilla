@@ -2,13 +2,17 @@
     
 ### Build parameters
 The [build.xml](build.xml) Ant script takes the following parameters:
+
  * **jdk** - path to Oracle JDK 8. The script uses this JDK to compile sources and run tests
+ 
  * **build.number** - build number. A built application shows build number on its About screen.
     Build script creates ZIP file with build number.
     If the build number is not provided, 0 (zero) build number is used by default.
 
 A sample shell script to run the build:
-```shell script
+
+```
+
 #! /bin/sh
 
 # Installation directory of Apache ANT (the dir which containts "bin", "lib" sub directories)
@@ -18,6 +22,7 @@ JDK8_HOME=
 
 "$JDK8_HOME/bin/java" -cp "$ANT_HOME/lib/ant-launcher.jar" org.apache.tools.ant.launch.Launcher -f ./build.xml prepareDistribution -Djdk="$JDK8_HOME" -Dbuild.number=9876
 ```
+
 Run the script from the [ant](.) directory          
     
 ### Files
@@ -33,8 +38,11 @@ Run the script from the [ant](.) directory
 
 ## meta.xml file format
 The [meta.xml](meta.xml) file describes:
+
  * Modules - Java Sources
+
  * Libraries - external JAR files
+ 
  * Product Description - JARs the product distribution consists of and their locations
 
 ### Modules
@@ -85,7 +93,7 @@ The **product** tag describe layout of a distribution.
 
 #### JARs Built from Sources
 
-The [meta.xml](meta.xml) file describes distributable JARs with **distjar* tags.
+The [meta.xml](meta.xml) file describes distributable JARs with **distjar** tags.
 The tag has single **jar** parameter - the name of the JAR file (it does not include path).
 
 ##### Child Tags

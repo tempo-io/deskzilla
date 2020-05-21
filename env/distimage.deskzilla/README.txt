@@ -1,6 +1,7 @@
 Deskzilla Readme
-Last edited: August 18, 2016
+Last edited: May 21, 2020
 http://almworks.com/deskzilla
+https://bitbucket.org/almworks/deskzilla/src/master/
 
 
 Contents
@@ -108,7 +109,7 @@ Uninstall
 To uninstall Deskzilla on Windows, run uninstaller from 
 Control Panel - Add/Remove Programs.
 
-To uninstall JIRA Client on other operating systems, just delete Deskzilla
+To uninstall Deskzilla on other operating systems, just delete Deskzilla
 home directory.
 
 NOTE: Deskzilla workspace (queries, local database, etc.) usually 

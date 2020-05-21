@@ -34,5 +34,10 @@ External parameters:
       <target name="ALL.test"/>
       <target name="distAll"/>
     </ant>
+    <chmod perm="+x">
+      <fileset dir="${dir.dist}/${product.name}/bin">
+        <include name="**/*.sh"/>
+      </fileset>
+    </chmod>
   </target>
 </project>
