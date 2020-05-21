@@ -35,10 +35,10 @@ In order to build the project you need [Apache Ant](https://ant.apache.org/) and
 
 6. Run the [build.sh](ant/build.sh) shell script (`./build.sh`)
 
-7. When the build successfully completes, find built application in the [build/.dist/jiraclient](/build/.dist/jiraclient)
+7. When the build successfully completes, find built application in the [build/.dist/deskzilla](/build/.dist/deskzilla)
 directory.
 
-     Find ZIPed application in the [build/.dist/jiraclient-NNNN.zip](/build/.dist/jiraclient-9876.zip) file.
+     Find ZIPed application in the [build/.dist/deskzilla-NNNN.zip](/build/.dist/deskzilla-9876.zip) file.
    
 For more details see the [build documentation](ant/BUILD.md)   
 
@@ -47,15 +47,15 @@ For more details see the [build documentation](ant/BUILD.md)
 To start the built application run the start up script from command-line terminal.
 The script is in the:
 
- * [jiraclient.sh](./build/.dist/jiraclient/bin/jiraclient.sh) for Mac
+ * [deskzilla.sh](./build/.dist/deskzilla/bin/deskzilla.sh) for Mac
  
- * [linux_jiraclient.sh](./build/.dist/jiraclient/bin/linux_jiraclient.sh) for Linux
+ * [linux_deskzilla.sh](./build/.dist/deskzilla/bin/linux_deskzilla.sh) for Linux
  
- * [jiraclient.bat](./build/.dist/jiraclient/bin/jiraclient.bat) for Windows
+ * [deskzilla.bat](./build/.dist/deskzilla/bin/deskzilla.bat) for Windows
  
 You can pass [workspace](https://wiki.almworks.com/display/jc16/Workspace) location as command-line parameter.
 
-Client for Jira requires Oracle Java8 updates 8u112 to 8u202 (versions 8u192 or 8u202 are recommended).
+Deskzilla requires Oracle Java8 updates 8u112 to 8u202 (versions 8u192 or 8u202 are recommended).
 Java either must be available on the PATH environment variable 
 or JAVA_HOME variable must be defined and point to the corresponding JRE or JDK.
  
